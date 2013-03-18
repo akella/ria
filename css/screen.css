@@ -1,0 +1,102 @@
+@font-face { font-family: 'Conv_regular'; src: url("../files/fonts/regular.eot"); src: local("☺"), url("../files/fonts/regular.woff") format("woff"), url("../files/fonts/regular.ttf") format("truetype"), url("../files/fonts/regular.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_bold'; src: url("../files/fonts/bold.eot"); src: local("☺"), url("../files/fonts/bold.woff") format("woff"), url("../files/fonts/bold.ttf") format("truetype"), url("../files/fonts/bold.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+.l-layout, .sidebar, .l-col-left, .l-col-right { min-height: 100%; height: auto !important; height: 100%; }
+
+.l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* ------------------------------------- Reset css -------------------------------------------- */
+/* ------------------------------------- Reset css -------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset { border: none; }
+
+input[type="submit"], button { cursor: pointer; }
+
+input[type='submit']::-moz-focus-inner { padding: 0; border: 0; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+table { border-spacing: 0; border-collapse: collapse; }
+
+* { -webkit-text-size-adjust: none; }
+
+/* ------------------------------------- //END Reset css --------------------------------------- */
+/* ----------------------------------------- Main styles --------------------------------------- */
+body { color: #474747; font-weight: normal; font-style: normal; font-family: 'Conv_regular', sans-serif; font-size: 16px; line-height: 1.3; }
+
+a { color: #00919e; }
+a:hover { text-decoration: none; }
+
+.l-layout { max-width: 1280px; margin: 0 auto; position: relative; }
+
+.sidebar, .l-col-left, .l-col-right { position: absolute; top: 0; bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.sidebar { padding: 20px 10px 0; width: 210px; z-index: 2; background: #2f373d; overflow: auto; }
+
+.l-col-left { left: 0; width: 52%; padding-left: 210px; border-right: 1px solid #cfcfcf; }
+
+.l-col-right { right: 0; width: 48%; background: #f2f2f2; }
+
+.wrapper { overflow: hidden; }
+
+/* ------------------------------------ //END Main styles --------------------------------------- */
+/* ------------------------------------- Independent blocks -------------------------------------- */
+.logo { display: block; margin: 0 auto; background: url('../img/icons-s7de953ab6e.png') 0 0 no-repeat; width: 161px; height: 20px; }
+
+.nav { margin: 14px 0; padding: 0 10px; border-top: 1px solid #474e53; }
+.nav li { height: 24px; line-height: 24px; }
+.nav .is-active { margin: 0 -19px; padding: 0 19px; background: #474e53; }
+.nav .is-active a { font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; color: #fff; }
+.nav a { font-size: 14px; color: #edeef0; text-decoration: none; }
+
+.nav__title { display: block; margin: 17px 0 11px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; font-size: 10px; color: #858f97; text-transform: uppercase; }
+
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
+/* ----------------------------------------- Footer ---------------------------------------------- */
+.footer { position: relative; height: 120px; }
+
+/* -------------------------------------- //END Footer ------------------------------------------- */
+@font-face { font-family: 'Conv_regular'; src: url("../files/fonts/regular.eot"); src: local("☺"), url("../files/fonts/regular.woff") format("woff"), url("../files/fonts/regular.ttf") format("truetype"), url("../files/fonts/regular.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_bold'; src: url("../files/fonts/bold.eot"); src: local("☺"), url("../files/fonts/bold.woff") format("woff"), url("../files/fonts/bold.ttf") format("truetype"), url("../files/fonts/bold.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+.l-layout, .sidebar, .l-col-left, .l-col-right { min-height: 100%; height: auto !important; height: 100%; }
+
+.l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+@font-face { font-family: 'Conv_regular'; src: url("../files/fonts/regular.eot"); src: local("☺"), url("../files/fonts/regular.woff") format("woff"), url("../files/fonts/regular.ttf") format("truetype"), url("../files/fonts/regular.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_bold'; src: url("../files/fonts/bold.eot"); src: local("☺"), url("../files/fonts/bold.woff") format("woff"), url("../files/fonts/bold.ttf") format("truetype"), url("../files/fonts/bold.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+.l-layout, .sidebar, .l-col-left, .l-col-right { min-height: 100%; height: auto !important; height: 100%; }
+
+.l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+@font-face { font-family: 'Conv_regular'; src: url("../files/fonts/regular.eot"); src: local("☺"), url("../files/fonts/regular.woff") format("woff"), url("../files/fonts/regular.ttf") format("truetype"), url("../files/fonts/regular.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_bold'; src: url("../files/fonts/bold.eot"); src: local("☺"), url("../files/fonts/bold.woff") format("woff"), url("../files/fonts/bold.ttf") format("truetype"), url("../files/fonts/bold.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+.l-layout, .sidebar, .l-col-left, .l-col-right { min-height: 100%; height: auto !important; height: 100%; }
+
+.l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
