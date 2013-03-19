@@ -85,23 +85,23 @@ $break-large: 1180px;
 }
 
 // user-select
-@mixin user-select() {
+@mixin user-select {
      -moz-user-select: none;
   -webkit-user-select: none;
           user-select: none;
 }
 
 // image replacement extend
-%hide-text{
+%hide-text {
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
 }
-%height{
+%height {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-}
+} 
 %clr{
   &:after{
     content: ".";

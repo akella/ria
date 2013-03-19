@@ -3,3 +3,28 @@
 @font-face { font-family: 'Conv_bold'; src: url("../files/fonts/bold.eot"); src: local("☺"), url("../files/fonts/bold.woff") format("woff"), url("../files/fonts/bold.ttf") format("truetype"), url("../files/fonts/bold.svg") format("svg"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
+
+.news li:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.news-top { padding: 4px 10px; background: #f3f3f3; border-top: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; }
+.news-top span, .news-top .check { vertical-align: middle; }
+
+.news-top__date { color: #404040; font-size: 10px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; text-transform: uppercase; }
+
+.news li { padding: 17px 5px 17px 10px; border-bottom: 1px solid #e7e7e7; }
+.news .check { float: left; margin-right: 16px; }
+.news .is-important { position: relative; }
+.news .is-important:before { content: ""; position: absolute; right: 5px; top: 5px; background: url('../i/icons-s6f6fa30c9b.png') 0 -107px no-repeat; width: 12px; height: 17px; }
+.news .is-important a { color: #f15c30; }
+.news .is-selected { background: #fffef0; }
+.news .is-read { color: #999; }
+.news .is-read a { color: #999; }
+
+.news__cont { overflow: hidden; }
+
+.news__title { position: relative; top: -7px; line-height: .9; margin-bottom: -5px; }
+.news__title a { color: #00659b; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; font-size: 16px; text-decoration: none; }
+
+.news__meta { color: #999; font-size: 12px; }
+
+.news__date { font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }

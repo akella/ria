@@ -18,46 +18,295 @@
         <div class="nav">
             <strong class="nav__title">Продукты РИА Новости</strong>
             <ul>
-                <li class="is-active"><a href="#">Общая лента</a></li>
-                <li><a href="#">Политика</a></li>
-                <li><a href="#">Экономика</a></li>
-                <li><a href="#">Культура</a></li>
-                <li><a href="#">РИА Тренды</a></li>
+                <li class="is-active">
+                    <a href="#">
+                        <span>Общая лента</span><i></i><b></b>
+                    </a>
+                </li>
+                <li class="is-new">
+                    <a href="#">
+                        <span>Политика</span><i></i><b>1</b>
+                    </a>
+                </li>
+                <li class="is-media">
+                    <a href="#">
+                        <span>Экономика</span><i></i><b></b>
+                    </a>
+                </li>
+                <li class="is-new">
+                    <a href="#">
+                        <span>Культура</span><i></i><b>5</b>
+                    </a>
+                </li>
+                <li class="is-rate">
+                    <a href="#">
+                        <span>РИА Тренды</span><i></i><b></b>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="nav">
             <strong class="nav__title">Мои ленты</strong>
             <ul>
-                <li><a href="#">Все мои ленты</a></li>
-                <li><a href="#">Анархия</a></li>
-                <li><a href="#">Моя лента с очень</a></li>
-                <li><a href="#">длинным названием</a></li>
+                <li>
+                    <a href="#">
+                        <span>Все мои ленты</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Анархия</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Моя лента с очень длинным названием</span><i></i><b></b>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="nav">
             <strong class="nav__title">ПОДБОРКИ</strong>
             <ul>
-                <li><a href="#">Отчет руководству</a></li>
-                <li><a href="#">К пресс-конференции</a></li>
+                <li>
+                    <a href="#">
+                        <span>Отчет руководству</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>К пресс-конференции</span><i></i><b></b>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="nav">
             <strong class="nav__title">Настройки</strong>
             <ul>
-                <li><a href="#">Профиль</a></li>
-                <li><a href="#">Настройка уведомлений</a></li>
-                <li><a href="#">Помощь</a></li>
-                <li><a href="#">Обратная связь</a></li>
-                <li><a href="#">Выйти</a></li>
+                <li>
+                    <a href="#">
+                        <span>Профиль</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Настройка уведомлений</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Помощь</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Обратная связь</span><i></i><b></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Выйти</span><i></i><b></b>
+                    </a>
+                </li>
             </ul>
         </div>
     </aside>
     <section class="l-col-left">
-        
+        <div class="toolbar">
+            <div class="search">
+                <input type="text" placeholder="Поиск…">
+                <input type="submit">
+                <button>
+                    <i></i>
+                </button>
+            </div>
+            <div class="options">
+                <div class="lightning">
+                    <button class="btn-opt"><i></i></button>
+                    <span class="tooltip">Показать только молнии</span>
+                </div>
+                <div class="view">
+                    <button class="btn-opt js-view-type">
+                        <i class="icon icon_sort1"></i>
+                        <i class="view__icon"></i>
+                    </button>
+                    <ul class="drop-list js-drop-down">
+                        <li><i class="icon icon_sort1"></i>Комфортный вид</li>
+                        <li><i class="icon icon_sort2"></i>Заголовок + лид</li>
+                        <li><i class="icon icon_sort3"></i>Только заголовок</li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <div class="news-top">
+            <span class="check">
+                <input type="checkbox">
+                <span><i></i></span>
+            </span>
+            <span class="news-top__date">Сегодня, 15 февраля</span>
+        </div>
+        <ul class="news">
+            <li class="is-selected">
+                <span class="check">
+                    <input type="checkbox">
+                    <span class="is-checked"><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li class="is-important">
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li class="is-read">
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>15:25  Политика, Моя супер лента</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+            <li>
+                <span class="check">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                </span>
+                <div class="news__cont">
+                    <h2 class="news__title">
+                        <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                    </h2>
+                    <span class="news__meta"><span class="news__date">15:28</span>  Политика</span>
+                </div>
+            </li>
+        </ul>
     </section>
     <section class="l-col-right">
         
     </section>
 </div>
 </body>
-</html> 
+</html>  

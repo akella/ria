@@ -50,7 +50,7 @@ body{
     color: #474747;
     @include r;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 a{
     color:#00919e;
@@ -66,7 +66,7 @@ a{
     @extend %height;
     @extend %clr;
 }  
-.sidebar,
+.sidebar, 
 .l-col-left,
 .l-col-right {
     position: absolute;
@@ -78,12 +78,13 @@ a{
 .sidebar {
     padding: 20px 10px 0;
     width: 210px;
-    z-index: 2;
+    z-index: 3;
     background: #2f373d;
     overflow: auto;
 }
 .l-col-left {
     left: 0;
+    z-index: 2;
     width: 52%;
     padding-left: 210px;
     border-right: 1px solid #cfcfcf;
@@ -113,26 +114,63 @@ a{
     padding: 0 10px;
     border-top: 1px solid #474e53;
     li {
+        position: relative;
         height: 24px;
         line-height: 24px;
     }
     .is-active {
         margin: 0 -19px;
-        padding: 0 19px;
         background: #474e53;
         a {
+            padding: 0 19px;
             @include b;
             color: #fff;
+            
         }
     }
+    .is-new {
+        &:before {
+            content: "";
+            position: absolute;
+            left: -14px;
+            top: 50%;
+            margin-top: -3px;
+            width: 6px;
+            height: 6px;
+            background: #f80;
+            @include border-radius(50%);
+        }
+    }
+    .is-media {
+        i {@include sized-sprite($icons, is-media);}
+    }
+    .is-rate {
+        i {@include sized-sprite($icons, is-rate);}
+    }
     a {
+        display: block;
         font-size: 14px;
         color: #edeef0;
         text-decoration: none;
     }
+    span {
+        display: inline-block;
+        line-height: 1;
+    }
+    i {
+        display: inline-block;
+        margin-left: 5px;
+    }
+    b {
+        float: right;
+        font-size: 12px;
+        color: #858f97;
+        @include b;
+    }
 }
 .nav__title {
     display: block;
+    float: none;
     margin: 17px 0 11px;
     @include b;
     font-size: 10px; 
@@ -140,6 +178,250 @@ a{
     text-transform: uppercase;
 }
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
+
+.toolbar {
+    padding: 10px;
+    @extend %clr;
+}
+.search {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    width: 66%;
+    input[type="submit"] {
+        display: none;
+    }
+    input[type="text"] {
+        padding: 0 30px 0 10px;
+        height: 30px;
+        width: 100%;
+        border: 1px  solid #ccc;
+        @include box-sizing(border-box); 
+        @include border-radius(2px);
+    }
+    button {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        background: none;
+        width: 26px;
+        height: 28px;
+        text-align: center;
+        i { 
+            display: inline-block;
+            vertical-align: middle;
+            @include sized-sprite($icons, drop);
+        }
+    }
+}
+.lightning {
+    position: relative;
+    float: left;
+    &:hover {
+        .tooltip {
+            @include opacity(1);
+        }
+    }
+    .btn-opt {
+        &:hover {
+            i {
+                position: relative;
+                top: -1px;
+                @include sized-sprite($icons, lightning-h);
+            }
+        }
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            @include sized-sprite($icons, lightning);
+        }
+    } 
+    .tooltip {
+        position: absolute;
+        left: 50%;
+        margin-left: -75px;
+        top: 38px;
+        width: 150px; 
+    }
+}
+.view { 
+    position: relative;
+    float: left;
+    margin-left: 10px; 
+    &:hover {
+        .view__icon {
+            @include sized-sprite($icons, drop-h);
+        }
+        button {
+            .icon_sort1 {@include sized-sprite($icons, sort1-h);}
+            .icon_sort2 {@include sized-sprite($icons, sort2-h);}
+            .icon_sort3 {@include sized-sprite($icons, sort3-h);}
+        }
+        
+    }
+    i {
+        vertical-align: middle;
+    }
+    .icon {
+        position: relative;
+        top: -2px;
+    }
+    .drop-list {
+        left: 0;
+        top: 32px;
+        li {
+            &:hover {
+                .icon_sort1 {@include sized-sprite($icons, sort1-h);}
+                .icon_sort2 {@include sized-sprite($icons, sort2-h);}
+                .icon_sort3 {@include sized-sprite($icons, sort3-h);}
+            }
+        }
+        
+    }
+    .is-active {
+        border: 1px solid #a3aaac;
+        @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
+    }
+}
+.view__icon {
+    display: inline-block;
+    
+    @include sized-sprite($icons, drop);
+}
+
+//icons
+.icon {display: inline-block;}
+.icon_sort1 {
+    @include sized-sprite($icons, sort1);
+    &:hover {
+        @include sized-sprite($icons, sort1-h);
+    }
+}
+.icon_sort2 {
+    @include sized-sprite($icons, sort2);
+    &:hover {
+        @include sized-sprite($icons, sort2-h);
+    }
+}
+.icon_sort3 {
+    @include sized-sprite($icons, sort3);
+    &:hover {
+        @include sized-sprite($icons, sort3-h);
+    }
+}
+// buttons
+.btn-opt { 
+    display: block;
+    width: 50px;
+    height: 30px;
+    border: 1px solid #c3ccce;
+    @include border-radius(2px);
+    background: #ebebeb;
+    @include box-sizing(border-box); 
+    @include transition(all .2s ease-in-out);
+    @include background-image(linear-gradient(bottom, #e6eaed 0%, #f5f7fa 100%));
+    &:hover {
+        border: 1px solid #a3aaac;
+        @include box-shadow(0 1px 2px rgba(0,0,0,.15));
+    }
+    &:active {
+        @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
+    }
+}
+
+// fade in message
+.tooltip {
+    @include opacity(0);
+    position: absolute;
+    padding: 8px 10px;
+    @include b;
+    color: #edeef0;
+    font-size: 12px;
+    background: #2f373d;
+    background: rgba(47,55,61,.8);
+    @include border-radius(2px);
+    @include box-sizing(border-box);
+    @include transition(all .2s ease-in-out);
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -6px;
+        margin-left: -6px; 
+        @include opacity(.8);
+        @include sized-sprite($icons, arr1);
+    }
+}
+
+// dropdown list
+.drop-list {
+    display: none;
+    position: absolute;
+    width: 180px;
+    background: #fff;
+    border: 1px solid #b9b9b9;
+    @include border-radius(2px);
+    @include box-sizing(border-box);
+    @include box-shadow(0 1px 3px rgba(0,0,0,.3));
+    li {
+        padding: 10px 5px 9px 9px;
+        color: #666;
+        height: 40px;
+        cursor: pointer;
+        font-size: 14px;
+        border-top: 1px solid #b9b9b9;
+        @include user-select;
+        @include box-sizing(border-box);
+        &:first-child {
+            border-top: 0;
+        }
+        &:hover {
+            color: #000;
+            @include b;
+        }
+    }
+    .icon {
+        margin-right: 17px;
+    }
+}
+
+// form's elements
+.check {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    input, span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        @include box-sizing(border-box);
+    } 
+    span {
+        background: #fff;
+        border: 1px solid #ccc;
+        @include border-radius(2px);
+    }
+    input {
+        @include opacity(0);
+        z-index: 2;
+    }
+    i {
+        display: none;
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        @include sized-sprite($icons, check);
+    }
+    .is-checked {
+        border-color: #4094d4;
+        i {
+            display: block;
+        }
+    }
+}
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {

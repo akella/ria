@@ -1,1 +1,73 @@
 @import "base";
+// news
+.news-top {
+    padding: 4px 10px;
+    background: #f3f3f3;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    
+    span, .check {
+        vertical-align: middle;
+    }
+}
+.news-top__date {
+    color: #404040;
+    font-size: 10px;
+    @include b;
+    text-transform: uppercase;
+}
+.news {
+    li {
+        padding: 17px 5px 17px 10px;
+        @extend %clr;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .check {
+        float: left;
+        margin-right: 16px;
+    }
+    .is-important {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            @include sized-sprite($icons, lightning2);
+        }
+        a {
+            color: #f15c30;
+        }
+    }
+    .is-selected {
+        background: #fffef0;
+    }
+    .is-read {
+        color: #999;
+        a {
+            color: #999;
+        }
+    }
+}
+.news__cont {
+    overflow: hidden;
+}
+.news__title {
+    position: relative;
+    top: -7px;
+    line-height: .9;
+    margin-bottom: -5px;
+    a {
+        color: #00659b;
+        @include b;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+.news__meta {
+    color: #999;
+    font-size: 12px;
+}
+.news__date {
+    @include b;
+}
