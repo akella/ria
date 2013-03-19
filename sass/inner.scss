@@ -49,6 +49,15 @@
         }
     }
 }
+.news_headers-only {
+    .news__title {
+        display: inline;
+    }
+    .news__meta {
+        position: relative;
+        top: -2px;
+    }
+}
 .news__cont {
     overflow: hidden;
     color: #333;

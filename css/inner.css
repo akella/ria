@@ -21,6 +21,9 @@
 .news .is-read { color: #999; }
 .news .is-read a { color: #999; }
 
+.news_headers-only .news__title { display: inline; }
+.news_headers-only .news__meta { position: relative; top: -2px; }
+
 .news__cont { overflow: hidden; color: #333; font-size: 12px; }
 .news__cont p { margin-bottom: 5px; }
 
