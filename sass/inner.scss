@@ -3,7 +3,6 @@
 .news-top {
     padding: 4px 10px;
     background: #f3f3f3;
-    border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
     
     span, .check {
@@ -17,6 +16,7 @@
     text-transform: uppercase;
 }
 .news {
+    border-right: 1px solid #e7e7e7;
     li {
         padding: 17px 5px 17px 10px;
         @extend %clr;
@@ -70,4 +70,121 @@
 }
 .news__date {
     @include b;
+}
+
+// Baron scroller styles
+.scroll-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 90%;
+}
+.scroll {
+    height: 100%;
+    overflow-y: scroll;
+}
+.scroll__container {
+    overflow: hidden;
+    padding-right: 15px;
+}
+.scroll__bar {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    span {
+        position: absolute;
+        z-index: 1;
+        width: 6px;
+        display: block;
+        min-height: 50px;
+        border-radius: 3px;
+        background: #2f363c;
+        @include opacity(.3);
+        @include transition(width .2s linear);
+    }
+}
+
+.l-col-right {
+    .scroll__container {
+        overflow: hidden;
+        padding: 0 30px;
+    }
+    .scroll__bar {
+        right: 18px;
+    }
+}
+
+.main {
+    padding: 10px 0;
+    background: #f2f2f2;
+}
+.main__header {
+    color: #000;
+    span {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+}
+.main__title {
+    margin-bottom: 25px;
+    @include b;
+    font-size: 30px;
+}
+.info-item {
+    margin-bottom: 30px;
+    border: 1px solid #c0c2c4;
+    @include box-sizing(border-box);
+    background: #fff;
+    overflow: hidden;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+.info-item__title {
+    margin: 0 10px 15px;
+    padding: 12px 0;
+    @extend %clr;
+    @include b;
+    border-bottom: 1px solid #e7e7e7;
+    span {
+        float: left;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+    a {
+        float: right;
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+.info-item__cont {
+    padding: 0 20px;
+}
+.trand {
+    padding-top: 12px;
+    li {
+        margin-bottom: 25px;
+    }
+}
+.trand__title {
+    display: block;
+    margin-bottom: 7px;
+    color: #404040;
+    font-size: 14px;
+}
+.trand__rate {
+    position: relative;
+    display: block;
+    height: 3px;
+    background: #f2f2f2;
+    span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 3px;
+        background: #00659b;
+    }
 }
