@@ -18,7 +18,7 @@
 .sidebar .scroller__container { padding: 0 11px; }
 
 .l-col-left { left: 0; z-index: 2; width: 52%; padding-left: 210px; border-right: 1px solid #cfcfcf; }
-.l-col-left .scroller__container { padding: 0 16px 0 0; }
+.l-col-left .scroller__container { padding: 0 17px 0 0; }
 
 .l-col-right { right: 0; width: 48%; background: #f2f2f2; }
 

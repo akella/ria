@@ -39,7 +39,7 @@
 
 .main-head__title { margin-bottom: 25px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; font-size: 30px; }
 
-.main { background: #f2f2f2; }
+.main { height: 88%; background: #f2f2f2; }
 .main .scroller__container { padding: 0 30px; }
 .main .scroller__bar { right: 13px; }
 
