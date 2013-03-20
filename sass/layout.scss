@@ -21,6 +21,10 @@
     width: 210px;
     z-index: 3;
     background: #2f373d;
+    @include respond-to(wide) {
+        padding: 14px 0;
+        width: 50px;
+    }
     .scroller__bar {
         right: 4px;
         span {
@@ -37,6 +41,9 @@
     width: 52%;
     padding-left: 210px;
     border-right: 1px solid #cfcfcf;
+    @include respond-to(wide) {
+        padding-left: 50px;
+    }
     .scroller__container {
         padding: 0 17px 0 0;
     }

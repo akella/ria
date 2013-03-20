@@ -34,14 +34,17 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 
 // responsive
 $break-small: 500px;
-$break-large: 1180px;
+$break-wide: 1024px;
 @mixin respond-to($media) {
   @if $media == pda {
     @media only screen and (max-width: $break-small) { @content; }
   }
   @else if $media == wide {
-    @media only screen and (min-width: $break-large) { @content; }
+    @media only screen and (max-width: $break-wide) { @content; }
   }
+  // @else if $media == big {
+  //   @media only screen and (min-width: $break-large) { @content; }
+  // }
 }
 // retina bg
 @mixin retina{
