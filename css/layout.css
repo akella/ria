@@ -8,7 +8,7 @@
 
 .l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-.l-layout { max-width: 1280px; margin: 0 auto; position: relative; }
+.l-layout { position: relative; }
 
 .sidebar, .l-col-left, .l-col-right { position: absolute; top: 0; bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
