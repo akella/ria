@@ -58,57 +58,7 @@ a{
         text-decoration:none
     }
 }
-// layout
-.l-layout {
-    max-width: 1280px;
-    margin: 0 auto;
-    position: relative;
-    @extend %height;
-    @extend %clr;
-}  
-.sidebar, 
-.l-col-left,
-.l-col-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    @extend %height; 
-    @include box-sizing(border-box);
-}
-.sidebar {
-    //padding: 20px 0;
-    padding: 20px 10px 0;
-    width: 210px;
-    z-index: 3;
-    background: #2f373d;
-    // .scroll__container {
-    //     padding: 0 10px;
-    // }
-    // .scroll__bar {
-    //     span {
-    //         background: #fff;
-    //         @include opacity(.9);
-    //     }
-    // }
-}
-.l-col-left {
-    left: 0;
-    z-index: 2;
-    width: 52%;
-    padding-left: 210px;
-    border-right: 1px solid #cfcfcf;
-}
-.l-col-right {
-    right: 0;
-    width: 48%;
-    background: #f2f2f2;
-}
-.wrapper {
-    overflow: hidden;
-}
-.wrap {
-    @extend %clr;
-}
+
 /* ------------------------------------ //END Main styles --------------------------------------- */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */

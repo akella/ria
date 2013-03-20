@@ -1,0 +1,103 @@
+@import "base";
+// layout
+.l-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    @extend %height;
+    @extend %clr;
+}  
+.sidebar, 
+.l-col-left,
+.l-col-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    @extend %height; 
+    @include box-sizing(border-box);
+}
+.sidebar {
+    padding: 20px 0;
+    width: 210px;
+    z-index: 3;
+    background: #2f373d;
+    .scroller__bar {
+        right: 4px;
+        span {
+            background: #fff;
+        }
+    }
+    .scroller__container {
+        padding: 0 11px;
+    }
+}
+.l-col-left {
+    left: 0;
+    z-index: 2;
+    width: 52%;
+    padding-left: 210px;
+    border-right: 1px solid #cfcfcf;
+    .scroller__container {
+        padding: 0 16px 0 0;
+    }
+}
+.l-col-right {
+    right: 0;
+    width: 48%;
+    background: #f2f2f2;
+}
+.wrapper {
+    overflow: hidden;
+}
+.wrap {
+    @extend %clr;
+}
+
+
+// Baron scroller styles
+.scroller-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 90%;
+}
+.scroller {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.scroller::-webkit-scrollbar {
+    width: 0;
+}
+.scroller__bar {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    bottom: 10px;
+    right: 5px;
+    width: 6px;
+    span {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        width: 6px;
+        min-height: 50px;
+        @include border-radius(5px);
+        background: #2f363c;
+        @include opacity(.3);
+        @include transition(width .2s linear);
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+.baron  {
+    .scroller__bar {
+        span {
+            display: block;
+        }
+    }
+}
+.scroller__container {
+    overflow: hidden;
+}
+// END Baron scroller styles

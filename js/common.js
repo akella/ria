@@ -12,26 +12,18 @@ $(document).ready(function() {
             list.slideDown("fast");
         }
     });
-// ------------------- Custom scroll ------------------- //
-    baron($('.js-scroll-1'), {
-        scroller: '.scroll',
-        container: '.scroll__container',
-        bar: '.scroll__bar span',
-        barOnCls: 'baron',
-        header: '.header__title',
-        hFixCls: 'header__title_state_fixed',
-        hBeforeFixCls: 'header__title_position_top',
-        hAfterFixCls: 'header__title_position_bottom'
-    });
-    baron($('.js-scroll-3'), {
-        scroller: '.scroll',
-        container: '.scroll__container',
-        bar: '.scroll__bar span',
-        barOnCls: 'baron',
-        header: '.header__title',
-        hFixCls: 'header__title_state_fixed',
-        hBeforeFixCls: 'header__title_position_top',
-        hAfterFixCls: 'header__title_position_bottom'
-    });
+
+    
 });
 
+// ------------------- Custom scroll ------------------- //
+window.onload = function() {
+    baron($('.js-scroller-1'), {
+        scroller: '.scroller',
+        container: '.scroller__container',
+        bar: '.scroller__bar span',
+        barOnCls: 'baron'
+    });
+    $('.js-scroller-2').baron({barOnCls: 'baron'});
+    $('.js-scroller-3').baron({barOnCls: 'baron'});
+};
