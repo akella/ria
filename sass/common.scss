@@ -160,9 +160,12 @@ a{
         padding: 0 30px 0 10px;
         height: 30px;
         width: 100%;
+        @include r;
+        font-size: 16px;
         border: 1px  solid #ccc;
         @include box-sizing(border-box); 
         @include border-radius(2px);
+        @include placeholder(#999, normal 14px Conv_regular);
     }
     button {
         position: absolute;
@@ -177,6 +180,47 @@ a{
             vertical-align: middle;
             @include sized-sprite($icons, drop);
         }
+    }
+}
+.search-list {
+    display: none;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    z-index: 1000;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px  solid #b9b9b9;
+    @include box-sizing(border-box); 
+    @include border-radius(2px);
+    @include box-shadow(0 1px 3px rgba(0,0,0,.3));
+    background: #fff;
+    li {
+        padding: 9px 0 10px;
+        @extend %clr;
+        border-top: 1px solid #dcdcdc;
+        &:first-child {
+            border-top: #000;
+        }
+    }
+    a {
+        color: #00659b;
+        font-size: 14px;
+        text-decoration: none;
+    }
+}
+.search-list__img {
+    float: left;
+    margin-right: 8px;
+    width: 32px;
+    text-align: center;
+}
+.search-list__text {
+    overflow: hidden;
+    span {
+        display: block;
+        color: #999;
+        font-size: 12px;
     }
 }
 .lightning {
@@ -274,6 +318,11 @@ a{
         @include sized-sprite($icons, sort3-h);
     }
 }
+.icon_glass {@include sized-sprite($icons, glass);}
+.icon_point {@include sized-sprite($icons, point);}
+.icon_all {@include sized-sprite($icons, all);}
+
+
 // buttons
 .btn-opt { 
     display: block;

@@ -116,18 +116,18 @@ $break-wide: 1024px;
 }
 
 // placeholder color
-@mixin placeholder($color, $font-family) {
+@mixin placeholder($color, $font) {
   &.placeholder {
     color: $color;
-    font-family: $font-family;
+    font: $font;
   }
   &:-moz-placeholder {
     color: $color;
-    font-family: $font-family;
+    font: $font;
   }
   &::-webkit-input-placeholder {
     color: $color;
-    font-family: $font-family;
+    font: $font;
   }
 }
 
