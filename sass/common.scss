@@ -66,8 +66,18 @@ a{
     display: block;
     margin: 20px auto 0;
     @include sized-sprite($icons, logo);
-    @include respond-to(wide) {
-        @include sized-sprite($icons, logo2);
+}
+.logo-mini {
+    display: block;
+    margin: 0 auto 31px;
+    @include sized-sprite($icons, logo2);
+}
+.show-nav {
+    display: block;
+    margin: 0 auto;
+    @include sized-sprite($icons, nav);
+    &:hover {
+        @include sized-sprite($icons, nav-h);
     }
 }
 // sidebar nav
@@ -75,9 +85,6 @@ a{
     margin: 14px 0;
     padding: 0 10px;
     border-top: 1px solid #474e53;
-    @include respond-to(wide) {
-        display: none; 
-    }
     li {
         position: relative;
         height: 24px;

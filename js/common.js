@@ -13,10 +13,28 @@ $(document).ready(function() {
         }
     });
 
+// ------------------- View type ------------------- //
+    $(".js-show-nav").click(function(){
+        var sidebar = $(this).parent().parent();
+        if($(this).hasClass("js-active")) {
+            $(this).removeClass("js-active");
+            $(".overlay").fadeOut();
+            sidebar.animate({
+                left: -210
+            }, 100);
+        }
+        else {
+            $(this).addClass("js-active");
+            $(".overlay").fadeIn();
+            sidebar.animate({
+                left: 0
+            }, 100);
+        }
+    });
     
 });
 
-// ------------------- Custom scroll ------------------- //
+// ------------------- Buron scroller ------------------- //
 window.onload = function() {
     baron($('.js-scroller-1'), {
         scroller: '.scroller',

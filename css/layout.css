@@ -4,15 +4,20 @@
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-.l-sidebar, .l-col-left, .l-col-right { position: absolute; top: 0; bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.l-sidebar, .l-col-left, .l-col-right { position: absolute; top: 0; bottom: 0; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.l-sidebar { width: 210px; z-index: 3; background: #2f373d; }
-@media only screen and (max-width: 1024px) { .l-sidebar { padding: 14px 0; width: 50px; } }
+.l-sidebar { width: 210px; z-index: 2000; background: #2f373d; }
+@media only screen and (max-width: 1024px) { .l-sidebar { left: -210px; } }
 .l-sidebar .scroller__bar { right: 4px; }
 .l-sidebar .scroller__bar span { background: #fff; }
 .l-sidebar .scroller__container { padding: 0 11px; }
+
+.sidebar-mini { position: absolute; top: 0; left: -50px; bottom: 0; z-index: 2000; padding-top: 15px; width: 50px; background: #2f373d; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+@media only screen and (max-width: 1024px) { .sidebar-mini { left: 210px; } }
+.sidebar-mini .is-new { position: relative; }
+.sidebar-mini .is-new:after { content: ""; position: absolute; right: -5px; top: -5px; width: 10px; height: 10px; background: #f80; border: 2px solid #2f373d; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
 
 .l-col-left { left: 0; z-index: 2; width: 52%; padding-left: 210px; border-right: 1px solid #cfcfcf; }
 @media only screen and (max-width: 1024px) { .l-col-left { padding-left: 50px; } }
@@ -21,6 +26,8 @@
 .l-col-left .scroller__container { padding: 0 17px 0 0; }
 
 .l-col-right { right: 0; width: 48%; background: #f2f2f2; }
+
+.overlay { display: none; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background: #000; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
 
 .wrapper { overflow: hidden; }
 

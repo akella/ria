@@ -1,27 +1,20 @@
 @import "base";
 // layout
-.l-layout {
-    //position: relative;
-    //@extend %height;
-    @extend %clr;
-}  
 .l-sidebar, 
 .l-col-left,
 .l-col-right {
     position: absolute;
     top: 0;
     bottom: 0;
-    //@extend %height; 
+    @include transition(all .5s ease-in-out);
     @include box-sizing(border-box);
 }
 .l-sidebar {
-    //padding: 20px 0;
     width: 210px;
-    z-index: 3;
+    z-index: 2000;
     background: #2f373d;
     @include respond-to(wide) {
-        padding: 14px 0;
-        width: 50px;
+        left: -210px;
     }
     .scroller__bar {
         right: 4px;
@@ -33,6 +26,34 @@
         padding: 0 11px;
     }
 }
+.sidebar-mini {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    bottom: 0;
+    z-index: 2000;
+    padding-top: 15px;
+    width: 50px;
+    background: #2f373d;
+    @include transition(all .5s ease-in-out);
+    @include respond-to(wide) {
+        left: 210px;
+    }
+    .is-new {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            width: 10px;
+            height: 10px;
+            background: #f80;
+            border: 2px solid #2f373d;
+            @include border-radius(50%);
+        }
+    }
+}
 .l-col-left {
     left: 0;
     z-index: 2;
@@ -42,7 +63,7 @@
     @include respond-to(wide) {
         padding-left: 50px;
     }
-    .scroller-wrap {
+    .scroller-wrap { 
         position: absolute;
         top: 78px;
         bottom: 0;
@@ -62,6 +83,17 @@
     right: 0;
     width: 48%;
     background: #f2f2f2;
+}
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    @include opacity(.5);
 }
 .wrapper {
     overflow: hidden;
