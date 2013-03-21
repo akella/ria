@@ -56,6 +56,17 @@ window.onload = function() {
         bar: '.scroller__bar span',
         barOnCls: 'baron'
     });
-    $('.js-scroller-2').baron({barOnCls: 'baron'});
+    $('.js-scroller-2').baron({
+        barOnCls: 'baron',
+        header: '.js-scroller-head',
+        // CSS class for fixed headers
+        hFixCls: 'news-top__fixed',
+        // CSS class for lowest fixed header of top headers group
+        hBeforeFixCls: 'news-top__position-top',
+        // !!! Remaned from hTopFixCls
+        // CSS class for uppermost fixed header of bottom headers group
+        hAfterFixCls: 'news-top__position-bottom'
+
+    });
     $('.js-scroller-3').baron({barOnCls: 'baron'});
 };

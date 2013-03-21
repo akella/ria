@@ -70,6 +70,7 @@
         left: 210px;
         right: 0;
         height: auto;
+        border-top: 1px solid #e7e7e7;
         @include box-sizing(border-box);
         @include respond-to(wide) {
             left: 50px;

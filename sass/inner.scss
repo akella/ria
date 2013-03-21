@@ -1,13 +1,29 @@
 @import "base";
 // news
 .news-top {
-    padding: 4px 10px;
-    background: #f3f3f3;
     border-bottom: 1px solid #e7e7e7;
-    
+    div {
+        padding: 4px 10px;
+        width: 100%;
+        background: #f3f3f3;
+        border-right: 1px solid #e7e7e7;
+        @include box-sizing(border-box);
+    }
     span, .check {
         vertical-align: middle;
     }
+}
+.news-top__fixed {
+    right: 17px;
+    left: 0;
+}
+.news-top__position-top {
+    position: absolute;
+    z-index: 2;
+    top: 0 !important;
+}
+.news-top__position-bottom {
+    position: static;
 }
 .news-top__date {
     color: #404040;

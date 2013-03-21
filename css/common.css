@@ -56,6 +56,7 @@ a:hover { text-decoration: none; }
 .nav li { position: relative; height: 24px; line-height: 24px; }
 .nav .is-active { margin: 0 -19px; background: #474e53; }
 .nav .is-active a { padding: 0 19px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; color: #fff; }
+.nav .is-new.is-active:before { left: 5px; }
 .nav .is-new:before { content: ""; position: absolute; left: -14px; top: 50%; margin-top: -3px; width: 6px; height: 6px; background: #f80; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
 .nav .is-media i { background: url('../i/icons-sb7a2624609.png') 0 -469px no-repeat; width: 12px; height: 10px; }
 .nav .is-rate i { background: url('../i/icons-sb7a2624609.png') 0 -715px no-repeat; width: 12px; height: 10px; }

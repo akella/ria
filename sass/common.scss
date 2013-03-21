@@ -110,6 +110,11 @@ a{
             
         }
     }
+    .is-new.is-active {
+        &:before {
+            left: 5px
+        }
+    }
     .is-new {
         &:before {
             content: "";

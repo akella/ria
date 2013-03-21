@@ -21,7 +21,7 @@
 
 .l-col-left { left: 0; z-index: 2; width: 52%; padding-left: 210px; border-right: 1px solid #cfcfcf; }
 @media only screen and (max-width: 1024px) { .l-col-left { padding-left: 50px; } }
-.l-col-left .scroller-wrap { position: absolute; top: 78px; bottom: 0; left: 210px; right: 0; height: auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.l-col-left .scroller-wrap { position: absolute; top: 78px; bottom: 0; left: 210px; right: 0; height: auto; border-top: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 @media only screen and (max-width: 1024px) { .l-col-left .scroller-wrap { left: 50px; } }
 .l-col-left .scroller__container { padding: 0 17px 0 0; }
 
