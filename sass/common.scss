@@ -46,11 +46,21 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-   // min-width: 1000px;
+    position: relative;
+    min-width: 1024px;
+    width: 100%;
     color: #474747;
     @include r;
     font-size: 16px;
     line-height: 1.2;
+}
+.is-withsidebar {
+    .l-sidebar {
+        left: 0 !important;
+    }
+    .overlay {
+        display: none !important
+    }
 }
 a{
     color:#00919e;

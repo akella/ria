@@ -35,7 +35,10 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
-body { color: #474747; font-weight: normal; font-style: normal; font-family: 'Conv_regular', sans-serif; font-size: 16px; line-height: 1.2; }
+body { position: relative; min-width: 1024px; width: 100%; color: #474747; font-weight: normal; font-style: normal; font-family: 'Conv_regular', sans-serif; font-size: 16px; line-height: 1.2; }
+
+.is-withsidebar .l-sidebar { left: 0 !important; }
+.is-withsidebar .overlay { display: none !important; }
 
 a { color: #00919e; }
 a:hover { text-decoration: none; }

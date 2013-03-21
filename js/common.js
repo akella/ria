@@ -32,6 +32,20 @@ $(document).ready(function() {
         }
     });
     
+    function adaptive() {
+        var width = $(window).width();
+        if (width > 1024) {
+            $("body").addClass("is-withsidebar");
+        }
+        else {
+            $("body").removeClass("is-withsidebar");
+        }
+    }
+    adaptive();
+    $(window).resize(function(){
+        adaptive();
+    });
+
 });
 
 // ------------------- Buron scroller ------------------- //
