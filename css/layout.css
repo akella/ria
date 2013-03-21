@@ -4,22 +4,20 @@
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.l-layout, .sidebar, .l-col-left, .l-col-right { min-height: 100%; height: auto !important; height: 100%; }
-
 .l-layout:after, .wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-.l-layout { position: relative; }
+.l-sidebar, .l-col-left, .l-col-right { position: absolute; top: 0; bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.sidebar, .l-col-left, .l-col-right { position: absolute; top: 0; bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-.sidebar { padding: 20px 0; width: 210px; z-index: 3; background: #2f373d; }
-@media only screen and (max-width: 1024px) { .sidebar { padding: 14px 0; width: 50px; } }
-.sidebar .scroller__bar { right: 4px; }
-.sidebar .scroller__bar span { background: #fff; }
-.sidebar .scroller__container { padding: 0 11px; }
+.l-sidebar { width: 210px; z-index: 3; background: #2f373d; }
+@media only screen and (max-width: 1024px) { .l-sidebar { padding: 14px 0; width: 50px; } }
+.l-sidebar .scroller__bar { right: 4px; }
+.l-sidebar .scroller__bar span { background: #fff; }
+.l-sidebar .scroller__container { padding: 0 11px; }
 
 .l-col-left { left: 0; z-index: 2; width: 52%; padding-left: 210px; border-right: 1px solid #cfcfcf; }
 @media only screen and (max-width: 1024px) { .l-col-left { padding-left: 50px; } }
+.l-col-left .scroller-wrap { position: absolute; top: 78px; bottom: 0; left: 210px; right: 0; height: auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (max-width: 1024px) { .l-col-left .scroller-wrap { left: 50px; } }
 .l-col-left .scroller__container { padding: 0 17px 0 0; }
 
 .l-col-right { right: 0; width: 48%; background: #f2f2f2; }

@@ -88,7 +88,7 @@
 
 .main-head {
     position: relative;
-    padding: 30px 30px 0;
+    margin-top: 30px;
     color: #000;
     @extend %clr;
     span {
@@ -104,7 +104,6 @@
     font-size: 30px;
 }
 .main {
-    height: 88%;
     background: #f2f2f2;
     .scroller__container {
         padding: 0 30px;    

@@ -42,7 +42,7 @@ a:hover { text-decoration: none; }
 
 /* ------------------------------------ //END Main styles --------------------------------------- */
 /* ------------------------------------- Independent blocks -------------------------------------- */
-.logo { display: block; margin: 0 auto; background: url('../i/icons-s00e7286510.png') 0 0 no-repeat; width: 161px; height: 20px; }
+.logo { display: block; margin: 20px auto 0; background: url('../i/icons-s00e7286510.png') 0 0 no-repeat; width: 161px; height: 20px; }
 @media only screen and (max-width: 1024px) { .logo { background: url('../i/icons-s00e7286510.png') 0 -30px no-repeat; width: 25px; height: 21px; } }
 
 .nav { margin: 14px 0; padding: 0 10px; border-top: 1px solid #474e53; }

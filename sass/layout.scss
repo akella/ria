@@ -1,21 +1,21 @@
 @import "base";
 // layout
 .l-layout {
-    position: relative;
-    @extend %height;
+    //position: relative;
+    //@extend %height;
     @extend %clr;
 }  
-.sidebar, 
+.l-sidebar, 
 .l-col-left,
 .l-col-right {
     position: absolute;
     top: 0;
     bottom: 0;
-    @extend %height; 
+    //@extend %height; 
     @include box-sizing(border-box);
 }
-.sidebar {
-    padding: 20px 0;
+.l-sidebar {
+    //padding: 20px 0;
     width: 210px;
     z-index: 3;
     background: #2f373d;
@@ -41,6 +41,18 @@
     border-right: 1px solid #cfcfcf;
     @include respond-to(wide) {
         padding-left: 50px;
+    }
+    .scroller-wrap {
+        position: absolute;
+        top: 78px;
+        bottom: 0;
+        left: 210px;
+        right: 0;
+        height: auto;
+        @include box-sizing(border-box);
+        @include respond-to(wide) {
+            left: 50px;
+        }
     }
     .scroller__container {
         padding: 0 17px 0 0;

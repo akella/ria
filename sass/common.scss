@@ -64,7 +64,7 @@ a{
 /* ------------------------------------- Independent blocks -------------------------------------- */
 .logo {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 0;
     @include sized-sprite($icons, logo);
     @include respond-to(wide) {
         @include sized-sprite($icons, logo2);
