@@ -1,3 +1,4 @@
+@charset "IBM866";
 @font-face { font-family: 'Conv_regular'; src: url("../files/fonts/regular.eot"); src: local("☺"), url("../files/fonts/regular.woff") format("woff"), url("../files/fonts/regular.ttf") format("truetype"), url("../files/fonts/regular.svg") format("svg"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: 'Conv_bold'; src: url("../files/fonts/bold.eot"); src: local("☺"), url("../files/fonts/bold.woff") format("woff"), url("../files/fonts/bold.ttf") format("truetype"), url("../files/fonts/bold.svg") format("svg"); font-weight: normal; font-style: normal; }

@@ -13,7 +13,7 @@ $(document).ready(function() {
         }
     });
 
-// ------------------- View type ------------------- //
+// ------------------- Show nav ------------------- //
     $(".js-show-nav").click(function(){
         var sidebar = $(this).parent().parent();
         if($(this).hasClass("js-active")) {
@@ -63,9 +63,66 @@ $(document).ready(function() {
             $(".l-wall-news").addClass("is-active").afterTransition(function () {
                 $('.js-scroller-2').baron({barOnCls: 'baron'});
                 $('.js-scroller-3').baron({barOnCls: 'baron'});
-            });5
+            });
         }
     });
+
+// ------------------- Check news ------------------- //
+    function select_news() {
+        $(".news li a").click(function(){
+            var news = $(this).parent().parent().parent();
+            var check = $(this).parent().parent().parent().children(".check").children("span");
+            var input = $(this).parent().parent().parent().children(".check").children("input");
+            if(news.hasClass("is-selected")) {
+                check.removeClass("is-checked");
+                input.removeAttr("checked");
+                news.removeClass("is-selected");
+            }
+            else {
+                check.addClass("is-checked");
+                input.attr("checked", "checked");
+                news.addClass("is-selected");
+            }
+
+        });
+    }
+    function checkbox() {
+        $(".news .check").click(function(){
+            var check = $(this).children("span");
+            var input = $(this).children("input");
+            var news = $(this).parent();
+            if(check.hasClass("is-checked")) {
+                check.removeClass("is-checked");
+                input.removeAttr("checked");
+                news.removeClass("is-selected");
+            }
+            else {
+                check.addClass("is-checked");
+                input.attr("checked", "checked");
+                news.addClass("is-selected");
+            }
+        });
+    }
+
+    select_news();
+    checkbox();
+
+// ------------------- Toolbar ------------------- //    
+    function toolbar() {
+        $(".news li a, .news .check").click(function(){
+            var quantity = $(".news .is-selected").length;
+            if (quantity > 0) {
+                $(".toolbar").addClass("toolbar_extend");
+            }
+            else {
+                $(".toolbar").removeClass("toolbar_extend");
+            }
+        });
+    }
+    toolbar(); 
+
+
+
 
 });
 

@@ -188,10 +188,10 @@ a{
         right: 10px;
     }
     .options {
-        display: none;
+        @include opacity(0);
     }
     .options-more {
-        display: block;
+        @include opacity(1);
     }
 }
 .search {
@@ -199,6 +199,7 @@ a{
     left: 10px;
     top: 10px;
     right: 140px;
+    @include transition(all .5s ease-in-out);
     input[type="submit"] {
         display: none;
     }
@@ -274,6 +275,7 @@ a{
     position: absolute;
     right: 10px;
     top: 10px;
+    @include transition(all .5s ease-in-out);
     .icon {
         vertical-align: middle;
     }
@@ -301,11 +303,8 @@ a{
         }
     } 
     .tooltip {
-        position: absolute;
-        left: 50%;
         margin-left: -75px;
-        top: 38px;
-        width: 150px; 
+        width: 150px;
     }
 }
 .view { 
@@ -313,6 +312,9 @@ a{
     float: left;
     margin-left: 10px; 
     &:hover {
+        .tooltip {
+            @include opacity(1);
+        }
         .view__icon {
             @include sized-sprite($icons, drop-h);
         }
@@ -322,6 +324,10 @@ a{
             .icon_sort3 {@include sized-sprite($icons, sort3-h);}
         }
         
+    }
+    .tooltip {
+        margin-left: -57px;
+        width: 115px;
     }
     i {
         vertical-align: middle;
@@ -352,38 +358,49 @@ a{
 }
 
 .options-more {
-    display: none;
+    @include opacity(0); 
     position: absolute;
     left: 10px;
     top: 10px;
-    .add-to {
-        float: left;
-        margin-right: -1px;
-        .btn-opt {
-            @include border-radius(2px 0 0 2px);
-        }
-        .drop-list {
-            .icon {
-                margin-right: 10px;
-            }
-        }
-    }
-    .download {
-        float: left;
-        margin-right: 10px;
-        .btn-opt {
-            @include border-radius(0 2px 2px 0);
+    @include transition(all .5s ease-in-out);
+}
+.add-to {
+    position: relative;
+    float: left;
+    margin-right: -1px;
+    &:hover {
+        .tooltip {
+            @include opacity(1);
         }
     }
-    .print {
-        float: left;
-        margin-right: -1px;
+    .btn-opt {
         @include border-radius(2px 0 0 2px);
     }
-    .email {
-        float: left;
+    .drop-list {
+        .icon {
+            margin-right: 10px;
+        }
+    }
+    .tooltip {
+        margin-left: -75px;
+        width: 150px;
+    }
+}
+.download {
+    float: left;
+    margin-right: 10px;
+    .btn-opt {
         @include border-radius(0 2px 2px 0);
     }
+}
+.print {
+    float: left;
+    margin-right: -1px;
+    @include border-radius(2px 0 0 2px);
+}
+.email {
+    float: left;
+    @include border-radius(0 2px 2px 0);
 }
 
 // END Toolbar 
@@ -466,10 +483,13 @@ a{
 .tooltip {
     @include opacity(0);
     position: absolute;
+    left: 50%;
+    top: 38px;
     z-index: 1000;
     padding: 8px 10px;
     @include b;
     color: #edeef0;
+    text-align: center;
     font-size: 12px;
     background: #2f373d;
     background: rgba(47,55,61,.8);
