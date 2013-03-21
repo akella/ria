@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // ------------------- View type ------------------- //
-    $(".js-view-type").click(function(){
+    $(".js-view-type, .js-add-to").click(function(){
         var list = $(this).parent().children(".js-drop-down");
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
@@ -31,7 +31,8 @@ $(document).ready(function() {
             }, 100);
         }
     });
-    
+
+// ------------------- Adaptive sidebar ------------------- //  
     function adaptive() {
         var width = $(window).width();
         if (width > 1024) {
@@ -44,6 +45,26 @@ $(document).ready(function() {
     adaptive();
     $(window).resize(function(){
         adaptive();
+    });
+
+// ------------------- View type ------------------- //
+    $(".js-show-wall").click(function(){
+        if($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+            $("body").removeClass("is-withwall");
+            $(".l-wall-news").removeClass("is-active").afterTransition(function () {
+                $('.js-scroller-2').baron({barOnCls: 'baron'});
+                $('.js-scroller-3').baron({barOnCls: 'baron'});
+            });
+        }
+        else {
+            $(this).addClass("is-active");
+            $("body").addClass("is-withwall");
+            $(".l-wall-news").addClass("is-active").afterTransition(function () {
+                $('.js-scroller-2').baron({barOnCls: 'baron'});
+                $('.js-scroller-3').baron({barOnCls: 'baron'});
+            });5
+        }
     });
 
 });
@@ -69,4 +90,69 @@ window.onload = function() {
 
     });
     $('.js-scroller-3').baron({barOnCls: 'baron'});
+    $('.js-scroller-4').baron({barOnCls: 'baron'});
 };
+
+
+
+
+// function stickyTitles(stickies) {
+
+//     this.load = function() {
+
+//               stickies.each(function(){
+                
+//                     var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
+//                         thisSticky.parent().height(thisSticky.outerHeight());
+                
+//                     jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
+
+//               });
+//         }
+            
+//         this.scroll = function() {
+        
+//               stickies.each(function(i){                
+                
+//                     var thisSticky = jQuery(this),
+//                           nextSticky = stickies.eq(i+1),
+//                           prevSticky = stickies.eq(i-1),
+//                           pos = jQuery.data(thisSticky[0], 'pos');
+            
+//                     if (pos <= jQuery(window).scrollTop()) {
+                    
+//                           thisSticky.addClass("fixed");
+                    
+//                           if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
+                        
+//                                 thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
+
+//                           }
+                    
+//                     } else {
+                    
+//                           thisSticky.removeClass("fixed");
+                    
+//                           if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
+                    
+//                                 prevSticky.removeClass("absolute").removeAttr("style");
+                    
+//                           }
+                    
+//                     }
+//             });         
+//     }
+// }
+    
+// jQuery(document).ready(function(){
+    
+//         var newStickies = new stickyTitles(jQuery(".followMeBar"));
+        
+//         newStickies.load();
+            
+//         jQuery(window).on("scroll", function() {
+
+//               newStickies.scroll();
+        
+//         });
+// });

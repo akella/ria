@@ -62,6 +62,17 @@ body{
         display: none !important
     }
 }
+.is-withwall {
+    // .l-wall-news {
+    //     right: 0;
+    // }
+    .l-layout {
+        right: 210px;
+    }
+    // .show-wall {
+    //     left: 0;
+    // }
+}
 a{
     color:#00919e;
     &:hover{
@@ -166,15 +177,28 @@ a{
 }
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
+// Toolbar 
 .toolbar {
     padding: 10px;
     @extend %clr;
 }
+.toolbar_extend {
+    .search {
+        left: 238px;
+        right: 10px;
+    }
+    .options {
+        display: none;
+    }
+    .options-more {
+        display: block;
+    }
+}
 .search {
-    position: relative;
-    float: left;
-    margin-right: 20px;
-    width: 66%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 140px;
     input[type="submit"] {
         display: none;
     }
@@ -203,11 +227,6 @@ a{
             @include sized-sprite($icons, drop);
         }
     }
-}
-.search_mod {
-    float: right;
-    margin: 0; 
-    width: 46%;
 }
 .search-list {
     display: none;
@@ -252,7 +271,9 @@ a{
 }
 
 .options {
-    float: left;
+    position: absolute;
+    right: 10px;
+    top: 10px;
     .icon {
         vertical-align: middle;
     }
@@ -310,8 +331,6 @@ a{
         top: -2px;
     }
     .drop-list {
-        left: 0;
-        top: 32px;
         li {
             &:hover {
                 .icon_sort1 {@include sized-sprite($icons, sort1-h);}
@@ -332,10 +351,42 @@ a{
     @include sized-sprite($icons, drop);
 }
 
-.add-to {
-    
+.options-more {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    .add-to {
+        float: left;
+        margin-right: -1px;
+        .btn-opt {
+            @include border-radius(2px 0 0 2px);
+        }
+        .drop-list {
+            .icon {
+                margin-right: 10px;
+            }
+        }
+    }
+    .download {
+        float: left;
+        margin-right: 10px;
+        .btn-opt {
+            @include border-radius(0 2px 2px 0);
+        }
+    }
+    .print {
+        float: left;
+        margin-right: -1px;
+        @include border-radius(2px 0 0 2px);
+    }
+    .email {
+        float: left;
+        @include border-radius(0 2px 2px 0);
+    }
 }
 
+// END Toolbar 
 
 //icons
 .icon {display: inline-block;}
@@ -360,26 +411,31 @@ a{
 .icon_glass {@include sized-sprite($icons, glass);}
 .icon_point {@include sized-sprite($icons, point);}
 .icon_all {@include sized-sprite($icons, all);}
+.icon_plus {@include sized-sprite($icons, plus);}
 .icon_star {
     @include sized-sprite($icons, star);
+    vertical-align: middle;
     &:hover {
         @include sized-sprite($icons, star-h);
     }
 }
 .icon_print {
     @include sized-sprite($icons, print);
+    vertical-align: middle;
     &:hover {
         @include sized-sprite($icons, print-h);
     }
 }
 .icon_downl {
     @include sized-sprite($icons, downl);
+    vertical-align: middle;
     &:hover {
         @include sized-sprite($icons, downl-h);
     }
 }
 .icon_email {
     @include sized-sprite($icons, email);
+    vertical-align: middle;
     &:hover {
         @include sized-sprite($icons, email-h);
     }
@@ -435,6 +491,8 @@ a{
 .drop-list {
     display: none;
     position: absolute;
+    left: 0;
+    top: 32px;
     z-index: 1000;
     width: 180px;
     background: #fff;

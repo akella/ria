@@ -1,5 +1,10 @@
 @import "base";
 // layout
+.l-wrapper {
+    overflow: hidden;
+    left: 0;
+    right: 0;
+}
 .l-layout {
     position: absolute;
     left: 210px;
@@ -8,10 +13,12 @@
         left: 50px;
     }
 }
+.l-wrapper,
 .l-layout,
 .l-sidebar, 
 .l-col-left,
-.l-col-right {
+.l-col-right,
+.l-wall-news {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -28,7 +35,7 @@
     .scroller__bar {
         right: 4px;
         span {
-            background: #fff;
+            background: #858f97;
         }
     }
     .scroller__container {
@@ -93,8 +100,29 @@
     width: 58%;
     background: #f2f2f2;
 }
+.l-wall-news {
+    right: -210px;
+    z-index: 3;
+    width: 210px;
+    background: #2f373d;
+    @include transition(translate .5s ease-in-out);
+    .scroller-wrap {
+        height: 96%;
+    }
+    .scroller__container {
+        padding-right: 16px;
+    }
+    .scroller__bar {
+        span {
+            background: #858f97;
+        }
+    }
+}
+.l-wall-news.is-active {
+    right: 0;
+}
 .overlay {
-    display: none;
+    display: none; 
     position: absolute;
     top: 0;
     right: 0;
@@ -116,7 +144,7 @@
 .scroller-wrap {
     position: relative;
     overflow: hidden;
-    height: 90%;
+    height: 100%;
 }
 .scroller {
     height: 100%;
