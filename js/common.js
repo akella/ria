@@ -109,6 +109,13 @@ $(document).ready(function() {
 
 // ------------------- Toolbar ------------------- //    
     function toolbar() {
+        var quantity = $(".news .is-selected").length;
+            if (quantity > 0) {
+                $(".toolbar").addClass("toolbar_extend");
+            }
+            else {
+                $(".toolbar").removeClass("toolbar_extend");
+            }
         $(".news li a, .news .check").click(function(){
             var quantity = $(".news .is-selected").length;
             if (quantity > 0) {
