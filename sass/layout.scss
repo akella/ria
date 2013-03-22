@@ -1,4 +1,19 @@
 @import "base";
+
+.is-withsidebar {
+    .l-sidebar {
+        left: 0 !important;
+    }
+    .overlay {
+        display: none !important
+    }
+}
+.is-withwall {
+    .l-layout {
+        right: 210px;
+    }
+}
+
 // layout
 .l-wrapper {
     overflow: hidden;
@@ -25,6 +40,8 @@
     @include transition(all .5s ease-in-out);
     @include box-sizing(border-box);
 }
+
+// Sidebar
 .l-sidebar {
     width: 210px;
     z-index: 2000;
@@ -39,7 +56,7 @@
         }
     }
     .scroller__container {
-        padding: 0 11px;
+        padding: 0 11px 0 6px;
     }
 }
 .sidebar-mini {
@@ -70,36 +87,39 @@
         }
     }
 }
+
+// Left column
 .l-col-left {
     left: 0;
     z-index: 2;
     width: 42%;
     border-right: 1px solid #cfcfcf;
-    @include respond-to(wide) {
-        
-    }
     .scroller-wrap { 
         position: absolute;
-        top: 78px;
+        top: 50px;
         bottom: 0;
         left: 0;
         right: 0;
         height: auto;
         border-top: 1px solid #e7e7e7;
         @include box-sizing(border-box);
-        @include respond-to(wide) {
-            // left: 50px;
-        }
     }
     .scroller__container {
-        padding: 0 17px 0 0;
+        padding: 0 14px 0 0;
     }
 }
+
+// Right column
 .l-col-right {
     right: 0;
     width: 58%;
     background: #f2f2f2;
+    .scroller-wrap {
+        height: 94%;
+    }
 }
+
+// Sidebar walls
 .l-wall-news {
     right: -210px;
     z-index: 3;
@@ -121,6 +141,8 @@
 .l-wall-news.is-active {
     right: 0;
 }
+
+// Other
 .overlay {
     display: none; 
     position: absolute;
@@ -159,7 +181,7 @@
     z-index: 1;
     top: 10px;
     bottom: 10px;
-    right: 5px;
+    right: 4px;
     width: 6px;
     span {
         position: absolute;

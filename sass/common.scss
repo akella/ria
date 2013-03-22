@@ -54,25 +54,7 @@ body{
     font-size: 16px;
     line-height: 1.2;
 }
-.is-withsidebar {
-    .l-sidebar {
-        left: 0 !important;
-    }
-    .overlay {
-        display: none !important
-    }
-}
-.is-withwall {
-    // .l-wall-news {
-    //     right: 0;
-    // }
-    .l-layout {
-        right: 210px;
-    }
-    // .show-wall {
-    //     left: 0;
-    // }
-}
+
 a{
     color:#00919e;
     &:hover{
@@ -85,7 +67,7 @@ a{
 /* ------------------------------------- Independent blocks -------------------------------------- */
 .logo {
     display: block;
-    margin: 20px auto 0;
+    margin: 15px auto 0;
     @include sized-sprite($icons, logo);
 }
 .logo-mini {
@@ -103,22 +85,23 @@ a{
 }
 // sidebar nav
 .nav {
-    margin: 14px 0;
+    margin: 15px 0;
     padding: 0 10px;
     border-top: 1px solid #474e53;
     li {
         position: relative;
-        height: 24px;
-        line-height: 24px;
+        margin: 0 -19px 0 -14px;
+        // height: 24px;
+        // line-height: 24px;
+        &:hover {
+            background: #394046;;
+        }
     }
     .is-active {
-        margin: 0 -19px;
         background: #474e53;
         a {
-            padding: 0 19px;
             @include b;
             color: #fff;
-            
         }
     }
     .is-new.is-active {
@@ -130,7 +113,7 @@ a{
         &:before {
             content: "";
             position: absolute;
-            left: -14px;
+            left: 5px;
             top: 50%;
             margin-top: -3px;
             width: 6px;
@@ -147,9 +130,15 @@ a{
     }
     a {
         display: block;
+        padding: 5px 19px;
         font-size: 14px;
+        line-height: 1;
         color: #edeef0;
         text-decoration: none;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
     }
     span {
         display: inline-block;
@@ -169,7 +158,7 @@ a{
 .nav__title {
     display: block;
     float: none;
-    margin: 17px 0 11px;
+    margin: 17px 0 11px 5px;
     @include b;
     font-size: 10px; 
     color: #858f97;
@@ -179,8 +168,7 @@ a{
 
 // Toolbar 
 .toolbar {
-    padding: 10px;
-    @extend %clr;
+    
 }
 .toolbar_extend {
     .search {
@@ -188,10 +176,10 @@ a{
         right: 10px;
     }
     .options {
-        @include opacity(0);
+        display: none;
     }
     .options-more {
-        @include opacity(1);
+        display: block;
     }
 }
 .search {
@@ -353,12 +341,11 @@ a{
 }
 .view__icon {
     display: inline-block;
-    
     @include sized-sprite($icons, drop);
 }
 
 .options-more {
-    @include opacity(0); 
+    display: none; 
     position: absolute;
     left: 10px;
     top: 10px;
@@ -586,3 +573,15 @@ a{
     height: 120px;
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
+
+// .test {
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     margin-left: -640px;
+//     width: 1280px;
+//     height: 2000px;
+//     background: url(../i/test.png) 0 0 no-repeat;
+//     opacity: .7;
+//     z-index: 5000;
+// }
