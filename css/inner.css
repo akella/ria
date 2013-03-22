@@ -4,7 +4,7 @@
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.news li:after, .main-head:after, .info-item__title:after, .article-nav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .news-top { border-bottom: 1px solid #e7e7e7; }
 .news-top div { padding: 4px 10px; background: #f3f3f3; border-right: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -19,10 +19,11 @@
 .news-top__date { margin-left: 13px; color: #404040; font-size: 10px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; text-transform: uppercase; }
 
 .news { border-right: 1px solid #e7e7e7; }
-.news li { padding: 17px 5px 17px 10px; border-bottom: 1px solid #e7e7e7; }
-.news .check { float: left; margin-right: 16px; }
+.news li { position: relative; padding-right: 5px; border-bottom: 1px solid #e7e7e7; }
+.news .check { position: absolute; top: 0; bottom: 0; left: 0px; height: auto; width: 40px; }
+.news .check span, .news .check input { top: 17px; left: 10px; }
 .news .is-important { position: relative; }
-.news .is-important:before { content: ""; position: absolute; right: 5px; top: 5px; background: url('../i/icons-s45c2424114.png') 0 -322px no-repeat; width: 12px; height: 17px; }
+.news .is-important:before { content: ""; position: absolute; right: 5px; top: 5px; background: url('../i/icons-sdbd0d493fa.png') 0 -448px no-repeat; width: 12px; height: 17px; }
 .news .is-important a { color: #f15c30; }
 .news .is-selected { background: #fffef0; }
 .news .is-read { color: #999; }
@@ -31,13 +32,15 @@
 .news_headers-only .news__title { display: inline; }
 .news_headers-only .news__meta { position: relative; top: -2px; }
 
-.news__cont { overflow: hidden; color: #333; font-size: 12px; }
+.news__cont { float: left; margin-left: 40px; padding: 17px 0; color: #333; font-size: 12px; }
 .news__cont p { margin-bottom: 5px; }
 
 .news__title { position: relative; top: -2px; line-height: 1.1; margin-bottom: 4px; }
 .news__title a { color: #00659b; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; font-size: 16px; text-decoration: none; }
 
 .news__meta { color: #999; font-size: 12px; }
+.news__meta span { cursor: pointer; }
+.news__meta .news__date { cursor: default; }
 
 .news__date { font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }
 
@@ -50,7 +53,7 @@
 .main .scroller__container { padding: 0 30px; }
 .main .scroller__bar { right: 13px; }
 
-.set-link { position: absolute; top: 0; right: 0; background: url('../i/icons-s45c2424114.png') 0 -218px no-repeat; width: 14px; height: 14px; }
+.set-link { position: absolute; top: 0; right: 0; background: url('../i/icons-sdbd0d493fa.png') 0 -344px no-repeat; width: 14px; height: 14px; }
 
 .info-item { margin: 0 0 29px; border: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: #fff; overflow: hidden; }
 .info-item img { display: block; height: auto; width: 100%; }
@@ -83,7 +86,7 @@
 .show-wall.is-new:after { width: 6px; height: 6px; background: #f80; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
 
 .show-wall.is-active { left: 0; width: 210px; border-top: 1px solid #474e53; -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 #474d53; -moz-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 #474d53; box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 #474d53; }
-.show-wall.is-active:after { background: url('../i/icons-s45c2424114.png') 0 -593px no-repeat; width: 8px; height: 4px; }
+.show-wall.is-active:after { background: url('../i/icons-sdbd0d493fa.png') 0 -719px no-repeat; width: 8px; height: 4px; }
 
 .article-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; height: 50px; background: #fff; border-bottom: 1px solid #e7e7e7; }
 .article-bar .btn-opt { background: #fff; }
@@ -93,10 +96,8 @@
 .article-bar__left { position: absolute; left: 30px; top: 10px; }
 
 .article-bar__right { position: absolute; right: 30px; top: 10px; }
-.article-bar__right .icon { cursor: pointer; }
+.article-bar__right .icon { cursor: pointer; vertical-align: middle; }
 .article-bar__right .icon_open { margin-right: 20px; }
-
-.content { background: #fff; }
 
 .article { padding: 63px 30px 10px; }
 .article h1 { margin: 8px 0 36px; font-size: 30px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; line-height: 1.2; }
@@ -107,10 +108,21 @@
 
 .article__date { font-size: 12px; color: #999; }
 
-.article-nav { padding: 15px 0 46px; border-top: 1px solid #e7e7e7; margin: 0 30px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }
-.article-nav div { float: right; width: 45%; }
-.article-nav div:first-child { float: left; }
+.article-nav { padding: 25px 0 46px; border-top: 1px solid #e7e7e7; margin: 0 30px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }
 .article-nav strong { position: relative; font-size: 11px; color: #404040; text-transform: uppercase; }
 .article-nav ul { margin-bottom: 21px; }
 .article-nav a { font-size: 12px; color: #00659b; text-decoration: none; }
 .article-nav .icon_star { position: absolute; left: -21px; top: -2px; }
+
+.article-nav__left { float: left; width: 45%; }
+
+.article-nav__right { float: right; width: 45%; }
+
+.article-nav__media { float: right; width: 180px; }
+.article-nav__media div { margin-bottom: 18px; }
+.article-nav__media div span { color: #404040; font-size: 11px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }
+.article-nav__media div a { float: right; font-size: 12px; }
+
+.media-link { display: block; position: relative; margin-bottom: 10px; }
+.media-link img { display: block; }
+.media-link .icon { position: absolute; top: 5px; left: 5px; }

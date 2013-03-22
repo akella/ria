@@ -22,6 +22,9 @@ $(document).ready(function() {
             sidebar.animate({
                 left: -210
             }, 100);
+            $(".l-sidebar").afterTransition(function () {
+                $(".l-sidebar").css("z-index", "1");
+            });
         }
         else {
             $(this).addClass("js-active");
@@ -29,7 +32,17 @@ $(document).ready(function() {
             sidebar.animate({
                 left: 0
             }, 100);
+            $(".l-sidebar").css("z-index", "2000");
         }
+    });
+
+    // Click on overlay
+    $(".overlay").click(function(){
+        $(this).fadeOut();
+        $(".js-show-nav").removeClass("js-active");
+        $(".l-sidebar").animate({
+            left: -210
+        }, 100);
     });
 
 // ------------------- Adaptive sidebar ------------------- //  
@@ -68,26 +81,26 @@ $(document).ready(function() {
     });
 
 // ------------------- Check news ------------------- //
-    function select_news() {
-        $(".news li a").click(function(){
-            var news = $(this).parent().parent().parent();
-            var check = $(this).parent().parent().parent().children(".check").children("span");
-            var input = $(this).parent().parent().parent().children(".check").children("input");
-            if(news.hasClass("is-selected")) {
-                check.removeClass("is-checked");
-                input.removeAttr("checked");
-                news.removeClass("is-selected");
-            }
-            else {
-                check.addClass("is-checked");
-                input.attr("checked", "checked");
-                news.addClass("is-selected");
-            }
+    // function select_news() {
+    //     $(".news li a").click(function(){
+    //         var news = $(this).parent().parent().parent();
+    //         var check = $(this).parent().parent().parent().children(".check").children("span");
+    //         var input = $(this).parent().parent().parent().children(".check").children("input");
+    //         if(news.hasClass("is-selected")) {
+    //             check.removeClass("is-checked");
+    //             input.removeAttr("checked");
+    //             news.removeClass("is-selected");
+    //         }
+    //         else {
+    //             check.addClass("is-checked");
+    //             input.attr("checked", "checked");
+    //             news.addClass("is-selected");
+    //         }
 
-        });
-    }
+    //     });
+    // }
     function checkbox() {
-        $(".news .check").click(function(){
+        $(".check").click(function(){
             var check = $(this).children("span");
             var input = $(this).children("input");
             var news = $(this).parent();
@@ -103,8 +116,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    select_news();
     checkbox();
 
 // ------------------- Toolbar ------------------- //    

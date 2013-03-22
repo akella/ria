@@ -14,11 +14,11 @@
 .l-wrapper { overflow: hidden; left: 0; right: 0; }
 
 .l-layout { position: absolute; left: 210px; right: 0; }
-@media only screen and (max-width: 1024px) { .l-layout { left: 50px; } }
+@media only screen and (max-width: 1024px) { .l-layout { left: 50px; right: 0 !important; } }
 
 .l-wrapper, .l-layout, .l-sidebar, .l-col-left, .l-col-right, .l-wall-news { position: absolute; top: 0; bottom: 0; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.l-sidebar { width: 210px; z-index: 2000; background: #2f373d; }
+.l-sidebar { width: 210px; z-index: 1; background: #2f373d; }
 @media only screen and (max-width: 1024px) { .l-sidebar { left: -210px; } }
 .l-sidebar .scroller__bar { right: 4px; }
 .l-sidebar .scroller__bar span { background: #858f97; }
@@ -35,8 +35,12 @@
 
 .l-col-right { right: 0; z-index: 1; width: 58%; background: #f2f2f2; }
 .l-col-right .main { height: 94%; }
+.l-col-right .content { background: #fff; border-right: 1px solid #cfcfcf; }
+.l-col-right .content .scroller__bar { top: 55px; }
+.l-col-right .content .scroller__container { margin-right: 15px; border-right: 1px solid #cfcfcf; }
 
 .l-wall-news { right: -210px; z-index: 3; width: 210px; background: #2f373d; -webkit-transition: translate 0.5s ease-in-out; -moz-transition: translate 0.5s ease-in-out; -ms-transition: translate 0.5s ease-in-out; -o-transition: translate 0.5s ease-in-out; transition: translate 0.5s ease-in-out; }
+@media only screen and (max-width: 1024px) { .l-wall-news { right: -210px !important; } }
 .l-wall-news .scroller-wrap { height: 96%; }
 .l-wall-news .scroller__container { padding-right: 16px; }
 .l-wall-news .scroller__bar span { background: #858f97; }
@@ -53,7 +57,7 @@
 
 .scroller::-webkit-scrollbar { width: 0; }
 
-.scroller__bar { position: absolute; z-index: 1; top: 10px; bottom: 10px; right: 4px; width: 6px; }
+.scroller__bar { position: absolute; z-index: 1; top: 4px; bottom: 10px; right: 4px; width: 6px; }
 .scroller__bar span { position: absolute; z-index: 1; display: none; width: 6px; min-height: 50px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background: #2f363c; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30); opacity: 0.3; -webkit-transition: width 0.2s linear; -moz-transition: width 0.2s linear; -ms-transition: width 0.2s linear; -o-transition: width 0.2s linear; transition: width 0.2s linear; }
 .scroller__bar span:hover { opacity: .8; }
 

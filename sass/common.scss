@@ -433,6 +433,9 @@ a{
 .icon_point {@include sized-sprite($icons, point);}
 .icon_all {@include sized-sprite($icons, all);}
 .icon_plus {@include sized-sprite($icons, plus);}
+.icon_info {@include sized-sprite($icons, info);}
+.icon_photo {@include sized-sprite($icons, photo);}
+.icon_video {@include sized-sprite($icons, video);}
 .icon_close {
     @include sized-sprite($icons, close);
     &:hover {

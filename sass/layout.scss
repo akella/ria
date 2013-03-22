@@ -26,6 +26,7 @@
     right: 0;
     @include respond-to(wide) {
         left: 50px;
+        right: 0 !important;
     }
 }
 .l-wrapper,
@@ -44,7 +45,7 @@
 // Sidebar
 .l-sidebar {
     width: 210px;
-    z-index: 2000;
+    z-index: 1;
     background: #2f373d;
     @include respond-to(wide) {
         left: -210px;
@@ -118,6 +119,17 @@
     .main {
         height: 94%;
     }
+    .content {
+        background: #fff;
+        border-right: 1px solid #cfcfcf;
+        .scroller__bar {
+            top: 55px;
+        }
+        .scroller__container {
+            margin-right: 15px;
+            border-right: 1px solid #cfcfcf;
+        }
+    }
 }
 
 // Sidebar walls
@@ -127,6 +139,9 @@
     width: 210px;
     background: #2f373d;
     @include transition(translate .5s ease-in-out);
+    @include respond-to(wide) {
+        right: -210px !important;
+    }
     .scroller-wrap {
         height: 96%;
     }
@@ -180,7 +195,7 @@
 .scroller__bar {
     position: absolute;
     z-index: 1;
-    top: 10px;
+    top: 4px;
     bottom: 10px;
     right: 4px;
     width: 6px;
