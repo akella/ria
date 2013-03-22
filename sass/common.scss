@@ -49,7 +49,7 @@ body{
     position: relative;
     min-width: 1024px;
     width: 100%;
-    color: #474747;
+    color: #000;
     @include r;
     font-size: 16px;
     line-height: 1.2;
@@ -168,7 +168,10 @@ a{
 
 // Toolbar 
 .toolbar {
-    
+    position: relative;
+    z-index: 3;
+    height: 50px;
+    background: #fff;
 }
 .toolbar_extend {
     .search {
@@ -350,6 +353,15 @@ a{
     left: 10px;
     top: 10px;
     @include transition(all .5s ease-in-out);
+    .print {
+        float: left;
+        margin-right: -1px;
+        @include border-radius(2px 0 0 2px);
+    }
+    .email {
+        float: left;
+        @include border-radius(0 2px 2px 0);
+    }
 }
 .add-to {
     position: relative;
@@ -366,6 +378,11 @@ a{
     .drop-list {
         .icon {
             margin-right: 10px;
+        }
+        li {
+            &:hover {
+                @include r;
+            }
         }
     }
     .tooltip {
@@ -416,6 +433,18 @@ a{
 .icon_point {@include sized-sprite($icons, point);}
 .icon_all {@include sized-sprite($icons, all);}
 .icon_plus {@include sized-sprite($icons, plus);}
+.icon_close {
+    @include sized-sprite($icons, close);
+    &:hover {
+        @include sized-sprite($icons, close-h);
+    }
+}
+.icon_open {
+    @include sized-sprite($icons, open);
+    &:hover {
+        @include sized-sprite($icons, open-h);
+    }
+}
 .icon_star {
     @include sized-sprite($icons, star);
     vertical-align: middle;
@@ -522,6 +551,7 @@ a{
         &:hover {
             color: #000;
             @include b;
+            background: #f8f8f8;
         }
     }
     .icon {
