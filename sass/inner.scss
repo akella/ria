@@ -261,6 +261,9 @@
     @include box-sizing(border-box);
     @include border-radius(2px 2px 0 0);
     @include transition(all .2s ease-in-out);
+    @include respond-to(wide) {
+        left: 0 !important;
+    }
     &:after {
         content: "";
         position: absolute;

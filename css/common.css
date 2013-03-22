@@ -96,7 +96,7 @@ a:hover { text-decoration: none; }
 .options .icon { vertical-align: middle; }
 
 .lightning { position: relative; float: left; }
-.lightning:hover .tooltip { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+.lightning .btn-opt:hover + .tooltip { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .lightning .btn-opt:hover i { position: relative; top: -1px; background: url('../i/icons-sdbd0d493fa.png') 0 -395px no-repeat; width: 12px; height: 17px; }
 .lightning .btn-opt i { display: inline-block; vertical-align: middle; background: url('../i/icons-sdbd0d493fa.png') 0 -368px no-repeat; width: 12px; height: 17px; }
 .lightning .tooltip { margin-left: -75px; width: 150px; }
@@ -122,8 +122,8 @@ a:hover { text-decoration: none; }
 .options-more .email { float: left; -webkit-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -ms-border-radius: 0 2px 2px 0; -o-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
 
 .add-to { position: relative; float: left; margin-right: -1px; }
-.add-to:hover .tooltip { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .add-to .btn-opt { -webkit-border-radius: 2px 0 0 2px; -moz-border-radius: 2px 0 0 2px; -ms-border-radius: 2px 0 0 2px; -o-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
+.add-to .btn-opt:hover + .tooltip { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .add-to .drop-list .icon { margin-right: 10px; }
 .add-to .drop-list li:hover { font-weight: normal; font-style: normal; font-family: 'Conv_regular', sans-serif; }
 .add-to .tooltip { margin-left: -75px; width: 150px; }

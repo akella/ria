@@ -38,7 +38,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    @include transition(all .5s ease-in-out);
+    @include transition(left, .5s ease-in-out);  
     @include box-sizing(border-box);
 }
 
@@ -92,9 +92,11 @@
 // Left column
 .l-col-left {
     left: 0;
-    z-index: 2;
     width: 42%;
     border-right: 1px solid #cfcfcf;
+    &:hover {
+        z-index: 3;
+    }
     .scroller-wrap { 
         position: absolute;
         top: 50px;
@@ -113,9 +115,11 @@
 // Right column
 .l-col-right {
     right: 0;
-    z-index: 1;
     width: 58%;
     background: #f2f2f2;
+    &:hover {
+        z-index: 3;
+    }
     .main {
         height: 94%;
     }
@@ -138,7 +142,6 @@
     z-index: 3;
     width: 210px;
     background: #2f373d;
-    @include transition(translate .5s ease-in-out);
     @include respond-to(wide) {
         right: -210px !important;
     }

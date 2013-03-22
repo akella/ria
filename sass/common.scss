@@ -274,13 +274,11 @@ a{
 .lightning {
     position: relative;
     float: left;
-    &:hover {
-        .tooltip {
-            @include opacity(1);
-        }
-    }
     .btn-opt {
         &:hover {
+            + .tooltip {
+                @include opacity(1);
+            }
             i {
                 position: relative;
                 top: -1px;
@@ -367,13 +365,13 @@ a{
     position: relative;
     float: left;
     margin-right: -1px;
-    &:hover {
-        .tooltip {
-            @include opacity(1);
-        }
-    }
     .btn-opt {
         @include border-radius(2px 0 0 2px);
+        &:hover {
+            + .tooltip {
+                @include opacity(1);
+            }
+        }
     }
     .drop-list {
         .icon {
