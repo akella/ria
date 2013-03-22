@@ -424,3 +424,11 @@
         left: 5px;
     }
 }
+
+.loader {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-image: inline-image("loader.gif", gif);
+} 
