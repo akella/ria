@@ -58,7 +58,7 @@ a:hover { text-decoration: none; }
 .nav .is-new:before { content: ""; position: absolute; left: 5px; top: 50%; margin-top: -3px; width: 6px; height: 6px; background: #f80; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
 .nav .is-media i { background: url('../i/icons-s6999de7ee3.png') 0 -673px no-repeat; width: 12px; height: 10px; }
 .nav .is-rate i { background: url('../i/icons-s6999de7ee3.png') 0 -971px no-repeat; width: 12px; height: 10px; }
-.nav a { display: block; padding: 5px 19px; font-size: 14px; line-height: 1; color: #edeef0; text-decoration: none; }
+.nav a { display: block; padding: 5px 19px; font-size: 14px; line-height: 1; color: #edeef0; text-decoration: none; cursor: pointer; }
 .nav a:active { position: relative; top: 1px; }
 .nav span { display: inline-block; line-height: 1; }
 .nav i { display: inline-block; margin-left: 5px; }
