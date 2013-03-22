@@ -4,7 +4,7 @@
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 /* ------------------------------------- Reset css -------------------------------------------- */
 /* ------------------------------------- Reset css -------------------------------------------- */
@@ -203,7 +203,7 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .is-withsidebar .l-sidebar { left: 0 !important; }
 .is-withsidebar .overlay { display: none !important; }
@@ -266,7 +266,7 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .news-top { border-bottom: 1px solid #e7e7e7; }
 .news-top div { padding: 4px 10px; background: #f3f3f3; border-right: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -364,8 +364,18 @@ a:hover { text-decoration: none; }
 .article h1 { margin: 8px 0 36px; font-size: 30px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; line-height: 1.2; }
 .article p { margin-bottom: 21px; }
 .article img { float: right; margin-left: 40px; border: 1px solid #1b5c94; }
+.article strong, .article b { font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }
+.article i { font-weight: normal; font-style: normal; font-family: 'Conv_italic', sans-serif; }
 
 .article__date { font-size: 12px; color: #999; }
+
+.article-nav { padding: 15px 0 46px; border-top: 1px solid #e7e7e7; margin: 0 30px; font-weight: normal; font-style: normal; font-family: 'Conv_bold', sans-serif; }
+.article-nav div { float: right; width: 45%; }
+.article-nav div:first-child { float: left; }
+.article-nav strong { position: relative; font-size: 11px; color: #404040; text-transform: uppercase; }
+.article-nav ul { margin-bottom: 21px; }
+.article-nav a { font-size: 12px; color: #00659b; text-decoration: none; }
+.article-nav .icon_star { position: absolute; left: -21px; top: -2px; }
 
 @font-face { font-family: 'Conv_regular'; src: url("../files/fonts/regular.eot"); src: local("☺"), url("../files/fonts/regular.woff") format("woff"), url("../files/fonts/regular.ttf") format("truetype"), url("../files/fonts/regular.svg") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -373,4 +383,4 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'Conv_italic'; src: url("../files/fonts/italic.eot"); src: local("☺"), url("../files/fonts/italic.woff") format("woff"), url("../files/fonts/italic.ttf") format("truetype"), url("../files/fonts/italic.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
