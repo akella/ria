@@ -333,7 +333,12 @@
 }
 
 .article {
-    padding: 63px 30px 10px;
+    padding: 63px 40px 10px;
+    @include respond-to(large) {
+        width: 70%;
+        @include transition(width, .5s ease-in-out);
+        @include box-sizing(border-box);
+    }
     h1 {
         margin: 8px 0 36px;
         font-size: 30px;
