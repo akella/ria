@@ -6,13 +6,20 @@ $(document).ready(function() {
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
             list.slideUp("fast");
+            $(".toolbar__overlay").hide()
         }
         else {
             $(this).addClass("is-active");
             list.slideDown("fast");
+            $(".toolbar__overlay").show()
         }
     });
-
+    // Click on toolbar__overlay
+    $(".toolbar__overlay").click(function(){
+        $(this).fadeOut();
+        $(".js-view-type").removeClass("is-active");
+        $(".js-drop-down").slideUp("fast");
+    });
 // ------------------- Show nav ------------------- //
     $(".js-show-nav").click(function(){
         var sidebar = $(this).parent().parent();

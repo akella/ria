@@ -162,9 +162,10 @@
 }
 
 // Other
-.overlay {
+.overlay,
+.toolbar__overlay {
     display: none; 
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -172,6 +173,9 @@
     z-index: 1000;
     background: #000;
     @include opacity(.5);
+}
+.toolbar__overlay {
+    background: none;
 }
 .wrapper {
     overflow: hidden;
