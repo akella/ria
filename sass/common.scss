@@ -204,7 +204,7 @@ a{
         border: 1px  solid #ccc;
         @include box-sizing(border-box); 
         @include border-radius(2px);
-        @include placeholder(#999, normal 14px Conv_regular);
+        @include placeholder(#999, sans-serif);
     }
     button {
         position: absolute;

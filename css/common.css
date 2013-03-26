@@ -76,9 +76,9 @@ a:hover { text-decoration: none; }
 .search { position: absolute; left: 10px; top: 10px; right: 140px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .search input[type="submit"] { display: none; }
 .search input[type="text"] { padding: 0 30px 0 10px; height: 30px; width: 100%; font-weight: normal; font-style: normal; font-family: "PT Sans regular", sans-serif; font-size: 16px; border: 1px solid #cccccc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
-.search input[type="text"].placeholder { color: #999999; font: normal 14px Conv_regular; }
-.search input[type="text"]:-moz-placeholder { color: #999999; font: normal 14px Conv_regular; }
-.search input[type="text"]::-webkit-input-placeholder { color: #999999; font: normal 14px Conv_regular; }
+.search input[type="text"].placeholder { color: #999999; font: sans-serif; }
+.search input[type="text"]:-moz-placeholder { color: #999999; font: sans-serif; }
+.search input[type="text"]::-webkit-input-placeholder { color: #999999; font: sans-serif; }
 .search button { position: absolute; right: 1px; top: 1px; background: none; width: 26px; height: 28px; text-align: center; }
 .search button i { display: inline-block; vertical-align: middle; background: url('../i/icons-s6999de7ee3.png') 0 -745px no-repeat; width: 8px; height: 4px; }
 

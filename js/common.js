@@ -67,7 +67,7 @@ $(document).ready(function() {
         adaptive();
     });
 
-// ------------------- View type ------------------- //
+// ------------------- Show wall ------------------- //
     $(".js-show-wall").click(function(){
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
@@ -85,6 +85,9 @@ $(document).ready(function() {
                 $('.js-scroller-3').baron({barOnCls: 'baron'});
             });
         }
+        // reinit columns with dragable
+        resize_proportions();
+        column_width();
     });
 
 // ------------------- Check news ------------------- //
@@ -145,6 +148,55 @@ $(document).ready(function() {
         });
     }
     toolbar(); 
+
+
+//  --------------------- width l-layout and cols ---------- //
+    function width_topic_content() {
+        var width_page_right = $('.l-layout').width();
+        var width_topic = width_page_right * 0.4;
+        var width_content = width_page_right * 0.6;
+        $('.l-col-left, .l-col-left .scroller').width(width_topic);
+        $('.l-col-right, .l-col-right .scroller').width(width_content);
+        //api.reinitialise();
+        //api_content.reinitialise();
+    }
+    width_topic_content();
+
+//  --------------- resise(drag) width l-layout and cols -------- //
+    cur_prop = 0.4;
+    function column_width() {
+      var topic_width = $('.l-col-left').width();
+      var drag_left = $('.drag span').position().left;
+      var page_width = $('.l-layout').width();
+      var content__width = page_width - drag_left;
+      $('.l-col-left, .l-col-left .scroller').width(drag_left);
+      $('.l-col-right, .l-col-right .scroller').width(content__width);
+      cur_prop = drag_left/page_width;
+    }
+    column_width();
+    function resize_proportions(){
+        whole = $('.l-layout').width();
+        $('.l-col-left, .l-col-left .scroller').width(whole*cur_prop);
+        $('.l-col-right, .l-col-right .scroller').width(whole*(1-cur_prop));
+        console.log('resizing with prop=='+cur_prop);
+        newValue = whole*cur_prop;
+        $('.drag span').css('left', newValue);
+    }
+    $('.drag span').draggable({
+      axis:'x',
+      containment:'parent',
+      drag: column_width,
+    });
+
+
+// --------------  reinit columns width -------------- //
+    $(window).resize(function(event) {
+        resize_proportions();
+        column_width();
+    });
+
+
+
 
 
 
