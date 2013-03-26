@@ -196,7 +196,14 @@ $(document).ready(function() {
     });
 
 
-
+    $(".toolbar, .article-bar").hover(
+      function () {
+        $(this).parent().css("z-index", "4");
+      },
+      function () {
+        $(this).parent().css("z-index", "2");
+      }
+    );
 
 
 
