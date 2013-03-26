@@ -5,10 +5,12 @@
 	<meta charset="utf-8">
 	<title>03-01-03-MArticle</title>
 	<link rel="stylesheet" media="screen" href="../css/screen.css" >
+	<link rel="stylesheet" media="screen" href="../css/jquery.fancybox.css" >
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="../js/baron.min.js"></script>  
     <script src="../js/transition-events.js"></script>  
     <script src="../js/jquery-ui-1.10.0.custom.min.js"></script>  
+    <script src="../js/jquery.fancybox.pack.js"></script>  
     <script src="../js/common.js"></script>
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -752,16 +754,17 @@
                                         <span>МУЛЬТИМЕДИА</span>
                                         <a href="#">Скачать все</a>
                                     </div>
-                                    <a href="#" class="media-link">
-                                        <img src="http://placehold.it/180x100" alt="">
+                                    <a href="#" data-fancybox-href="#popup-photo" class="media-link" title="Ольга Голодец, вице-премьер правительства РФ по социальным вопросам. ">
+                                        <!-- <img src="http://placehold.it/180x100" alt=""> -->
+                                        <img src="../i/graph.jpg" alt="" width="180" height="100">
                                         <i class="icon icon_photo"></i>
                                     </a>
                                     <a href="#" class="media-link">
-                                        <img src="http://placehold.it/180x100" alt="">
+                                        <!-- <img src="http://placehold.it/180x100" alt=""> -->
                                         <i class="icon icon_video"></i>
                                     </a>
                                     <a href="#" class="media-link">
-                                        <img src="http://placehold.it/180x100" alt="">
+                                        <!-- <img src="http://placehold.it/180x100" alt=""> -->
                                         <i class="icon icon_info"></i>
                                     </a>
                                 </div>
@@ -848,6 +851,8 @@
         </aside>
     </section>
     <div class="overlay"></div>
-
+    <div class="popup" id="popup-photo">  
+        <img src="http://placehold.it/500x600" alt="">
+    </div>
 </body>
 </html>   

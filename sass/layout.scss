@@ -179,7 +179,7 @@
 // Sidebar walls
 .l-wall-news {
     right: -210px;
-    z-index: 3;
+    z-index: 3; 
     width: 210px;
     background: #2f373d;
     @include transition(left, .5s ease-in-out);
@@ -238,6 +238,12 @@
     -webkit-overflow-scrolling: touch;
 }
 .scroller::-webkit-scrollbar {
+    width: 0;
+}
+.scroller::-moz-scrollbar {
+    width: 0;
+}
+.scroller::scrollbar {
     width: 0;
 }
 .scroller__bar {

@@ -579,7 +579,7 @@ a{
     }
     i {
         display: none;
-        position: absolute;
+        position: absolute; 
         top: -3px;
         right: -3px;
         @include sized-sprite($icons, check);
@@ -592,21 +592,39 @@ a{
     }
 }
 
-/* ----------------------------------------- Footer ---------------------------------------------- */
-.footer {
-    position: relative;
-    height: 120px;
+.popup {
+    display: none;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    img {
+        height: 100%;
+        width: auto;
+    }
 }
-/* -------------------------------------- //END Footer ------------------------------------------- */
 
-// .test {
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     margin-left: -640px;
-//     width: 1280px;
-//     height: 2000px;
-//     background: url(../i/test.png) 0 0 no-repeat;
-//     opacity: .7;
-//     z-index: 5000;
-// }
+.popup__download {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    padding: 0 15px 0 20px;
+    height: 50px;
+    line-height: 50px;
+    @include b;
+    font-size: 14px;
+    text-decoration: none;
+    border-left: 1px solid #e7e7e7;
+    overflow: hidden;
+    &:hover {
+        i {
+            @include sized-sprite($icons, downl-h);
+        }
+    }
+    i {
+        display: inline-block;
+        margin: -7px 9px 0 0;
+        vertical-align: middle;
+        @include sized-sprite($icons, downl);
+    }
+}

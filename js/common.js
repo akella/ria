@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+// ------------------- Fancybox ----------------------// 
+    // $(".email").fancybox({
+    //     openEffect  : 'none',
+    //     closeEffect : 'none',
+    //     padding: 20,
+    //     afterLoad   : function() {
+    //         this.inner.prepend( '<h1>1. My custom title</h1>' );
+    //         this.content = '<h1>2. My custom title</h1>' + this.content.html();
+    //     } 
+    // });
+    $(".media-link").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+        padding: 20,
+        afterLoad   : function() {
+            this.inner.prepend( '<a href="#" class="popup__download"><i></i>Скачать</a>' );
+        },
+        helpers : {
+            title : {
+                type : 'inside'
+            }
+        }
+        
+    });
 // ------------------- View type ------------------- //
     $(".js-view-type, .js-add-to").click(function(){
         var list = $(this).parent().children(".js-drop-down");
@@ -193,6 +217,10 @@ $(document).ready(function() {
     $(window).resize(function(event) {
         resize_proportions();
         column_width();
+        //$('.js-scroller-1').baron({barOnCls: 'baron'});
+        //$('.js-scroller-2').baron({barOnCls: 'baron'});
+        //$('.js-scroller-3').baron({barOnCls: 'baron'});
+        //$('.js-scroller-4').baron({barOnCls: 'baron'});
     });
 
 
