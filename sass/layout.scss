@@ -238,15 +238,9 @@
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
-.scroller::-webkit-scrollbar {
-    width: 0;
-}
-.scroller::-moz-scrollbar {
-    width: 0;
-}
-.scroller::scrollbar {
-    width: 0;
-}
+// .scroller::-webkit-scrollbar {
+//     width: 0;
+// }
 .scroller__bar {
     position: absolute;
     z-index: 1;

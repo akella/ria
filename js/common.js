@@ -205,33 +205,41 @@ $(document).ready(function() {
 
 
 //  --------------------- width l-layout and cols ---------- //
-    function width_topic_content() {
-        var width_page_right = $('.l-layout').width();
-        var width_topic = width_page_right * 0.4;
-        var width_content = width_page_right * 0.6;
-        $('.l-col-left, .l-col-left .scroller').width(width_topic);
-        $('.l-col-right, .l-col-right .scroller').width(width_content);
+    function width_content() {
+        var width_layout = $('.l-layout').width();
+        var width_left = width_layout * 0.4;
+        var width_right = width_layout * 0.6;
+        $('.l-col-left').width(width_left);
+        $('.l-col-right').width(width_right);
+        //$('.l-col-left, .l-col-left .scroller').width(width_topic);
+        //$('.l-col-right, .l-col-right .scroller').width(width_content);
         //api.reinitialise();
         //api_content.reinitialise();
     }
-    width_topic_content();
+    width_content();
 
 //  --------------- resise(drag) width l-layout and cols -------- //
-    cur_prop = 0.4;
+    //cur_prop = 0.4;
     function column_width() {
-      var topic_width = $('.l-col-left').width();
-      var drag_left = $('.drag span').position().left;
-      var page_width = $('.l-layout').width();
-      var content__width = page_width - drag_left;
-      $('.l-col-left, .l-col-left .scroller').width(drag_left);
-      $('.l-col-right, .l-col-right .scroller').width(content__width);
-      cur_prop = drag_left/page_width;
+      var width_left = $('.l-col-left').width();
+      var drag = $('.drag span').position().left;
+      var width_layout = $('.l-layout').width();
+      var content__width = width_layout - drag;
+      //$('.l-col-left, .l-col-left .scroller').width(drag_left);
+      //$('.l-col-right, .l-col-right .scroller').width(content__width);
+      $('.l-col-left').width(drag);
+      $('.l-col-right').width(content__width);
+      $('.l-col-left .scroller').width(drag + 17);
+      $('.l-col-right .scroller').width(content__width + 17);
+      cur_prop = drag/width_layout;
     }
     column_width();
     function resize_proportions(){
         whole = $('.l-layout').width();
-        $('.l-col-left, .l-col-left .scroller').width(whole*cur_prop);
-        $('.l-col-right, .l-col-right .scroller').width(whole*(1-cur_prop));
+        // $('.l-col-left, .l-col-left .scroller').width(whole*cur_prop);
+        // $('.l-col-right, .l-col-right .scroller').width(whole*(1-cur_prop));
+        $('.l-col-left').width(whole*cur_prop);
+        $('.l-col-right').width(whole*(1-cur_prop));
         newValue = whole*cur_prop;
         $('.drag span').css('left', newValue);
     }
@@ -246,6 +254,7 @@ $(document).ready(function() {
     $(window).resize(function(event) {
         resize_proportions();
         column_width();
+        //width_content();
     });
 
 
