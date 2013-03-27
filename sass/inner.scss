@@ -316,6 +316,15 @@
     position: absolute;
     left: 30px;
     top: 10px;
+    .add-to {
+        .tooltip {
+            margin-left: -36px;
+            &:before {
+                left: 0;
+                margin-left: 25px;
+            }
+        }
+    }
 }
 .article-bar__right {
     position: absolute;

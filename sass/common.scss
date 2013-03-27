@@ -310,8 +310,13 @@ a{
         
     }
     .tooltip {
-        margin-left: -57px;
+        margin-left: -94px;
         width: 115px;
+        &:before {
+            left: auto;
+            right: 0;
+            margin-right: 17px;
+        }
     }
     i {
         vertical-align: middle;

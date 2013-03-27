@@ -95,7 +95,7 @@
     width: 42%;
     z-index: 2;
     &:hover {
-        //z-index: 3;
+        z-index: 3;
     }
     .scroller-wrap { 
         position: absolute;
@@ -119,7 +119,7 @@
     width: 58%;
     background: #f2f2f2;
     &:hover {
-        //z-index: 3;
+        z-index: 3;
     }
     .main {
         height: 94%;
@@ -150,7 +150,7 @@
         top: 0;
         left: 40%;
         bottom: 0;
-        z-index: 3;
+        z-index: 4;
         width: 9px;
         cursor: move;
         background: #fff;

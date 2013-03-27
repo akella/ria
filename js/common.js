@@ -202,7 +202,6 @@ $(document).ready(function() {
         whole = $('.l-layout').width();
         $('.l-col-left, .l-col-left .scroller').width(whole*cur_prop);
         $('.l-col-right, .l-col-right .scroller').width(whole*(1-cur_prop));
-        console.log('resizing with prop=='+cur_prop);
         newValue = whole*cur_prop;
         $('.drag span').css('left', newValue);
     }
@@ -224,14 +223,14 @@ $(document).ready(function() {
     });
 
 
-    $(".toolbar, .article-bar").hover(
-      function () {
-        $(this).parent().css("z-index", "4");
-      },
-      function () {
-        $(this).parent().css("z-index", "2");
-      }
-    );
+    // $(".toolbar, .article-bar").hover(
+    //   function () {
+    //     $(this).parent().css("z-index", "4");
+    //   },
+    //   function () {
+    //     $(this).parent().css("z-index", "2");
+    //   }
+    // );
 
 
 
