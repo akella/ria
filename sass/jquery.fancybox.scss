@@ -48,6 +48,7 @@
 
 .fancybox-inner {
 	overflow: hidden;
+	padding-bottom: 70px;
 }
 
 .fancybox-type-iframe .fancybox-inner {
@@ -102,7 +103,7 @@
 	&:hover {
 		@include sized-sprite($icons, close2-h);
 	}
-}
+} 
 
 .fancybox-nav {
 	position: absolute;
@@ -224,9 +225,14 @@
 }
 
 .fancybox-title-outside-wrap {
-	position: relative;
-	margin-top: 10px;
-	color: #fff;
+	position: absolute;
+	color: #000;
+	left: 20px;
+	top: 100%;
+	margin-top: -70px;
+	height: 60px;
+	overflow: hidden;
+	right: 155px;
 }
 
 .fancybox-title-inside-wrap {

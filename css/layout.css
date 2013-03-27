@@ -55,7 +55,7 @@
 
 .l-wall-news.is-active { right: 0; }
 
-.overlay, .toolbar__overlay { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background: #000; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.overlay, .toolbar__overlay, .overlay-popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background: #000; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
 
 .toolbar__overlay { background: none; }
 

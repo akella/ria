@@ -1,28 +1,39 @@
 $(document).ready(function() {
 
 // ------------------- Fancybox ----------------------// 
-    // $(".email").fancybox({
-    //     openEffect  : 'none',
-    //     closeEffect : 'none',
-    //     padding: 20,
-    //     afterLoad   : function() {
-    //         this.inner.prepend( '<h1>1. My custom title</h1>' );
-    //         this.content = '<h1>2. My custom title</h1>' + this.content.html();
-    //     } 
-    // });
     $(".media-link").fancybox({
         openEffect  : 'none',
         closeEffect : 'none',
         padding: 20,
-        afterLoad   : function() {
-            this.inner.prepend( '<a href="#" class="popup__download"><i></i>Скачать</a>' );
-        },
+        // afterLoad   : function() {
+        //     this.inner.apppend( '<a href="#" class="popup__download"><i></i>Скачать</a>' );
+        // },
         helpers : {
             title : {
-                type : 'inside'
+                type : 'outside'
             }
         }
         
+    });
+
+// ------------------- Popup  ------------------- //
+    $(".email").click(function(){
+        if($(this).hasClass("js-active")) {
+            $(this).removeClass("js-active");
+            $(".popup-send").fadeOut("fast");
+            $(".overlay-popup").fadeOut()
+        }
+        else {
+            $(this).addClass("js-active");
+            $(".popup-send").fadeIn("fast");
+            $(".overlay-popup").fadeIn()
+        }
+    });
+
+    $(".overlay-popup, .popup-close").click(function(){
+        $(".popup-send").fadeOut();
+        $(".overlay-popup").fadeOut();
+        $(".email").removeClass("js-active");
     });
 // ------------------- View type ------------------- //
     $(".js-view-type, .js-add-to").click(function(){

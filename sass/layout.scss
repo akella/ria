@@ -204,7 +204,8 @@
 
 // Other
 .overlay,
-.toolbar__overlay {
+.toolbar__overlay,
+.overlay-popup {
     display: none; 
     position: fixed;
     top: 0;
