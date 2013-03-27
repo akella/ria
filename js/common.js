@@ -35,6 +35,7 @@ $(document).ready(function() {
         $(".overlay-popup").fadeOut();
         $(".email").removeClass("js-active");
     });
+
 // ------------------- View type ------------------- //
     $(".js-view-type, .js-add-to").click(function(){
         var list = $(this).parent().children(".js-drop-down");
@@ -55,6 +56,7 @@ $(document).ready(function() {
         $(".js-view-type").removeClass("is-active");
         $(".js-drop-down").slideUp("fast");
     });
+
 // ------------------- Show nav ------------------- //
     $(".js-show-nav").click(function(){
         var sidebar = $(this).parent().parent();
@@ -125,25 +127,7 @@ $(document).ready(function() {
         column_width();
     });
 
-// ------------------- Check news ------------------- //
-    // function select_news() {
-    //     $(".news li a").click(function(){
-    //         var news = $(this).parent().parent().parent();
-    //         var check = $(this).parent().parent().parent().children(".check").children("span");
-    //         var input = $(this).parent().parent().parent().children(".check").children("input");
-    //         if(news.hasClass("is-selected")) {
-    //             check.removeClass("is-checked");
-    //             input.removeAttr("checked");
-    //             news.removeClass("is-selected");
-    //         }
-    //         else {
-    //             check.addClass("is-checked");
-    //             input.attr("checked", "checked");
-    //             news.addClass("is-selected");
-    //         }
-
-    //     });
-    // }
+// ------------------- Checkbox ------------------- //
     function checkbox() {
         $(".check").click(function(){
             var check = $(this).children("span");
@@ -160,8 +144,43 @@ $(document).ready(function() {
                 news.addClass("is-selected");
             }
         });
+        // just one checkbox
+        $(".check strong").click(function(){
+            var check = $(this).parent().children("span");
+            var input = $(this).parent().children("input");
+            if(check.hasClass("is-checked")) {
+                check.removeClass("is-checked");
+                input.removeAttr("checked");
+            }
+            else {
+                check.addClass("is-checked");
+                input.attr("checked", "checked");
+            }
+        });
     }
     checkbox();
+
+// ------------------- Radio ------------------- //
+    function radio() {
+        $(".radio label").change(function(){
+            var radio = $(this).children("i");
+            var input = $(this).children("input");
+            var group = $(this).parent(".js-radio-group");
+            var all_radio = $(this).parent(".radio").parent(".js-radio-group").children(".radio").children("label").children("i");
+            var all_input = $(this).parent(".radio").parent(".js-radio-group").children(".radio").children("label").children("input");
+            if(radio.hasClass("is-active")) {
+                radio.removeClass("is-active");
+                input.removeAttr("checked");
+            }
+            else {
+                all_radio.removeClass("is-active")
+                all_input.removeAttr("checked", "checked");
+                radio.addClass("is-active");
+                input.attr("checked", "checked");
+            }
+        });
+    }
+    radio();
 
 // ------------------- Toolbar ------------------- //    
     function toolbar() {
