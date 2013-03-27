@@ -37,7 +37,7 @@ $(document).ready(function() {
     });
 
 // ------------------- View type ------------------- //
-    $(".js-view-type, .js-add-to").click(function(){
+    $(".js-btn-opt").click(function(){
         var list = $(this).parent().children(".js-drop-down");
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
@@ -53,7 +53,7 @@ $(document).ready(function() {
     // Click on toolbar__overlay
     $(".toolbar__overlay").click(function(){
         $(this).fadeOut();
-        $(".js-view-type").removeClass("is-active");
+        $(".btn-opt").removeClass("is-active");
         $(".js-drop-down").slideUp("fast");
     });
 
@@ -246,23 +246,7 @@ $(document).ready(function() {
     $(window).resize(function(event) {
         resize_proportions();
         column_width();
-        //$('.js-scroller-1').baron({barOnCls: 'baron'});
-        //$('.js-scroller-2').baron({barOnCls: 'baron'});
-        //$('.js-scroller-3').baron({barOnCls: 'baron'});
-        //$('.js-scroller-4').baron({barOnCls: 'baron'});
     });
-
-
-    // $(".toolbar, .article-bar").hover(
-    //   function () {
-    //     $(this).parent().css("z-index", "4");
-    //   },
-    //   function () {
-    //     $(this).parent().css("z-index", "2");
-    //   }
-    // );
-
-
 
 
 });
@@ -290,67 +274,3 @@ window.onload = function() {
     $('.js-scroller-3').baron({barOnCls: 'baron'});
     $('.js-scroller-4').baron({barOnCls: 'baron'});
 };
-
-
-
-
-// function stickyTitles(stickies) {
-
-//     this.load = function() {
-
-//               stickies.each(function(){
-                
-//                     var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
-//                         thisSticky.parent().height(thisSticky.outerHeight());
-                
-//                     jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
-
-//               });
-//         }
-            
-//         this.scroll = function() {
-        
-//               stickies.each(function(i){                
-                
-//                     var thisSticky = jQuery(this),
-//                           nextSticky = stickies.eq(i+1),
-//                           prevSticky = stickies.eq(i-1),
-//                           pos = jQuery.data(thisSticky[0], 'pos');
-            
-//                     if (pos <= jQuery(window).scrollTop()) {
-                    
-//                           thisSticky.addClass("fixed");
-                    
-//                           if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
-                        
-//                                 thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
-
-//                           }
-                    
-//                     } else {
-                    
-//                           thisSticky.removeClass("fixed");
-                    
-//                           if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
-                    
-//                                 prevSticky.removeClass("absolute").removeAttr("style");
-                    
-//                           }
-                    
-//                     }
-//             });         
-//     }
-// }
-    
-// jQuery(document).ready(function(){
-    
-//         var newStickies = new stickyTitles(jQuery(".followMeBar"));
-        
-//         newStickies.load();
-            
-//         jQuery(window).on("scroll", function() {
-
-//               newStickies.scroll();
-        
-//         });
-// });

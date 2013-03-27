@@ -205,21 +205,21 @@
                             <span class="tooltip">Показать только молнии</span>
                         </div>
                         <div class="view">
-                            <button class="btn-opt js-view-type">
+                            <button class="btn-opt js-btn-opt">
                                 <i class="icon icon_sort1"></i>
                                 <i class="view__icon"></i>
                             </button>
                             <span class="tooltip">Переключить вид</span>
                             <ul class="drop-list js-drop-down">
-                                <li><i class="icon icon_sort1"></i>Комфортный вид</li>
-                                <li><i class="icon icon_sort2"></i>Заголовок + лид</li>
-                                <li><i class="icon icon_sort3"></i>Только заголовок</li>
+                                <li class="view__1 is-selected"><i class="icon icon_sort1"></i>Комфортный вид</li>
+                                <li class="view__2"><i class="icon icon_sort2"></i>Заголовок + лид</li>
+                                <li class="view__3"><i class="icon icon_sort3"></i>Только заголовок</li>
                             </ul>
                         </div> 
                     </div>
                     <div class="options-more">
                         <div class="add-to">
-                            <button class="btn-opt js-add-to">
+                            <button class="btn-opt js-btn-opt">
                                 <i class="icon icon_star"></i>
                                 <i class="view__icon"></i>
                             </button>
@@ -230,16 +230,31 @@
                                 <li><i class="icon icon_plus"></i>Создать подборку</li>
                             </ul>
                         </div>
-                        <button class="btn-opt download">
-                            <i class="icon icon_downl"></i>
-                            <i class="view__icon"></i>
-                        </button>
-                        <button class="btn-opt print">
-                            <i class="icon icon_print"></i>
-                        </button>
-                        <button class="btn-opt email">
-                            <i class="icon icon_email"></i>
-                        </button>
+                        <div class="download">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_downl"></i>
+                                <i class="view__icon"></i>
+                            </button>
+                            <span class="tooltip">Скачать выбранные</span>
+                            <ul class="drop-list js-drop-down">
+                                <li><i></i>PDF</li>
+                                <li><i></i>MS Word</li>
+                                <li><i></i>XML</li>
+                                <li><i></i>Скачать с медиа</li>
+                            </ul>
+                        </div>
+                        <div class="print">
+                            <button class="btn-opt">
+                                <i class="icon icon_print"></i>
+                            </button>
+                            <span class="tooltip">Распечатать выбранные</span>
+                        </div>
+                        <div class="email">
+                            <button class="btn-opt">
+                                <i class="icon icon_email"></i>
+                            </button>
+                            <span class="tooltip">Отправить выбранные по эл. почте</span>
+                        </div>
                     </div>
                 </div>
                 <div class="scroller-wrap js-scroller-2">

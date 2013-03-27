@@ -105,14 +105,19 @@ a:hover { text-decoration: none; }
 .view:hover button .icon_sort1 { background: url('../i/icons-s05e1b53ed7.png') 0 -1059px no-repeat; width: 16px; height: 14px; }
 .view:hover button .icon_sort2 { background: url('../i/icons-s05e1b53ed7.png') 0 -987px no-repeat; width: 16px; height: 14px; }
 .view:hover button .icon_sort3 { background: url('../i/icons-s05e1b53ed7.png') 0 -1125px no-repeat; width: 16px; height: 14px; }
+.view .is-active { border: 1px solid #a3aaac; -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); }
 .view .tooltip { margin-left: -94px; width: 115px; }
 .view .tooltip:before { left: auto; right: 0; margin-right: 17px; }
 .view i { vertical-align: middle; }
 .view .icon { position: relative; top: -2px; }
+.view .drop-list { left: auto; right: 0; }
 .view .drop-list li:hover .icon_sort1 { background: url('../i/icons-s05e1b53ed7.png') 0 -1059px no-repeat; width: 16px; height: 14px; }
 .view .drop-list li:hover .icon_sort2 { background: url('../i/icons-s05e1b53ed7.png') 0 -987px no-repeat; width: 16px; height: 14px; }
 .view .drop-list li:hover .icon_sort3 { background: url('../i/icons-s05e1b53ed7.png') 0 -1125px no-repeat; width: 16px; height: 14px; }
-.view .is-active { border: 1px solid #a3aaac; -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); }
+.view .drop-list .is-selected { font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; color: #000; }
+.view .view__1.is-selected .icon { background: url('../i/icons-s05e1b53ed7.png') 0 -1059px no-repeat; width: 16px; height: 14px; }
+.view .view__2.is-selected .icon { background: url('../i/icons-s05e1b53ed7.png') 0 -987px no-repeat; width: 16px; height: 14px; }
+.view .view__3.is-selected .icon { background: url('../i/icons-s05e1b53ed7.png') 0 -1125px no-repeat; width: 16px; height: 14px; }
 
 .view__icon { display: inline-block; background: url('../i/icons-s05e1b53ed7.png') 0 -857px no-repeat; width: 8px; height: 4px; }
 
@@ -122,16 +127,22 @@ a:hover { text-decoration: none; }
 
 .add-to { position: relative; float: left; margin-right: -1px; }
 .add-to .btn-opt { -webkit-border-radius: 2px 0 0 2px; -moz-border-radius: 2px 0 0 2px; -ms-border-radius: 2px 0 0 2px; -o-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
+.add-to .is-active { border: 1px solid #a3aaac; -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); }
 .add-to .drop-list .icon { margin-right: 10px; }
 .add-to .drop-list li:hover { font-weight: normal; font-style: normal; font-family: 'PT Sans regular', sans-serif; }
 .add-to .tooltip { margin-left: -75px; width: 150px; }
 
-.download { float: left; margin-right: 10px; }
+.download { position: relative; float: left; margin-right: 10px; }
 .download .btn-opt { -webkit-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -ms-border-radius: 0 2px 2px 0; -o-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
+.download .tooltip { width: 125px; margin-left: -62px; }
+.download .is-active { border: 1px solid #a3aaac; -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); -moz-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); }
+.download .drop-list i { display: inline-block; margin: -4px 18px 0 0; width: 16px; height: 16px; background: #999; vertical-align: middle; }
 
-.print { float: left; margin-right: -1px; -webkit-border-radius: 2px 0 0 2px; -moz-border-radius: 2px 0 0 2px; -ms-border-radius: 2px 0 0 2px; -o-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
+.print { position: relative; float: left; margin-right: -1px; -webkit-border-radius: 2px 0 0 2px; -moz-border-radius: 2px 0 0 2px; -ms-border-radius: 2px 0 0 2px; -o-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
+.print .tooltip { width: 146px; margin-left: -73px; }
 
-.email { float: left; -webkit-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -ms-border-radius: 0 2px 2px 0; -o-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
+.email { position: relative; float: left; -webkit-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -ms-border-radius: 0 2px 2px 0; -o-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
+.email .tooltip { width: 146px; margin-left: -73px; }
 
 .icon { display: inline-block; }
 
