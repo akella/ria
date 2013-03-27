@@ -203,6 +203,12 @@ a{
         @include box-sizing(border-box); 
         @include border-radius(2px);
         @include placeholder(#999, sans-serif);
+        &:hover {
+            border-color: #999;
+        }
+        &:focus {
+            border-color: #4094d4;
+        }
     }
     button {
         position: absolute;
@@ -761,7 +767,7 @@ a{
         &:hover {
             border-color: #999;
         }
-        &:active {
+        &:focus {
             border-color: #4094d4;
         }
     }

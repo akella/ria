@@ -27,6 +27,7 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 // responsive
 $break-small: 500px;
 $break-wide: 1024px;
+$break-nout: 1280px;
 $break-large: 1940px;
 @mixin respond-to($media) {
   @if $media == pda {
@@ -34,6 +35,9 @@ $break-large: 1940px;
   }
   @else if $media == wide {
     @media only screen and (max-width: $break-wide) { @content; }
+  }
+  @else if $media == nout {
+    @media only screen and (min-width: $break-nout) { @content; }
   }
   @else if $media == large {
     @media only screen and (min-width: $break-large) { @content; }

@@ -1,5 +1,13 @@
 @import "base";
 
+.is-full-screen {
+    min-width: 480px;
+    @include respond-to(nout) {
+        .article, .article-nav {
+            width: 50%;
+        }
+    }
+}
 // styles of .l-col-left  items
 // news
 .news-top {
@@ -391,11 +399,7 @@
 
 .article {
     padding: 63px 40px 10px;
-    @include respond-to(large) {
-        width: 70%;
-        @include transition(width, .5s ease-in-out);
-        @include box-sizing(border-box);
-    }
+    @include box-sizing(border-box);
     h1 {
         margin: 8px 0 36px;
         font-size: 30px;
@@ -421,6 +425,12 @@
     font-size: 12px;
     color: #999;
 }
+.article_mod {
+    width: 65%;
+    float: left;
+    @include transition(width, .5s ease-in-out);
+}
+
 
 .article-nav {
     padding: 25px 0 46px;
@@ -447,6 +457,16 @@
         left: -21px;
         top: -2px;
     }
+}
+.article-nav_wide {
+    float: right;
+    margin: 75px 0 0;
+    padding-right: 15px;
+    width: 30%;
+    width: 35%;
+    border-top: 0;
+    @include box-sizing(border-box);
+    @include transition(width, .5s ease-in-out);
 }
 .article-nav__left {
     float: left;

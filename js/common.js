@@ -254,9 +254,7 @@ $(document).ready(function() {
     $(window).resize(function(event) {
         resize_proportions();
         column_width();
-        //width_content();
     });
-
 
 });
 

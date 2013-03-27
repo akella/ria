@@ -79,6 +79,8 @@ a:hover { text-decoration: none; }
 .search input[type="text"].placeholder { color: #999999; font: sans-serif; }
 .search input[type="text"]:-moz-placeholder { color: #999999; font: sans-serif; }
 .search input[type="text"]::-webkit-input-placeholder { color: #999999; font: sans-serif; }
+.search input[type="text"]:hover { border-color: #999; }
+.search input[type="text"]:focus { border-color: #4094d4; }
 .search button { position: absolute; right: 1px; top: 1px; background: none; width: 26px; height: 28px; text-align: center; }
 .search button i { display: inline-block; vertical-align: middle; background: url('../i/icons-se4964fe653.png') 0 -976px no-repeat; width: 8px; height: 4px; }
 
@@ -239,7 +241,7 @@ a:hover { text-decoration: none; }
 .input input:-moz-placeholder, .input textarea:-moz-placeholder { color: #999999; font: sans-serif; }
 .input input::-webkit-input-placeholder, .input textarea::-webkit-input-placeholder { color: #999999; font: sans-serif; }
 .input input:hover, .input textarea:hover { border-color: #999; }
-.input input:active, .input textarea:active { border-color: #4094d4; }
+.input input:focus, .input textarea:focus { border-color: #4094d4; }
 .input .is-blocked { border-color: #e6e6e6; background: #f5f5f5; }
 .input label { display: block; margin-bottom: 7px; font-size: 10px; color: #666; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
 .input textarea { padding: 10px; height: 140px; resize: vertical; }
