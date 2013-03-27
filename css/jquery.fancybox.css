@@ -31,8 +31,8 @@
 
 #fancybox-loading div { width: 44px; height: 44px; }
 
-.fancybox-close { position: absolute; top: -10px; right: -10px; cursor: pointer; z-index: 8040; background: url('../i/icons-s05e1b53ed7.png') 0 -103px no-repeat; width: 22px; height: 22px; }
-.fancybox-close:hover { background: url('../i/icons-s05e1b53ed7.png') 0 -269px no-repeat; width: 22px; height: 22px; }
+.fancybox-close { position: absolute; top: -10px; right: -10px; cursor: pointer; z-index: 8040; background: url('../i/icons-se4964fe653.png') 0 -103px no-repeat; width: 22px; height: 22px; }
+.fancybox-close:hover { background: url('../i/icons-se4964fe653.png') 0 -293px no-repeat; width: 22px; height: 22px; }
 
 .fancybox-nav { position: absolute; top: 0; width: 40%; height: 100%; cursor: pointer; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 8040; }
 

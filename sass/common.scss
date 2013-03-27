@@ -169,8 +169,6 @@ a{
 
 // Toolbar 
 .toolbar {
-    position: relative;
-    z-index: 3;
     height: 50px;
     background: #fff;
 }
@@ -541,6 +539,7 @@ a{
         @include box-shadow(0 1px 2px rgba(0,0,0,.15));
         + .tooltip {
             @include opacity(1);
+            z-index: 1000;
         }
     }
     &:active {
@@ -555,7 +554,7 @@ a{
     position: absolute;
     left: 50%;
     top: 38px;
-    z-index: 1000;
+    //z-index: 1000;
     padding: 8px 10px;
     @include b;
     color: #edeef0;
@@ -619,6 +618,16 @@ a{
     display: inline-block;
     width: 14px;
     height: 14px;
+    &:hover {
+        span {
+            border: 1px solid #4094d4;
+        }
+        .is-checked {
+            i {
+                @include sized-sprite($icons, check-h);
+            }
+        }
+    }
     input, span {
         position: absolute;
         left: 0;
@@ -651,6 +660,30 @@ a{
         i {
             display: block;
         }
+        &:hover {
+            i {
+                @include sized-sprite($icons, check-h);
+            }
+        }
+    }
+    .is-blocked {
+        border: 1px solid #e6e6e6;
+        background: #f5f5f5;
+        i {
+            @include opacity(.3);
+        }
+    }
+    .is-partly-blocked {
+        border: 1px solid #e6e6e6;
+        background: #f5f5f5;
+        i {
+            left: 50%;
+            top: 50%;
+            margin: -1px 0 0 -3px;
+            width: 6px;
+            height: 3px;
+            background: #ccc;
+        }
     }
     sub {
         color: #999;
@@ -666,6 +699,17 @@ a{
     color: #404040;
     font-size: 14px;
     margin-bottom: 14px;
+    &:hover {
+        i {
+            @include sized-sprite($icons, radio-h);
+        }
+        .is-active {
+            @include sized-sprite($icons, radio-act-h);
+        }
+        .is-blocked {
+            @include sized-sprite($icons, radio-b);
+        }
+    }
     label {
         position: relative;
         padding-left: 24px;
@@ -676,7 +720,7 @@ a{
         height: 14px;
         left: 0;
         top: 50%;
-        margin-top: -7px;
+        margin-top: -7px; 
     }
     input {
         opacity: 0;
@@ -687,6 +731,12 @@ a{
     }
     .is-active {
         @include sized-sprite($icons, radio-act);
+    }
+    .is-blocked {
+        @include sized-sprite($icons, radio-b);
+    }
+    .is-active.is-blocked {
+        @include sized-sprite($icons, radio-act-b);
     }
     sub {
         color: #999;
@@ -708,6 +758,16 @@ a{
         @include box-sizing(border-box); 
         @include border-radius(2px);
         @include placeholder(#999, sans-serif);
+        &:hover {
+            border-color: #999;
+        }
+        &:active {
+            border-color: #4094d4;
+        }
+    }
+    .is-blocked {
+        border-color: #e6e6e6;
+        background: #f5f5f5;
     }
     label {
         display: block;
