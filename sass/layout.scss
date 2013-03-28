@@ -151,10 +151,12 @@
         width: 65%;
     }
     .article-nav {
-        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
         margin: 0;
         padding: 98px 15px 46px;
-        width: 30%;
+        width: 35%;
         @include box-sizing(border-box);
     }
 }

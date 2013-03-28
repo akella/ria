@@ -318,7 +318,7 @@ a:hover { text-decoration: none; }
 .l-col-right .content .scroller__container { margin-right: 15px; border-right: 1px solid #cfcfcf; }
 
 .l-col-right_width .article { float: left; width: 65%; }
-.l-col-right_width .article-nav { float: right; margin: 0; padding: 98px 15px 46px; width: 30%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.l-col-right_width .article-nav { position: absolute; right: 0; top: 0; margin: 0; padding: 98px 15px 46px; width: 35%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .drag { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 330px; }
 .drag span { position: absolute; top: 0; left: 40%; bottom: 0; z-index: 4; width: 9px; cursor: move; background: #fff; border-left: 1px solid #cfcfcf; border-right: 1px solid #cfcfcf; }
@@ -471,7 +471,7 @@ a:hover { text-decoration: none; }
 .article { padding: 63px 40px 10px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .article h1 { margin: 8px 0 36px; font-size: 30px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; line-height: 1.2; }
 .article p { margin-bottom: 21px; }
-.article img { float: right; margin-left: 40px; border: 1px solid #1b5c94; }
+.article img { float: right; margin: 0 0 20px 40px; border: 1px solid #1b5c94; }
 .article strong, .article b { font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; }
 .article i { font-weight: normal; font-style: normal; font-family: 'PT Sans italic', sans-serif; }
 

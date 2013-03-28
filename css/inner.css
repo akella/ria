@@ -117,7 +117,7 @@
 .article { padding: 63px 40px 10px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .article h1 { margin: 8px 0 36px; font-size: 30px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; line-height: 1.2; }
 .article p { margin-bottom: 21px; }
-.article img { float: right; margin-left: 40px; border: 1px solid #1b5c94; }
+.article img { float: right; margin: 0 0 20px 40px; border: 1px solid #1b5c94; }
 .article strong, .article b { font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; }
 .article i { font-weight: normal; font-style: normal; font-family: 'PT Sans italic', sans-serif; }
 
