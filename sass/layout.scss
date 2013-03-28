@@ -251,6 +251,10 @@
     @extend %clr;
 }
 
+.is-with-shadow,
+.news-top__position-top  {
+    @include box-shadow(0 4px 6px -4px rgba(0,0,0,0.6));
+}
 
 // Baron scroller styles
 .scroller-wrap {

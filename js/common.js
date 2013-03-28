@@ -239,6 +239,14 @@ $(document).ready(function() {
       else {
             $('.l-col-right').removeClass("l-col-right_width");
       }
+
+      if (width_right >= 1280) {
+            $('.l-col-right').addClass("l-col-right_width");
+      }
+      else {
+            $('.l-col-right').removeClass("l-col-right_width");
+      }
+
     }
     column_width();
     function resize_proportions(){
@@ -261,6 +269,18 @@ $(document).ready(function() {
     $(window).resize(function(event) {
         column_width();
         resize_proportions();
+    });
+
+
+//-------------- show/hide shadow ------------------------------- //
+    $(".l-col-right .scroller").scroll(function() {
+        // animate shadow 1        
+        if (($(this).scrollTop() > 10)) {
+            $(".article-bar").addClass("is-with-shadow");
+        }
+        else {
+           $(".article-bar").removeClass("is-with-shadow");
+        }
     });
 
 });
