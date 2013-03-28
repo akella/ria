@@ -284,6 +284,9 @@ a:hover { text-decoration: none; }
 
 .is-withwall .l-layout { right: 210px; }
 
+.is-full-screen { min-width: 480px; }
+@media only screen and (min-width: 1280px) { .is-full-screen .article, .is-full-screen .article-nav { width: 50%; } }
+
 .l-wrapper { overflow: hidden; left: 0; right: 0; }
 
 .l-layout { position: absolute; left: 210px; right: 0; }
@@ -313,6 +316,9 @@ a:hover { text-decoration: none; }
 .l-col-right .content { background: #fff; border-right: 1px solid #cfcfcf; }
 .l-col-right .content .scroller__bar { top: 55px; }
 .l-col-right .content .scroller__container { margin-right: 15px; border-right: 1px solid #cfcfcf; }
+
+.l-col-right_width .article { float: left; width: 65%; }
+.l-col-right_width .article-nav { float: right; margin: 0; padding: 98px 15px 46px; width: 30%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .drag { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 330px; }
 .drag span { position: absolute; top: 0; left: 40%; bottom: 0; z-index: 4; width: 9px; cursor: move; background: #fff; border-left: 1px solid #cfcfcf; border-right: 1px solid #cfcfcf; }
@@ -353,9 +359,6 @@ a:hover { text-decoration: none; }
 @font-face { font-family: 'PT Sans bold'; src: url("../files/fonts/pts75f_w.eot"); font-style: normal; font-weight: bold; src: local("PT Sans Bold"), url("../files/fonts/PTS75F_W.woff") format("woff"), url("../files/fonts/PTS75F_W.ttf") format("truetype"), url("../files/fonts/PTS75F_W.svg#PTSans-Bold") format("svg"); }
 
 .search-list li:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-
-.is-full-screen { min-width: 480px; }
-@media only screen and (min-width: 1280px) { .is-full-screen .article, .is-full-screen .article-nav { width: 50%; } }
 
 .news-top { border-bottom: 1px solid #e7e7e7; }
 .news-top div { padding: 4px 10px; background: #f3f3f3; border-right: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -465,7 +468,7 @@ a:hover { text-decoration: none; }
 .article-bar__right .btn-open:active, .article-bar__right .btn-close:active { position: relative; top: -1px; }
 .article-bar__right .btn-close .tooltip { margin-left: -30px; }
 
-.article { padding: 63px 40px 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.article { padding: 63px 40px 10px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .article h1 { margin: 8px 0 36px; font-size: 30px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; line-height: 1.2; }
 .article p { margin-bottom: 21px; }
 .article img { float: right; margin-left: 40px; border: 1px solid #1b5c94; }
@@ -476,7 +479,7 @@ a:hover { text-decoration: none; }
 
 .article_mod { width: 65%; float: left; -webkit-transition: width, 0.5s ease-in-out; -moz-transition: width, 0.5s ease-in-out; -ms-transition: width, 0.5s ease-in-out; -o-transition: width, 0.5s ease-in-out; transition: width, 0.5s ease-in-out; }
 
-.article-nav { padding: 25px 0 46px; border-top: 1px solid #e7e7e7; margin: 0 30px 0 41px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; }
+.article-nav { padding: 25px 0 46px; border-top: 1px solid #e7e7e7; margin: 0 30px 0 41px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 .article-nav strong { position: relative; font-size: 11px; color: #404040; text-transform: uppercase; }
 .article-nav ul { margin-bottom: 21px; }
 .article-nav a { font-size: 12px; color: #00659b; text-decoration: none; }

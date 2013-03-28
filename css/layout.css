@@ -11,6 +11,9 @@
 
 .is-withwall .l-layout { right: 210px; }
 
+.is-full-screen { min-width: 480px; }
+@media only screen and (min-width: 1280px) { .is-full-screen .article, .is-full-screen .article-nav { width: 50%; } }
+
 .l-wrapper { overflow: hidden; left: 0; right: 0; }
 
 .l-layout { position: absolute; left: 210px; right: 0; }
@@ -40,6 +43,9 @@
 .l-col-right .content { background: #fff; border-right: 1px solid #cfcfcf; }
 .l-col-right .content .scroller__bar { top: 55px; }
 .l-col-right .content .scroller__container { margin-right: 15px; border-right: 1px solid #cfcfcf; }
+
+.l-col-right_width .article { float: left; width: 65%; }
+.l-col-right_width .article-nav { float: right; margin: 0; padding: 98px 15px 46px; width: 30%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .drag { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 330px; }
 .drag span { position: absolute; top: 0; left: 40%; bottom: 0; z-index: 4; width: 9px; cursor: move; background: #fff; border-left: 1px solid #cfcfcf; border-right: 1px solid #cfcfcf; }

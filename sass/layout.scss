@@ -13,6 +13,15 @@
         right: 210px;
     }
 }
+.is-full-screen {
+    min-width: 480px;
+    @include respond-to(nout) {
+        .article, .article-nav {
+            width: 50%;
+        }
+    }
+}
+
 
 // layout
 .l-wrapper {
@@ -136,6 +145,20 @@
         }
     }
 }
+.l-col-right_width {
+    .article {
+        float: left;
+        width: 65%;
+    }
+    .article-nav {
+        float: right;
+        margin: 0;
+        padding: 98px 15px 46px;
+        width: 30%;
+        @include box-sizing(border-box);
+    }
+}
+
 
 // Drag
 .drag {
