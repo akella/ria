@@ -1,3 +1,29 @@
+
+// ------------------- Buron scroller ------------------- //
+window.onload = function() {
+    baron($('.js-scroller-1'), {
+        scroller: '.scroller',
+        container: '.scroller__container',
+        bar: '.scroller__bar span',
+        barOnCls: 'baron'
+    });
+    $('.js-scroller-2').baron({
+        barOnCls: 'baron',
+        header: '.js-scroller-head',
+        // CSS class for fixed headers
+        hFixCls: 'news-top__fixed',
+        // CSS class for lowest fixed header of top headers group
+        hBeforeFixCls: 'news-top__position-top',
+        // !!! Remaned from hTopFixCls
+        // CSS class for uppermost fixed header of bottom headers group
+        hAfterFixCls: 'news-top__position-bottom'
+
+    });
+    $('.js-scroller-3').baron({barOnCls: 'baron'});
+    $('.js-scroller-4').baron({barOnCls: 'baron'});
+    $('.js-scroller-5').baron({barOnCls: 'baron'});
+}
+
 $(document).ready(function() {
 
 // ------------------- Fancybox ----------------------// 
@@ -5,9 +31,6 @@ $(document).ready(function() {
         openEffect  : 'none',
         closeEffect : 'none',
         padding: 20,
-        // afterLoad   : function() {
-        //     this.inner.apppend( '<a href="#" class="popup__download"><i></i>Скачать</a>' );
-        // },
         helpers : {
             title : {
                 type : 'outside'
@@ -221,31 +244,31 @@ $(document).ready(function() {
 //  --------------- resise(drag) width l-layout and cols -------- //
     //cur_prop = 0.4;
     function column_width() {
-      var width_left = $('.l-col-left').width();
-      var width_right = $('.l-col-right').width();
-      var drag = $('.drag span').position().left;
-      var width_layout = $('.l-layout').width();
-      var content__width = width_layout - drag;
-      //$('.l-col-left, .l-col-left .scroller').width(drag_left);
-      //$('.l-col-right, .l-col-right .scroller').width(content__width);
-      $('.l-col-left').width(drag);
-      $('.l-col-right').width(content__width);
-      $('.l-col-left .scroller').width(drag + 17);
-      $('.l-col-right .scroller').width(content__width + 17);
-      cur_prop = drag/width_layout;
-      if (width_right >= 1280) {
-            $('.l-col-right').addClass("l-col-right_width");
-      }
-      else {
-            $('.l-col-right').removeClass("l-col-right_width");
-      }
-
-      if (width_right >= 1280) {
-            $('.l-col-right').addClass("l-col-right_width");
-      }
-      else {
-            $('.l-col-right').removeClass("l-col-right_width");
-      }
+        var width_left = $('.l-col-left').width();
+        var width_right = $('.l-col-right').width();
+        var drag = $('.drag span').position().left;
+        var width_layout = $('.l-layout').width();
+        var content__width = width_layout - drag;
+        //$('.l-col-left, .l-col-left .scroller').width(drag_left);
+        //$('.l-col-right, .l-col-right .scroller').width(content__width);
+        $('.l-col-left').width(drag);
+        $('.l-col-right').width(content__width);
+        $('.l-col-left .scroller').width(drag + 17);
+        $('.l-col-right .scroller').width(content__width + 17);
+        cur_prop = drag/width_layout;
+        if (width_right >= 1280) {
+              $('.l-col-right').addClass("l-col-right_width");
+        }
+        else {
+              $('.l-col-right').removeClass("l-col-right_width");
+        }
+    
+        if (width_right >= 1280) {
+              $('.l-col-right').addClass("l-col-right_width");
+        }
+        else {
+              $('.l-col-right').removeClass("l-col-right_width");
+        }
 
     }
     column_width();
@@ -273,38 +296,55 @@ $(document).ready(function() {
 
 
 //-------------- show/hide shadow ------------------------------- //
+
     $(".l-col-right .scroller").scroll(function() {
         // animate shadow 1        
         if (($(this).scrollTop() > 10)) {
-            $(".article-bar").addClass("is-with-shadow");
+            $(".l-col-right").children(".article-bar").addClass("is-with-shadow");
         }
         else {
-           $(".article-bar").removeClass("is-with-shadow");
+           $(".l-col-right").children(".article-bar").removeClass("is-with-shadow");
         }
     });
+    $(".window .scroller").scroll(function() {
+        // animate shadow 1        
+        if (($(this).scrollTop() > 10)) {
+            $(".window .article-bar").addClass("is-with-shadow");
+        }
+        else {
+            $(".window .article-bar").removeClass("is-with-shadow");
+        }
+    });
+    //var height = $(".window").height();
+    //$(".window").css("top", -height);
+    $(".wall li").click(function(){
+        var wh = $(window).height();
+        var pt = $(this).position().top;
+        var h = $(".window").height() + 51;
+        var bottom = wh - pt - h;
+        $(".window").css({"bottom":bottom, "top":"auto"});
+        if (wh - pt - h < 0) {
+            $(".window").css("bottom", 0);
+            $(".window__close").addClass("is-floating").css({"top":pt});
+        }
+        else {
+            $(".window__close").removeClass("is-floating").css({"top":21});
+        }
+        if ($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+        }
+        else {
+            $(".wall li").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+    $(".l-wall-news .scroller").scroll(function() {
+        // animate shadow 1        
+        $(".wall li").removeClass("is-active");
+        $(".window").css("top", -447);
+        $(".window__close").removeClass("is-floating").css({"top":21});
+    });
+ 
 
 });
 
-// ------------------- Buron scroller ------------------- //
-window.onload = function() {
-    baron($('.js-scroller-1'), {
-        scroller: '.scroller',
-        container: '.scroller__container',
-        bar: '.scroller__bar span',
-        barOnCls: 'baron'
-    });
-    $('.js-scroller-2').baron({
-        barOnCls: 'baron',
-        header: '.js-scroller-head',
-        // CSS class for fixed headers
-        hFixCls: 'news-top__fixed',
-        // CSS class for lowest fixed header of top headers group
-        hBeforeFixCls: 'news-top__position-top',
-        // !!! Remaned from hTopFixCls
-        // CSS class for uppermost fixed header of bottom headers group
-        hAfterFixCls: 'news-top__position-bottom'
-
-    });
-    $('.js-scroller-3').baron({barOnCls: 'baron'});
-    $('.js-scroller-4').baron({barOnCls: 'baron'});
-};

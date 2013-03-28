@@ -238,10 +238,16 @@
             border-top: 0;
         }
     }
-    .is-active {
+    .is-new {
         a {
             color: #f15c30;
         } 
+    }
+    .is-active {
+        background: #474e53;
+        a {
+            @include b;
+        }
     }
     a {
         color: #fff;
@@ -356,20 +362,14 @@
 .article-bar__right {
     position: absolute;
     right: 30px;
-    top: 10px;
+    top: 13px;
     .icon {
         cursor: pointer;
         vertical-align: middle;
     }
-    .btn-open {
-        margin-right: 20px;
-        .tooltip {
-            width: 140px;
-            margin-left: -70px;
-        }
-    }
     .btn-open,
-    .btn-close {
+    .btn-close,
+    .btn-open-feed {
         position: relative;
         float: left;
         &:hover {
@@ -386,6 +386,20 @@
     .btn-close {
         .tooltip {
             margin-left: -30px;
+        }
+    }
+    .btn-open {
+        margin-right: 20px;
+        .tooltip {
+            width: 140px;
+            margin-left: -70px;
+        }
+    }
+    .btn-open-feed {
+        margin-right: 20px;
+        .tooltip {
+            width: 140px;
+            margin-left: -70px;
         }
     }
 }

@@ -53,6 +53,12 @@ body{
     @include r;
     font-size: 16px;
     line-height: 1.2;
+    ::-webkit-selection {
+    background: #c2cedd;
+}
+::selection {
+    background: #c2cedd;
+} 
 }
 
 a{
@@ -498,6 +504,12 @@ a{
         @include sized-sprite($icons, open-h);
     }
 }
+.icon_open-feed {
+    @include sized-sprite($icons, open-in-feed);
+    &:hover {
+        @include sized-sprite($icons, open-in-feed-h);
+    }
+}
 .icon_star {
     @include sized-sprite($icons, star);
     vertical-align: middle;
@@ -891,4 +903,91 @@ a{
     &:hover {
         @include sized-sprite($icons, close2-h);
     }
+}
+
+.window {
+    position: absolute;
+   // margin-top: -10px;
+    top: -447px;
+    right: 203px;
+    z-index: 2000;
+    padding-top: 51px;
+    width: 357px;
+    height: 394px;
+    border: 1px solid #b9b9b9;
+    @include border-radius(2px);
+    background: #fff;
+    @include transition(left, .5s ease-in-out);
+    @include box-shadow(0 1px 3px rgba(0,0,0,.3));
+    .is-floating {
+        position: fixed;
+        right: 197px;
+        margin-top: 10px; 
+    }
+    .article-bar__left {
+        left: 10px;
+    }
+    .article-bar__right {
+        right: 10px;
+    }
+    .scroller__container {
+        padding: 0 !important;
+    }
+    .scroller__bar {
+        right: 5px !important;
+    }
+    .article-nav {
+        margin: 0;
+        padding: 22px 0 0;
+        .icon_star {
+            display: none;
+        }
+    }
+    .article-nav__left,
+    .article-nav__right,
+    .article-nav__media {
+        float: none;
+        width: 100%;
+    }
+    .media-link {
+        display: inline-block;
+        margin: 0 8px 8px 0;
+        vertical-align: top;
+    }
+    .article-nav__media {
+        margin-bottom: 23px;
+        padding-bottom: 23px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+}
+.window__main {
+    margin: 0 16px 0 0;  
+    padding: 13px 10px 0 19px;
+    border-right: 1px solid #e7e7e7;
+}
+.window__close {
+    position: absolute;
+    right: -7px;
+    top: 21px;
+    z-index: 3000;
+    @include sized-sprite($icons, arr2);
+}
+.article-window {
+    font-size: 14px;
+    h1 {
+        margin: 9px 0 22px;
+        font-size: 18px;
+        @include b;
+    }
+    strong, b {
+        @include b;
+    }
+    p {
+        margin-bottom: 22px;
+    }
+}
+.article-window__meta {
+    font-size: 12px;
+    @include b;
+    color: #999;
 }

@@ -43,7 +43,7 @@
 .l-col-right .content .scroller__container { margin-right: 15px; border-right: 1px solid #cfcfcf; }
 
 .l-col-right_width .article { float: left; width: 65%; }
-.l-col-right_width .article-nav { position: absolute; right: 0; top: 0; margin: 0; padding: 98px 15px 46px; width: 35%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.l-col-right_width .article-nav { position: absolute; right: 0; top: 0; margin: 0; padding: 98px 30px 46px 0; width: 35%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .drag { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 330px; }
 .drag span { position: absolute; top: 0; left: 40%; bottom: 0; z-index: 4; width: 9px; cursor: move; background: #fff; border-left: 1px solid #cfcfcf; border-right: 1px solid #cfcfcf; }
