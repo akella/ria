@@ -22,6 +22,7 @@
     }
 }
 
+
 // layout
 .l-wrapper {
     overflow: hidden;
@@ -56,7 +57,6 @@
     width: 210px;
     z-index: 2;
     background: #2f373d;
-    @include transition(all .5s ease-in-out);
     @include respond-to(wide) {
         left: -210px;
     }
@@ -162,6 +162,7 @@
     }
 }
 
+
 // Drag
 .drag {
     position: absolute;
@@ -263,9 +264,9 @@
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
-// .scroller::-webkit-scrollbar {
-//     width: 0;
-// }
+.scroller::-webkit-scrollbar {
+    width: 0;
+}
 .scroller__bar {
     position: absolute;
     z-index: 1;

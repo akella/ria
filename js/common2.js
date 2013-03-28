@@ -52,7 +52,7 @@ $(document).ready(function() {
     });
     // Click on toolbar__overlay
     $(".toolbar__overlay").click(function(){
-        $(".toolbar__overlay").fadeOut();
+        $(this).fadeOut();
         $(".btn-opt").removeClass("is-active");
         $(".js-drop-down").slideUp("fast");
     });
@@ -222,7 +222,6 @@ $(document).ready(function() {
     //cur_prop = 0.4;
     function column_width() {
       var width_left = $('.l-col-left').width();
-      var width_right = $('.l-col-right').width();
       var drag = $('.drag span').position().left;
       var width_layout = $('.l-layout').width();
       var content__width = width_layout - drag;
@@ -233,12 +232,6 @@ $(document).ready(function() {
       $('.l-col-left .scroller').width(drag + 17);
       $('.l-col-right .scroller').width(content__width + 17);
       cur_prop = drag/width_layout;
-      if (width_right >= 1280) {
-            $('.l-col-right').addClass("l-col-right_width");
-      }
-      else {
-            $('.l-col-right').removeClass("l-col-right_width");
-      }
     }
     column_width();
     function resize_proportions(){
@@ -259,8 +252,8 @@ $(document).ready(function() {
 
 // --------------  reinit columns width -------------- //
     $(window).resize(function(event) {
-        column_width();
         resize_proportions();
+        column_width();
     });
 
 });

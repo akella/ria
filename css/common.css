@@ -70,10 +70,10 @@ a:hover { text-decoration: none; }
 .toolbar { height: 50px; background: #fff; }
 
 .toolbar_extend .search { left: 238px; right: 10px; }
-.toolbar_extend .options { display: none; }
-.toolbar_extend .options-more { display: block; }
+.toolbar_extend .options { right: -115px; }
+.toolbar_extend .options-more { left: 10px; }
 
-.search { position: absolute; left: 10px; top: 10px; right: 140px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.search { position: absolute; left: 10px; top: 10px; right: 140px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -ms-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .search input[type="submit"] { display: none; }
 .search input[type="text"] { padding: 0 30px 0 10px; height: 30px; width: 100%; font-weight: normal; font-style: normal; font-family: 'PT Sans regular', sans-serif; font-size: 16px; border: 1px  solid #ccc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
 .search input[type="text"].placeholder { color: #999999; font: sans-serif; }
@@ -94,7 +94,7 @@ a:hover { text-decoration: none; }
 .search-list__text { overflow: hidden; }
 .search-list__text span { display: block; color: #999; font-size: 12px; }
 
-.options { position: absolute; right: 10px; top: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.options { position: absolute; right: 10px; top: 10px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -ms-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .options .icon { vertical-align: middle; }
 
 .lightning { position: relative; float: left; }
@@ -123,7 +123,7 @@ a:hover { text-decoration: none; }
 
 .view__icon { display: inline-block; background: url('../i/icons-se4964fe653.png') 0 -976px no-repeat; width: 8px; height: 4px; }
 
-.options-more { display: none; position: absolute; left: 10px; top: 10px; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.options-more { position: absolute; left: -210px; top: 10px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -ms-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
 .options-more .print { float: left; margin-right: -1px; -webkit-border-radius: 2px 0 0 2px; -moz-border-radius: 2px 0 0 2px; -ms-border-radius: 2px 0 0 2px; -o-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
 .options-more .email { float: left; -webkit-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -ms-border-radius: 0 2px 2px 0; -o-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
 

@@ -1,6 +1,13 @@
 @import "base";
 
-
+.is-full-screen {
+    min-width: 480px;
+    @include respond-to(nout) {
+        .article, .article-nav {
+            width: 50%;
+        }
+    }
+}
 // styles of .l-col-left  items
 // news
 .news-top {
@@ -16,16 +23,16 @@
     }
 }
 .news-top__fixed {
-    right: 14px;
+    right: 14px; 
     left: 0;
 }
 .news-top__position-top {
-    position: absolute; 
+    position: absolute;
     z-index: 2;
     top: 0 !important;
 }
 .news-top__position-bottom {
-    position: static; 
+    position: static;
 }
 .news-top__date {
     margin-left: 13px;
@@ -58,7 +65,7 @@
         position: relative;
         &:before {
             content: "";
-            position: absolute; 
+            position: absolute;
             right: 5px;
             top: 5px;
             @include sized-sprite($icons, lightning2);
@@ -392,9 +399,7 @@
 
 .article {
     padding: 63px 40px 10px;
-    width: 100%; // for animation
     @include box-sizing(border-box);
-    @include transition(all .5s ease-in-out);
     h1 {
         margin: 8px 0 36px;
         font-size: 30px;
@@ -406,7 +411,7 @@
     }
     img {
         float: right;
-        margin: 0 0 20px 40px;
+        margin-left: 40px;
         border: 1px solid #1b5c94;
     }
     strong, b {
@@ -433,7 +438,6 @@
     margin: 0 30px 0 41px;
     @include b;
     @extend %clr;
-    @include transition(all .5s ease-in-out);
     strong {
         position: relative;
         font-size: 11px;
