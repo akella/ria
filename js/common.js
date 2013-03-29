@@ -32,6 +32,9 @@ window.onload = function() {
     if ($('.js-scroller-5').length > 0) {
         $('.js-scroller-5').baron({barOnCls: 'baron'});
     }
+    if ($('.js-scroller-6').length > 0) {
+        $('.js-scroller-6').baron({barOnCls: 'baron'});
+    }
 }
 
 $(document).ready(function() {
@@ -143,20 +146,36 @@ $(document).ready(function() {
             $(this).removeClass("is-active");
             $("body").removeClass("is-withwall");
             $(".l-wall-news").removeClass("is-active").afterTransition(function () {
-                $('.js-scroller-2').baron({barOnCls: 'baron'});
-                $('.js-scroller-3').baron({barOnCls: 'baron'});
+                if ($('.js-scroller-2').length > 0) {
+                    $('.js-scroller-2').baron({barOnCls: 'baron'});
+                }
+                if ($('.js-scroller-3').length > 0) {
+                    $('.js-scroller-3').baron({barOnCls: 'baron'});
+                }
+                if ($('.js-scroller-6').length > 0) {
+                    $('.js-scroller-6').baron({barOnCls: 'baron'});
+                }
             });
+            $(".window").css("top", -456);
+            $(".window__close").removeClass("is-floating").css({"top":21});
         }
         else {
             $(this).addClass("is-active");
             $("body").addClass("is-withwall");
             $(".l-wall-news").addClass("is-active").afterTransition(function () {
-                $('.js-scroller-2').baron({barOnCls: 'baron'});
-                $('.js-scroller-3').baron({barOnCls: 'baron'});
+                if ($('.js-scroller-2').length > 0) {
+                    $('.js-scroller-2').baron({barOnCls: 'baron'});
+                }
+                if ($('.js-scroller-3').length > 0) {
+                    $('.js-scroller-3').baron({barOnCls: 'baron'});
+                }
+                if ($('.js-scroller-6').length > 0) {
+                    $('.js-scroller-6').baron({barOnCls: 'baron'});
+                }
             });
         }
         // reinit columns with dragable
-        resize_proportions();
+        //resize_proportions();
         column_width();
     });
 
@@ -295,7 +314,7 @@ $(document).ready(function() {
         newValue = whole*cur_prop;
         $('.drag span').css('left', newValue);
     }
-    if ($(".drag span").length > 0) {
+    if ($(".drag").length > 0) {
         $('.drag span').draggable({
           axis:'x',
           containment:'parent',
@@ -360,7 +379,7 @@ $(document).ready(function() {
     $(".l-wall-news .scroller").scroll(function() {
         // animate shadow 1        
         $(".wall li").removeClass("is-active");
-        $(".window").css("top", -447);
+        $(".window").css("top", -456);
         $(".window__close").removeClass("is-floating").css({"top":21});
     });
  

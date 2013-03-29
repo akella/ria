@@ -151,3 +151,15 @@
 .media-link .icon { position: absolute; top: 5px; left: 5px; }
 
 .loader { display: inline-block; vertical-align: middle; width: 16px; height: 16px; background-image: url('data:gif;base64,R0lGODlhEAAQAPYAAP7+/s3Nzf39/c7OztbW1u3t7eTk5Ovr6+Dg4PX19dDQ0Ofn5/Pz897e3tPT0/v7++Hh4dHR0fr6+urq6vz8/Nvb2/j4+PDw8NjY2Pn5+c/Pz9TU1O/v7/f399LS0tfX1+7u7vb29uXl5ePj4/T09Ojo6Nzc3Obm5tra2nh4ePHx8fLy8mZmZqWlpRISEtnZ2YeHh9XV1VpaWpmZmQwMDAMDAwYGBpaWliQkJGlpaTMzM8PDwzAwMDw8PN/f3+np6UtLSwkJCbS0tN3d3RsbGw8PD+Li4ioqKuzs7B4eHq6urhgYGDY2Nqurq0hISJycnHJycsnJyY2NjYSEhLe3t3t7e1FRUWNjY8DAwD8/P35+fi0tLSEhIbGxsTk5OaioqE5OTr29vYGBgScnJ5+fn8bGxkJCQmBgYHV1dRUVFbq6ulRUVIqKipOTk29vb11dXaKiogAAAMzMzFdXV5CQkGxsbEVFRQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgBzACwAAAAAEAAQAAAHQ4BzgoNzcYSHgnKDhoWIg4qNkY5yiiySjHOUjoVxmImOnpublHIGo5qiqZCHq4mthKSDI66PtayfAK+PAJ+Zqb2/v4EAIfkEBQoAAQAsBwAAAAgACAAABxWAcgGDhAGChYOHiAiIjY6PkAFxk4EAIfkEBQoAHgAsCQABAAUACwAABxSAHnIehIKFg4WJiouMinGJcZGQgQAh+QQFCgAzACwJAAMABQALAAAHF4AzgjNygnKHhoOKi4yNgnGKFJCDkzOBACH5BAUKAAAALAcABwAIAAgAAAcRgACCgnKFg4eIiYqKcYyOiYEAIfkEBQoASAAsAwAJAAsABQAABxiASIKDgnKEh0hyikhxcYiJjI+CcRSSSIEAIfkEBQoAKgAsAAAJAAsABQAABxaAKoJxgoWFcYSGhlCKgnKNhgCPkI6BACH5BAUKAAkALAAABwAIAAgAAAcRgHGCKQmFhoeIiYqLinKNjYEAIfkEBQoARgAsAAADAAYACwAABxiARoKDRnFxhIKHiIuMjY5ycoSRg3IARoEAIfkEBQoATAAsAAABAAYACwAABxmATIJxgoVMhIZxiIaMjY6PTHKFcpKFI4aBACH5BAUKAAAALAAAAAAIAAgAAAcWgACCgwBxhIOGh4WKACyMj5BykgaEgQAh+QQFCgBJACwAAAEACwAFAAAHFIBJgoOEcYSHSYaIgopycouEj4iBADs='); }
+
+.set-col { float: left; margin-top: 24px; padding: 0 10px 0 39px; width: 35%; color: #666; font-size: 14px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.set-col:first-child { border: 0; width: 30%; }
+.set-col:nth-child(2) { border-left: 1px solid #e8e8e8; border-right: 1px solid #e8e8e8; }
+
+.set-col__title { display: block; margin-bottom: 11px; color: #000; font-size: 18px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; }
+
+.settings { margin-bottom: 33px; }
+.settings .check { display: block; margin-bottom: 16px; }
+.settings .check .icon { margin-left: 6px; }
+
+.settings__title { display: block; margin-bottom: 16px; font-size: 10px; color: #000; text-transform: uppercase; }

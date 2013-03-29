@@ -491,11 +491,12 @@ a{
 .icon_info {@include sized-sprite($icons, info);}
 .icon_photo {@include sized-sprite($icons, photo);}
 .icon_video {@include sized-sprite($icons, video);}
+.icon_media {@include sized-sprite($icons, is-media);}
 
 .icon_close {
     @include sized-sprite($icons, close);
     &:hover {
-        @include sized-sprite($icons, close-h);
+        @include sized-sprite($icons, close-h); 
     }
 }
 .icon_open {
@@ -710,6 +711,7 @@ a{
 .check_mod {
     width: auto;
     padding-left: 24px;
+    @include user-select;
 }
 
 .radio {
@@ -907,8 +909,8 @@ a{
 
 .window {
     position: absolute;
-   // margin-top: -10px;
-    top: -447px;
+    margin-top: -10px;
+    top: -456px;
     right: 203px;
     z-index: 2000;
     padding-top: 51px;

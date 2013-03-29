@@ -9,7 +9,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="../js/baron.min.js"></script>  
     <script src="../js/transition-events.js"></script>  
-    
+    <script src="../js/jquery-ui-1.10.0.custom.min.js"></script>  
     <script src="../js/jquery.fancybox.pack.js"></script>  
     <script src="../js/common.js"></script>
     <!--[if lt IE 9]> 
@@ -130,7 +130,200 @@
             </div>
         </aside>
         <section class="l-layout">
-            
+            <div class="scroller-wrap js-scroller-6">
+                <div class="scroller">
+                    <div class="scroller__container">
+                        <div class="wrap">
+                            <div class="set-col">
+                                <strong class="set-col__title">
+                                    Настройка отображения
+                                </strong>
+                                <p>Выберите ленты, которые нужно отображать в меню</p>
+                            </div>
+                            <div class="set-col">
+                                <div class="settings">
+                                    <span class="settings__title">ОБЩИЕ</span>
+                                    <label for="check1" class="check check_mod">
+                                        <input type="checkbox" id="check1">
+                                        <span><i></i></span>
+                                        <strong>Анонсы</strong>
+                                    </label>
+                                    <label for="check2" class="check check_mod">
+                                        <input type="checkbox" id="check2">
+                                        <span><i></i></span>
+                                        <strong>В мире</strong>
+                                    </label>
+                                    <label for="check3" class="check check_mod">
+                                        <input type="checkbox" id="check3">
+                                        <span><i></i></span>
+                                        <strong>Главное</strong>
+                                    </label>
+                                    <label for="check4" class="check check_mod">
+                                        <input type="checkbox" id="check4">
+                                        <span><i></i></span>
+                                        <strong>Культура</strong>
+                                    </label>
+                                    <label for="check5" class="check check_mod">
+                                        <input type="checkbox" id="check5">
+                                        <span><i></i></span>
+                                        <strong>Москва</strong>
+                                    </label>
+                                    <label for="check6" class="check check_mod">
+                                        <input type="checkbox" id="check6">
+                                        <span><i></i></span>
+                                        <strong>Новости дня</strong>
+                                    </label>
+                                    <label for="check7" class="check check_mod">
+                                        <input type="checkbox" id="check7">
+                                        <span><i></i></span>
+                                        <strong>Политика</strong>
+                                    </label>
+                                    <label for="check8" class="check check_mod">
+                                        <input type="checkbox" id="check8">
+                                        <span><i></i></span>
+                                        <strong>Право</strong>
+                                    </label>
+                                    <label for="check9" class="check check_mod">
+                                        <input type="checkbox" id="check9">
+                                        <span><i></i></span>
+                                        <strong>Происшествия</strong>
+                                    </label>
+                                    <label for="check10" class="check check_mod">
+                                        <input type="checkbox" id="check10">
+                                        <span><i></i></span>
+                                        <strong>Светская хроника</strong>
+                                    </label>
+                                    <label for="check11" class="check check_mod">
+                                        <input type="checkbox" id="check11">
+                                        <span><i></i></span>
+                                        <strong>Спорт</strong>
+                                    </label>
+                                    <label for="check12" class="check check_mod">
+                                        <input type="checkbox" id="check12">
+                                        <span><i></i></span>
+                                        <strong>Утренняя почта</strong>
+                                    </label>
+                                    <label for="check13" class="check check_mod">
+                                        <input type="checkbox" id="check13">
+                                        <span><i></i></span>
+                                        <strong>Экономика<b class="icon icon_media"></b></strong>
+                                    </label>
+                                </div>
+                                <div class="settings">
+                                    <span class="settings__title">РЕГИОНЫ</span>
+                                    <label for="check_r1" class="check check_mod">
+                                        <input type="checkbox" id="check_r1">
+                                        <span><i></i></span>
+                                        <strong>Дальний Восток</strong>
+                                    </label>
+                                    <label for="check_r2" class="check check_mod">
+                                        <input type="checkbox" id="check_r2">
+                                        <span><i></i></span>
+                                        <strong>Приволжье</strong>
+                                    </label>
+                                    <label for="check_r3" class="check check_mod">
+                                        <input type="checkbox" id="check_r3">
+                                        <span><i></i></span>
+                                        <strong>Северо-Запад</strong>
+                                    </label>
+                                    <label for="check_r4" class="check check_mod">
+                                        <input type="checkbox" id="check_r4">
+                                        <span><i></i></span>
+                                        <strong>Сибирь</strong>
+                                    </label>
+                                    <label for="check_r5" class="check check_mod">
+                                        <input type="checkbox" id="check_r5">
+                                        <span><i></i></span>
+                                        <strong>СНГ и страны Балтии</strong>
+                                    </label>
+                                    <label for="check_r6" class="check check_mod">
+                                        <input type="checkbox" id="check_r6">
+                                        <span><i></i></span>
+                                        <strong>Урал</strong>
+                                    </label>
+                                    <label for="check_r7" class="check check_mod">
+                                        <input type="checkbox" id="check_r7">
+                                        <span><i></i></span>
+                                        <strong>Центр</strong>
+                                    </label>
+                                    <label for="check_r8" class="check check_mod">
+                                        <input type="checkbox" id="check_r8">
+                                        <span><i></i></span>
+                                        <strong>Юг</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="set-col">
+                                <div class="settings">
+                                    <span class="settings__title">ENGLISH</span>
+                                    <label for="check_e1" class="check check_mod">
+                                        <input type="checkbox" id="check_e1">
+                                        <span><i></i></span>
+                                        <strong>BusinessNews</strong>
+                                    </label>
+                                    <label for="check_e2" class="check check_mod">
+                                        <input type="checkbox" id="check_e2">
+                                        <span><i></i></span>
+                                        <strong>RIAN Mulimedia Service</strong>
+                                    </label>
+                                    <label for="check_e3" class="check check_mod">
+                                        <input type="checkbox" id="check_e3">
+                                        <span><i></i></span>
+                                        <strong>RIAN News Service</strong>
+                                    </label>
+                                    <label for="check_e4" class="check check_mod">
+                                        <input type="checkbox" id="check_e4">
+                                        <span><i></i></span>
+                                        <strong>RNS Analysis</strong>
+                                    </label>
+                                    <label for="check_e5" class="check check_mod">
+                                        <input type="checkbox" id="check_e5">
+                                        <span><i></i></span>
+                                        <strong>R-Sport News Service<b class="icon icon_media"></b></strong>
+                                    </label>
+                                </div>
+                                <div class="settings">
+                                    <span class="settings__title">Deutsch</span>
+                                    <label for="check_d1" class="check check_mod">
+                                        <input type="checkbox" id="check_d1">
+                                        <span><i></i></span>
+                                        <strong>RIAN News Service</strong>
+                                    </label>
+                                    <label for="check_d2" class="check check_mod">
+                                        <input type="checkbox" id="check_d2">
+                                        <span><i></i></span>
+                                        <strong>RNS Analysis</strong>
+                                    </label>
+                                </div>
+                                <div class="settings">
+                                    <span class="settings__title">français</span>
+                                    <label for="check_f1" class="check check_mod">
+                                        <input type="checkbox" id="check_f1">
+                                        <span><i></i></span>
+                                        <strong>RIAN News Service</strong>
+                                    </label>
+                                    <label for="check_f2" class="check check_mod">
+                                        <input type="checkbox" id="check_f2">
+                                        <span><i></i></span>
+                                        <strong>RNS Analysis</strong>
+                                    </label>
+                                </div>
+                                <div class="settings">
+                                    <span class="settings__title">中国的</span>
+                                    <label for="check_c1" class="check check_mod">
+                                        <input type="checkbox" id="check_c1">
+                                        <span><i></i></span>
+                                        <strong>俄新社中文信息</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="scroller__bar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <aside class="l-wall-news">
             <div class="scroller-wrap js-scroller-4">
