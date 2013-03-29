@@ -133,6 +133,7 @@ $(document).ready(function() {
         }
         else {
             $("body").removeClass("is-withsidebar");
+            hide_window();
         }
     }
     adaptive();
@@ -144,6 +145,7 @@ $(document).ready(function() {
     $(".js-show-wall").click(function(){
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
+            $(this).text("Все ленты");
             $("body").removeClass("is-withwall");
             $(".l-wall-news").removeClass("is-active").afterTransition(function () {
                 if ($('.js-scroller-2').length > 0) {
@@ -156,11 +158,11 @@ $(document).ready(function() {
                     $('.js-scroller-6').baron({barOnCls: 'baron'});
                 }
             });
-            $(".window").css("top", -456);
-            $(".window__close").removeClass("is-floating").css({"top":21});
+            hide_window();
         }
         else {
             $(this).addClass("is-active");
+            $(this).text("Скрыть");
             $("body").addClass("is-withwall");
             $(".l-wall-news").addClass("is-active").afterTransition(function () {
                 if ($('.js-scroller-2').length > 0) {
@@ -333,8 +335,7 @@ $(document).ready(function() {
     });
 
 
-//-------------- show/hide shadow ------------------------------- //
-
+//-------------------- show/hide shadow --------------------- //
     $(".l-col-right .scroller").scroll(function() {
         // animate shadow 1        
         if (($(this).scrollTop() > 10)) {
@@ -353,8 +354,8 @@ $(document).ready(function() {
             $(".window .article-bar").removeClass("is-with-shadow");
         }
     });
-    //var height = $(".window").height();
-    //$(".window").css("top", -height);
+
+//-------------------- show/hide window on click  --------------------- //
     $(".wall li").click(function(){
         var wh = $(window).height();
         var pt = $(this).position().top;
@@ -370,6 +371,7 @@ $(document).ready(function() {
         }
         if ($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
+            hide_window();
         }
         else {
             $(".wall li").removeClass("is-active");
@@ -378,11 +380,16 @@ $(document).ready(function() {
     });
     $(".l-wall-news .scroller").scroll(function() {
         // animate shadow 1        
+        hide_window();
+    });
+
+
+    function hide_window() {
         $(".wall li").removeClass("is-active");
         $(".window").css("top", -456);
         $(".window__close").removeClass("is-floating").css({"top":21});
-    });
- 
+    }
+    hide_window();
 
 });
 
