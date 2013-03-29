@@ -1,27 +1,37 @@
 
 // ------------------- Buron scroller ------------------- //
 window.onload = function() {
-    baron($('.js-scroller-1'), {
-        scroller: '.scroller',
-        container: '.scroller__container',
-        bar: '.scroller__bar span',
-        barOnCls: 'baron'
-    });
-    $('.js-scroller-2').baron({
-        barOnCls: 'baron',
-        header: '.js-scroller-head',
-        // CSS class for fixed headers
-        hFixCls: 'news-top__fixed',
-        // CSS class for lowest fixed header of top headers group
-        hBeforeFixCls: 'news-top__position-top',
-        // !!! Remaned from hTopFixCls
-        // CSS class for uppermost fixed header of bottom headers group
-        hAfterFixCls: 'news-top__position-bottom'
+    if ($('.js-scroller-1').length > 0) {
+        baron($('.js-scroller-1'), {
+            scroller: '.scroller',
+            container: '.scroller__container',
+            bar: '.scroller__bar span',
+            barOnCls: 'baron'
+        });
+    }
+    if ($('.js-scroller-2').length > 0) {
+        $('.js-scroller-2').baron({
+            barOnCls: 'baron',
+            header: '.js-scroller-head',
+            // CSS class for fixed headers
+            hFixCls: 'news-top__fixed',
+            // CSS class for lowest fixed header of top headers group
+            hBeforeFixCls: 'news-top__position-top',
+            // !!! Remaned from hTopFixCls
+            // CSS class for uppermost fixed header of bottom headers group
+            hAfterFixCls: 'news-top__position-bottom'
 
-    });
-    $('.js-scroller-3').baron({barOnCls: 'baron'});
-    $('.js-scroller-4').baron({barOnCls: 'baron'});
-    $('.js-scroller-5').baron({barOnCls: 'baron'});
+        });
+    }
+    if ($('.js-scroller-3').length > 0) {
+        $('.js-scroller-3').baron({barOnCls: 'baron'});
+    }
+    if ($('.js-scroller-4').length > 0) {
+        $('.js-scroller-4').baron({barOnCls: 'baron'});
+    }
+    if ($('.js-scroller-5').length > 0) {
+        $('.js-scroller-5').baron({barOnCls: 'baron'});
+    }
 }
 
 $(document).ready(function() {
@@ -239,7 +249,9 @@ $(document).ready(function() {
         //api.reinitialise();
         //api_content.reinitialise();
     }
-    width_content();
+    if ($(".l-col-left").length > 0) {
+        width_content();
+    }
 
 //  --------------- resise(drag) width l-layout and cols -------- //
     //cur_prop = 0.4;
@@ -271,7 +283,9 @@ $(document).ready(function() {
         }
 
     }
-    column_width();
+    if ($(".l-col-left").length > 0) {
+        column_width();
+    }
     function resize_proportions(){
         whole = $('.l-layout').width();
         // $('.l-col-left, .l-col-left .scroller').width(whole*cur_prop);
@@ -281,17 +295,22 @@ $(document).ready(function() {
         newValue = whole*cur_prop;
         $('.drag span').css('left', newValue);
     }
-    $('.drag span').draggable({
-      axis:'x',
-      containment:'parent',
-      drag: column_width,
-    });
+    if ($(".drag span").length > 0) {
+        $('.drag span').draggable({
+          axis:'x',
+          containment:'parent',
+          drag: column_width,
+        });
+    }
+    
 
 
 // --------------  reinit columns width -------------- //
     $(window).resize(function(event) {
-        column_width();
-        resize_proportions();
+        if ($(".l-col-left").length > 0) {
+            column_width();
+            resize_proportions();
+        }
     });
 
 
