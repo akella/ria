@@ -910,8 +910,7 @@ a{
 .window {
     position: absolute;
     margin-top: -10px;
-    top: -456px;
-    right: 203px;
+    right: -456px;
     z-index: 2000;
     padding-top: 51px;
     width: 357px;
@@ -923,7 +922,7 @@ a{
     @include box-shadow(0 1px 3px rgba(0,0,0,.3));
     .is-floating {
         position: fixed;
-        right: 197px;
+        right: 204px;
         margin-top: 10px; 
     }
     .article-bar__left {

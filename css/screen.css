@@ -278,8 +278,8 @@ a:hover { text-decoration: none; }
 .popup-close { position: absolute; top: -10px; right: -10px; cursor: pointer; z-index: 8040; background: url('../i/icons-sc2f87bfa6b.png') 0 -103px no-repeat; width: 22px; height: 22px; }
 .popup-close:hover { background: url('../i/icons-sc2f87bfa6b.png') 0 -293px no-repeat; width: 22px; height: 22px; }
 
-.window { position: absolute; margin-top: -10px; top: -456px; right: 203px; z-index: 2000; padding-top: 51px; width: 357px; height: 394px; border: 1px solid #b9b9b9; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; background: #fff; -webkit-transition: left, 0.5s ease-in-out; -moz-transition: left, 0.5s ease-in-out; -ms-transition: left, 0.5s ease-in-out; -o-transition: left, 0.5s ease-in-out; transition: left, 0.5s ease-in-out; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
-.window .is-floating { position: fixed; right: 197px; margin-top: 10px; }
+.window { position: absolute; margin-top: -10px; right: -456px; z-index: 2000; padding-top: 51px; width: 357px; height: 394px; border: 1px solid #b9b9b9; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; background: #fff; -webkit-transition: left, 0.5s ease-in-out; -moz-transition: left, 0.5s ease-in-out; -ms-transition: left, 0.5s ease-in-out; -o-transition: left, 0.5s ease-in-out; transition: left, 0.5s ease-in-out; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+.window .is-floating { position: fixed; right: 204px; margin-top: 10px; }
 .window .article-bar__left { left: 10px; }
 .window .article-bar__right { right: 10px; }
 .window .scroller__container { padding: 0 !important; }
@@ -417,7 +417,7 @@ a:hover { text-decoration: none; }
 .news_headers-only .news__title { display: inline; }
 .news_headers-only .news__meta { position: relative; top: -2px; }
 
-.news__cont { float: left; margin-left: 40px; padding: 17px 0; color: #333; font-size: 12px; }
+.news__cont { margin-left: 40px; padding: 17px 0; color: #333; font-size: 12px; }
 .news__cont p { margin-bottom: 5px; }
 
 .news__title { position: relative; top: -2px; line-height: 1.1; margin-bottom: 4px; }

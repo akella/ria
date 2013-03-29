@@ -33,7 +33,7 @@
 .news_headers-only .news__title { display: inline; }
 .news_headers-only .news__meta { position: relative; top: -2px; }
 
-.news__cont { float: left; margin-left: 40px; padding: 17px 0; color: #333; font-size: 12px; }
+.news__cont { margin-left: 40px; padding: 17px 0; color: #333; font-size: 12px; }
 .news__cont p { margin-bottom: 5px; }
 
 .news__title { position: relative; top: -2px; line-height: 1.1; margin-bottom: 4px; }

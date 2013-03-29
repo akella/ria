@@ -361,7 +361,7 @@ $(document).ready(function() {
         var pt = $(this).position().top;
         var h = $(".window").height() + 51;
         var bottom = wh - pt - h;
-        $(".window").css({"bottom":bottom, "top":"auto"});
+        $(".window").css({"bottom":bottom, "right":210});
         if (wh - pt - h < 0) {
             $(".window").css("bottom", 0);
             $(".window__close").addClass("is-floating").css({"top":pt});
@@ -386,7 +386,7 @@ $(document).ready(function() {
 
     function hide_window() {
         $(".wall li").removeClass("is-active");
-        $(".window").css("top", -456);
+        $(".window").css("right", -456);
         $(".window__close").removeClass("is-floating").css({"top":21});
     }
     hide_window();
