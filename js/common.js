@@ -74,16 +74,17 @@ $(document).ready(function() {
 
 // ------------------- View type ------------------- //
     $(".js-btn-opt").click(function(){
+        var overlay = $(this).parent().parent().parent().children(".toolbar__overlay");
         var list = $(this).parent().children(".js-drop-down");
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
             list.slideUp("fast");
-            $(".toolbar__overlay").hide()
+            overlay.hide()
         }
         else {
             $(this).addClass("is-active");
             list.slideDown("fast");
-            $(".toolbar__overlay").show()
+            overlay.show()
         }
     });
     // Click on toolbar__overlay
@@ -390,8 +391,8 @@ $(document).ready(function() {
         $(".window__arr").removeClass("is-floating").css({"top":21});
     }
     hide_window();
-    $(".window__arr").click(function(){
-         hide_window();   
+    $(".window .icon_close").click(function(){
+        hide_window();   
     });
 
 });

@@ -32,11 +32,11 @@
 .sidebar-mini .is-new { position: relative; }
 .sidebar-mini .is-new:after { content: ""; position: absolute; right: -5px; top: -5px; width: 10px; height: 10px; background: #f80; border: 2px solid #2f373d; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
 
-.l-col-left { left: 0; width: 42%; z-index: 2; }
+.l-col-left { left: 0; width: 42%; }
 .l-col-left .scroller-wrap { position: absolute; top: 50px; bottom: 0; left: 0; right: 0; height: auto; border-top: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .l-col-left .scroller__container { padding: 0 14px 0 0; }
 
-.l-col-right { right: 0; z-index: 2; width: 58%; background: #f2f2f2; }
+.l-col-right { right: 0; width: 58%; background: #f2f2f2; }
 .l-col-right .main { height: 94%; }
 .l-col-right .content { background: #fff; border-right: 1px solid #cfcfcf; }
 .l-col-right .content .scroller__bar { top: 55px; }
