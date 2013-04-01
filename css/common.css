@@ -292,7 +292,7 @@ a:hover { text-decoration: none; }
 
 .window__main { margin: 0 16px 0 0; padding: 13px 10px 0 19px; border-right: 1px solid #e7e7e7; }
 
-.window__close { position: absolute; right: -7px; top: 21px; z-index: 3000; background: url('../i/icons-sc2f87bfa6b.png') 0 -625px no-repeat; width: 7px; height: 12px; }
+.window__arr { position: absolute; right: -7px; top: 21px; z-index: 3000; background: url('../i/icons-sc2f87bfa6b.png') 0 -625px no-repeat; width: 7px; height: 12px; }
 
 .article-window { font-size: 14px; }
 .article-window h1 { margin: 9px 0 22px; font-size: 18px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; }
