@@ -50,7 +50,7 @@ body{
     min-width: 1024px;
     width: 100%;
     color: #000;
-    @include r;
+    @include font;
     font-size: 16px;
     line-height: 1.2;
     ::-webkit-selection {
@@ -203,7 +203,7 @@ a{
         padding: 0 30px 0 10px;
         height: 30px;
         width: 100%;
-        @include r;
+        @include font;
         font-size: 16px;
         border: 1px  solid #ccc;
         @include box-sizing(border-box); 
@@ -350,7 +350,7 @@ a{
             }
         }
         .is-selected {
-            @include b;
+            font-weight: bold;
             color: #000;
         }
     }
@@ -407,7 +407,7 @@ a{
         }
         li {
             &:hover {
-                @include r;
+                @include font;
             }
         }
     }
@@ -660,7 +660,7 @@ a{
         @include border-radius(2px);
     }
     strong {
-        @include r;
+        @include font;
     }
     input {
         @include opacity(0);
@@ -771,7 +771,7 @@ a{
         padding: 0 10px;
         height: 30px;
         width: 100%;
-        @include r;
+        @include font;
         font-size: 16px;
         border: 1px solid #ccc;
         @include box-sizing(border-box); 
