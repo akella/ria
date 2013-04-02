@@ -15,7 +15,7 @@ output, ruby, section, summary,time, mark, audio, video {
     vertical-align: baseline;
 }
 body, html {
-    height: 100%
+    height: 100% 
 }
 img,fieldset {border:none;}
 input[type="submit"], button {cursor:pointer;}
@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6,a,span,a:focus {
 }
 ul,ol {
     list-style-type: none;
-}
+}  
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header,
 hgroup, menu, nav, section { 
@@ -175,6 +175,7 @@ a{
 
 // Toolbar 
 .toolbar {
+    position: relative;
     height: 50px;
     background: #fff;
 }
@@ -199,37 +200,23 @@ a{
     input[type="submit"] {
         display: none;
     }
-    input[type="text"] {
-        padding: 0 30px 0 10px;
-        height: 30px;
-        width: 100%;
-        @include r;
-        font-size: 16px;
-        border: 1px  solid #ccc;
-        @include box-sizing(border-box); 
-        @include border-radius(2px);
-        @include placeholder(#999, sans-serif);
-        &:hover {
-            border-color: #999;
-        }
-        &:focus {
-            border-color: #4094d4;
-        }
-    }
-    button {
-        position: absolute;
-        right: 1px;
-        top: 1px;
-        background: none;
-        width: 26px;
-        height: 28px;
-        text-align: center;
-        i { 
-            display: inline-block;
-            vertical-align: middle;
-            @include sized-sprite($icons, drop);
-        }
-    }
+    // input[type="text"] {
+    //     padding: 0 30px 0 10px;
+    //     height: 30px;
+    //     width: 100%;
+    //     @include r;
+    //     font-size: 16px;
+    //     border: 1px  solid #ccc;
+    //     @include box-sizing(border-box); 
+    //     @include border-radius(2px);
+    //     @include placeholder(#999, sans-serif);
+    //     &:hover {
+    //         border-color: #999;
+    //     }
+    //     &:focus {
+    //         border-color: #4094d4;
+    //     }
+    // }
 }
 .search-list {
     display: none;
@@ -272,6 +259,76 @@ a{
         font-size: 12px;
     }
 }
+
+.search-ext {
+    position: relative;
+    z-index: -1; 
+    padding: 30px 40px;
+    background: #fff;
+    border-top: 1px solid #e7e7e7;
+    .icon_close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        cursor: pointer;
+    }
+    .submit-wrap {
+        text-align: center;
+    }
+}
+.search-ext__title {
+    display: block;
+    margin-bottom: 17px;
+    color: #666;
+    font-size: 10px;
+    @include b;
+    text-transform: uppercase;
+}
+.block {
+    float: left;
+    width: 50%;
+    @include respond-to(pda) {
+        float: none;
+        width: 100%;
+    }
+}
+.search-ext__cols  {
+    margin-bottom: 14px;
+    .radio {
+        display: inline-block;
+        width: 49%;
+    }
+}
+.search-ext__filter {
+    clear: both;
+    margin: 0 0 30px;
+    padding-top: 27px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7; 
+}
+.search-ext__input { 
+    position: relative;
+    .check_mod {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        strong {
+            font-size: 14px;
+            color: #404040;
+            vertical-align: top;
+        }
+    }
+    .input {
+        button {
+            top: 19px;
+        }
+    }
+    .search-list {
+        top: 50px;
+        width: 80%;
+    }
+}
+
 
 .options {
     position: absolute;
@@ -784,7 +841,7 @@ a{
             border-color: #4094d4;
         }
     }
-    .is-blocked {
+    .is-disabled {
         border-color: #e6e6e6;
         background: #f5f5f5;
     }
@@ -800,6 +857,20 @@ a{
         padding: 10px;
         height: 140px;
         resize: vertical;
+    }
+    button {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        background: none;
+        width: 26px;
+        height: 28px;
+        text-align: center;
+        i { 
+            display: inline-block;
+            vertical-align: middle;
+            @include sized-sprite($icons, drop);
+        }
     }
 }
 .submit-wrap {
@@ -992,3 +1063,4 @@ a{
     @include b;
     color: #999;
 }
+

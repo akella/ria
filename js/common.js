@@ -384,7 +384,7 @@ $(document).ready(function() {
         hide_window();
     });
 
-
+//-------------------- show/hide window  --------------------- //
     function hide_window() {
         $(".wall li").removeClass("is-active");
         $(".window").css("right", -456);
@@ -394,6 +394,44 @@ $(document).ready(function() {
     $(".window .icon_close").click(function(){
         hide_window();   
     });
+
+//-------------------- show/hide extend search --------------------- //
+    function extend_search() {
+        var search = $(".search-ext");
+        var search_pos = search.height() + 110; 
+        var top = search.height() + 60 + $(".l-col-left .toolbar").height();
+        search.css("top", -search_pos);
+        $(".js-show-search").click(function(){    
+            $(this).hide();
+            search.animate({
+                top: 0,
+                zIndex: 3
+            }, 500);
+            $(".scroller-wrap__overlay").fadeIn();
+            $(".js-scroller-2").animate({
+                top: top
+                }, 500);
+            if ($('.js-scroller-2').length > 0) {
+                $('.js-scroller-2').baron({barOnCls: 'baron'});
+            }
+        });
+        $(".js-close-search").click(function(){
+            $(".js-show-search").show();
+            search.animate({
+                top: -search_pos
+            }, 500);
+            search.css("z-index", -1);
+            $(".js-scroller-2").animate({
+                top: 50
+                }, 500);
+            $(".scroller-wrap__overlay").fadeOut();
+            if ($('.js-scroller-2').length > 0) {
+                $('.js-scroller-2').baron({barOnCls: 'baron'});
+            }
+        });
+
+    }
+    extend_search();
 
 });
 
