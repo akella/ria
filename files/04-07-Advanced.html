@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>04-05-Advanced</title>
+	<title>04-07-Advanced</title>
     <link rel="stylesheet" media="screen" href="../css/screen.css" >
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="../js/baron.min.js"></script>  
@@ -254,6 +254,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="filter-result">
+                    Область поиска: что — <strong>все слова</strong>, где — <strong>в заголовках</strong>, период — <strong>за все время</strong>, ленты — <strong>во всех лентах</strong>, обьекты — <strong>Путин</strong>
+                </div>
                 <div class="search-ext">
                     <span class="search-ext__title">ЧТО И ГДЕ ИСКАТЬ?</span>
                         <form>
@@ -305,12 +308,12 @@
                                 <div class="search-ext__input">
                                     <div class="input">
                                         <label for="input_s1">ЗА ПЕРИОД</label>
-                                        <input class="is-disabled" type="text" id="input_s1" disabled>
+                                        <input type="text" id="input_s1">
                                         <button>
                                             <i></i>
                                         </button>
                                     </div>
-                                    <label for="check_s1" class="check check_mod">
+                                    <label for="check_s1" class="check check_mod js-block-input">
                                         <input type="checkbox" id="check_s1">
                                         <span><i></i></span>
                                         <strong>Все время</strong>
@@ -319,21 +322,24 @@
                                 <div class="search-ext__input">
                                     <div class="input">
                                         <label for="input_s2">ПО ЛЕНТАМ</label>
-                                        <input class="is-disabled" type="text" id="input_s2" disabled>
+                                        <input type="text" id="input_s2">
                                         <button>
                                             <i></i>
                                         </button>
                                     </div>
-                                    <label for="check_s3" class="check check_mod">
+                                    <label for="check_s3" class="check check_mod js-block-input">
                                         <input type="checkbox" id="check_s3">
                                         <span><i></i></span>
-                                        <strong>Все время</strong>
+                                        <strong>Все ленты</strong>
                                     </label>
                                 </div>
-                                <div class="search-ext__input">
+                                <div class="search-ext__input search-ext__input_obj">
                                     <div class="input">
                                         <label for="input_s3">Обьекты</label>
                                         <input type="text" id="input_s3">
+                                    </div>
+                                    <div class="tags-wrap">
+                                        <span class="tag">Путин<i></i></span>
                                     </div>
                                     <ul class="search-list">
                                         <li>
@@ -398,16 +404,16 @@
                         </form>
                     <i class="icon icon_close js-close-search"></i>
                 </div>
-                <div class="scroller-wrap js-scroller-2">
+                <div class="scroller-wrap scroller-wrap_filter-res js-scroller-2">
                     <div class="scroller">
                         <div class="scroller__container">
                             <div class="news-top">
                                 <div class="js-scroller-head">
                                     <span class="check check_all">
                                         <input type="checkbox">
-                                        <span class="is-blocked"><i></i></span>
+                                        <span><i></i></span>
                                     </span>
-                                    <span class="news-top__date">Сегодня, 15 февраля</span>
+                                    <span class="news-top__date">Найдено 5 654 новости</span>
                                 </div>
                             </div>
                             <ul class="news">

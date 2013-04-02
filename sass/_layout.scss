@@ -114,6 +114,9 @@
         border-top: 1px solid #e7e7e7;
         @include box-sizing(border-box);
     }
+    .scroller-wrap_filter-res {
+        top: 100px;
+    }
     .scroller__container {
         padding: 0 14px 0 0;
     }

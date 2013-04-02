@@ -49,7 +49,7 @@ body{
     position: relative;
     min-width: 1024px;
     width: 100%;
-    color: #000;
+    color: #404040;
     @include r;
     font-size: 16px;
     line-height: 1.2;
@@ -281,16 +281,8 @@ a{
     margin-bottom: 17px;
     color: #666;
     font-size: 10px;
-    @include b;
+    @include b; 
     text-transform: uppercase;
-}
-.block {
-    float: left;
-    width: 50%;
-    @include respond-to(pda) {
-        float: none;
-        width: 100%;
-    }
 }
 .search-ext__cols  {
     margin-bottom: 14px;
@@ -302,7 +294,7 @@ a{
 .search-ext__filter {
     clear: both;
     margin: 0 0 30px;
-    padding-top: 27px;
+    padding: 27px 0 20px;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7; 
 }
@@ -328,7 +320,56 @@ a{
         width: 80%;
     }
 }
-
+.search-ext__input_obj {
+    .input {
+        margin-bottom: 10px;
+    }
+}
+.tags-cloud {
+    margin-bottom: 20px;
+}
+.tag {
+    display: inline-block;
+    margin: 0 5px 5px;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    color: #404040;
+    cursor: pointer;
+    font-size: 12px;
+    @include b;
+    border: 1px solid #c3ccce;
+    @include border-radius(10px);
+    background: #e6eaed;
+    @include user-select;
+    @include background-image(linear-gradient(bottom, #e6eaed 0%, #f5f7fa 100%));
+    &:hover {
+        background: #f5f7fa;
+        @include background-image(linear-gradient(bottom, #f5f7fa 0%, #e6eaed 100%));
+        i {
+            @include sized-sprite($icons, del-tag-h);
+        }
+    }
+    &:active {
+        @include box-shadow(inset 0 1px 3px rgba(0,0,0,.4));
+    }
+    i {
+        display: inline-block;
+        margin-left: 5px;
+        @include sized-sprite($icons, del-tag);
+        vertical-align: middle;
+    }
+}
+.filter-result {
+    padding: 10px 10px 0;
+    height: 40px;
+    font-size: 12px;
+    overflow: hidden;
+    border-top: 1px solid #e7e7e7;
+    strong {
+        @include b;
+    }
+}
 
 .options {
     position: absolute;
