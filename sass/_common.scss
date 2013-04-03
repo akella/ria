@@ -510,8 +510,12 @@ a{
         }
     }
     .tooltip {
-        margin-left: -75px;
+        margin-left: -25px;
         width: 150px;
+        &:before {
+            left: 0;
+            margin-left: 17px;
+        }
     }
 }
 .download {

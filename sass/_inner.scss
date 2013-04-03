@@ -16,7 +16,7 @@
     }
 }
 .news-top__fixed {
-    right: 14px;
+    right: 14px;  
     left: 0;
 }
 .news-top__position-top {
@@ -164,10 +164,28 @@
     }
 }
 .set-link {
+    a {
+        display: block;
+        @include sized-sprite($icons, set);
+    }
     position: absolute;
     top: 0;
     right: 0;
-    @include sized-sprite($icons, set);
+    &:hover {
+        .tooltip {
+            @include opacity(1);
+        }
+    }
+    .tooltip {
+        top: 28px;
+        margin-left: -80px;
+        width: 95px;
+        text-transform: none;
+        &:before {
+            left: auto;
+            right: 8px
+        }
+    }
 }
 .info-item {
     margin: 0 0 29px;

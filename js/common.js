@@ -355,15 +355,6 @@ $(document).ready(function() {
 
 
 //-------------------- show/hide shadow --------------------- //
-    $(".l-col-right .scroller").scroll(function() {
-        // animate shadow 1        
-        if (($(this).scrollTop() > 10)) {
-            $(".l-col-right").children(".article-bar").addClass("is-with-shadow");
-        }
-        else {
-           $(".l-col-right").children(".article-bar").removeClass("is-with-shadow");
-        }
-    });
     $(".window .scroller").scroll(function() {
         // animate shadow 1        
         if (($(this).scrollTop() > 10)) {
@@ -371,6 +362,15 @@ $(document).ready(function() {
         }
         else {
             $(".window .article-bar").removeClass("is-with-shadow");
+        }
+    });
+    $(".content .scroller").scroll(function() {
+        // animate shadow 1        
+        if (($(this).scrollTop() > 10)) {
+            $(".content .article-bar").addClass("is-with-shadow");
+        }
+        else {
+            $(".content .article-bar").removeClass("is-with-shadow");
         }
     });
 
