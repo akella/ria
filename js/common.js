@@ -104,7 +104,7 @@ $(document).ready(function() {
                 left: -210
             }, 100);
             $(".l-sidebar").afterTransition(function () {
-                $(".l-sidebar").css("z-index", "1");
+                $(".l-sidebar").css("z-index", "2");
             });
         }
         else {
@@ -339,7 +339,7 @@ $(document).ready(function() {
         $('.drag span').draggable({
           axis:'x',
           containment:'parent',
-          drag: column_width,
+          drag: column_width
         });
     }
     
@@ -397,7 +397,7 @@ $(document).ready(function() {
             $(this).addClass("is-active");
         }
     });
-    $(".l-wall-news .scroller").scroll(function() {
+    $(".js-scroller-4 .scroller").scroll(function() {
         // animate shadow 1        
         hide_window();
     });

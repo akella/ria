@@ -737,7 +737,6 @@ a{
     position: relative;
     display: inline-block;
     width: 14px;
-    height: 14px;
     &:hover {
         span {
             border: 1px solid #4094d4;
@@ -904,13 +903,16 @@ a{
         resize: vertical;
     }
     button {
+        display: block;
         position: absolute;
         right: 1px;
         top: 1px;
-        background: none;
+        z-index: 2;
+        background: transparent;
         width: 26px;
         height: 28px;
         text-align: center;
+        background: #fff;
         i { 
             display: inline-block;
             vertical-align: middle;

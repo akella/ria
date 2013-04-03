@@ -1,7 +1,11 @@
 @import "base";
 // ie6-8
 .lteie8 {
-
+    .input {
+        input {
+            line-height: 28px;
+        }
+    }
 }
 // ie7
 

@@ -291,8 +291,10 @@
     padding-left: 11px;
     width: 190px;
     height: 28px;
+    line-height: 28px;
     background: #2f373d;
     @include b;
+    cursor: pointer;
     font-size: 12px;
     color: #fff;
     text-align: left;
@@ -305,9 +307,8 @@
     &:after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 12px;
         right: 11px;
-        margin-top: -3px;
     }
 }
 .show-wall.is-new {
@@ -542,9 +543,10 @@
 .loader {
     display: inline-block;
     vertical-align: middle;
+    padding: 0;
     width: 16px;
     height: 16px;
-    background-image: inline-image("loader.gif", gif);
+    //background-image: inline-image("loader.gif", gif);
 } 
 
 .set-col  { 

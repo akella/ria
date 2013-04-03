@@ -56,9 +56,11 @@
     width: 210px;
     z-index: 2;
     background: #2f373d;
-    @include transition(all .5s ease-in-out);
+    //@include transition(left .2s ease-in-out);
     @include respond-to(wide) {
         left: -210px;
+        //@include transform(translate(-210px,0) 500ms ease-in-out);
+        //@include translate(-210px,0);
     }
     .scroller__bar {
         right: 4px;
@@ -79,9 +81,10 @@
     padding-top: 15px;
     width: 50px;
     background: #2f373d;
-    @include transition(all .5s ease-in-out);
+    //@include transition(left .2s ease-in-out);
     @include respond-to(wide) {
         left: 210px;
+        //@include translate(260px,0);
     }
     .is-new {
         position: relative;
@@ -119,6 +122,9 @@
     }
     .scroller__container {
         padding: 0 14px 0 0;
+    }
+    .is-searching {
+        padding: 0;
     }
 }
 
