@@ -368,7 +368,7 @@
     top: 10px;
     .add-to {
         .tooltip {
-            margin-left: -36px;
+            margin-left: -27px; 
             &:before {
                 left: 0;
                 margin-left: 25px;
@@ -379,7 +379,7 @@
 .article-bar__right {
     position: absolute;
     right: 30px;
-    top: 13px;
+    top: 13px; 
     .icon {
         cursor: pointer;
         vertical-align: middle;
@@ -390,14 +390,19 @@
         position: relative;
         float: left;
         &:hover {
-            .tooltip {
-                top: 28px;
-                @include opacity(1);
+            .icon {
+                + .tooltip {
+                    @include opacity(1);
+                }
             }
+            
         }
         &:active {
             position: relative;
             top: -1px;
+        }
+        .tooltip {
+            top: 28px;
         }
     }
     .btn-close {

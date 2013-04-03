@@ -647,6 +647,7 @@ a{
     display: block;
     width: 50px;
     height: 30px;
+    line-height: 1;
     border: 1px solid #c3ccce;
     @include border-radius(2px);
     background: #ebebeb;
@@ -923,7 +924,7 @@ a{
 .submit {
     padding: 0 23px;
     height: 28px;
-    line-height: 28px;
+    //line-height: 28px;
     color: #404040;
     border: 1px solid #c3ccce;
     @include border-radius(2px);
