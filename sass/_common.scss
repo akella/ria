@@ -200,23 +200,6 @@ a{
     input[type="submit"] {
         display: none;
     }
-    // input[type="text"] {
-    //     padding: 0 30px 0 10px;
-    //     height: 30px;
-    //     width: 100%;
-    //     @include r;
-    //     font-size: 16px;
-    //     border: 1px  solid #ccc;
-    //     @include box-sizing(border-box); 
-    //     @include border-radius(2px);
-    //     @include placeholder(#999, sans-serif);
-    //     &:hover {
-    //         border-color: #999;
-    //     }
-    //     &:focus {
-    //         border-color: #4094d4;
-    //     }
-    // }
 }
 .search-list {
     display: none;
@@ -266,12 +249,28 @@ a{
     padding: 30px 40px;
     background: #fff;
     border-top: 1px solid #e7e7e7;
-    .icon_close {
+    .btn-close {
         position: absolute;
         top: 10px;
         right: 12px;
         cursor: pointer;
+        .icon {
+            &:hover {
+                + .tooltip {
+                    @include opacity(1);
+                }
+            }
+        }
+        .tooltip {
+            top: 28px;
+            margin-left: -50px;
+            &:before {
+                right: 7px;
+                left: auto;
+            }
+        }
     }
+
     .submit-wrap {
         text-align: center;
     }
