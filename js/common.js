@@ -454,5 +454,29 @@ $(document).ready(function() {
     }
     extend_search();
 
+// ---------------- Placeholder -------------------------- //
+    // add placeholder to all input
+    $(".input input").each(function(){
+        var placeholder = $(this).attr("placeholder");
+        $(this).val(placeholder);
+    });
+    // remove placeholder from the current input
+    $(".input input").focusin(function(){
+        if ($(this).hasClass("is-focused")) {}
+        else {
+            $(this).addClass("is-focused");
+            $(this).val("");
+        }
+    });
+    // remove placeholder from the current input
+    $(".input input").focusout(function(){
+        var placeholder = $(this).attr("placeholder");
+        if ($(this).val() != "") {}
+        else {
+            $(this).val(placeholder);
+            $(this).removeClass("is-focused");
+        }
+    });
+
 });
 

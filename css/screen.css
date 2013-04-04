@@ -269,13 +269,14 @@ a:hover { text-decoration: none; }
 .radio sub { color: #999; font-size: 12px; }
 
 .input { margin-bottom: 31px; text-align: left; }
-.input input, .input textarea { display: block; padding: 0 10px; height: 30px; width: 100%; font-weight: normal; font-style: normal; font-family: 'PT Sans regular', sans-serif; font-size: 16px; border: 1px solid #ccc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+.input input, .input textarea { display: block; padding: 0 10px; height: 30px; width: 100%; font-weight: normal; font-style: normal; font-family: 'PT Sans regular', sans-serif; color: #999; font-size: 16px; border: 1px solid #ccc; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
 .input input.placeholder, .input textarea.placeholder { color: #999999; font: sans-serif; }
 .input input:-moz-placeholder, .input textarea:-moz-placeholder { color: #999999; font: sans-serif; }
 .input input::-webkit-input-placeholder, .input textarea::-webkit-input-placeholder { color: #999999; font: sans-serif; }
 .input input:hover, .input textarea:hover { border-color: #999; }
 .input input:focus, .input textarea:focus { border-color: #4094d4; }
 .input .is-disabled { border-color: #e6e6e6; background: #f5f5f5; }
+.input .is-focused { color: #404040; }
 .input label { display: block; margin-bottom: 7px; font-size: 10px; color: #666; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
 .input textarea { padding: 10px; height: 140px; resize: vertical; }
 .input button { display: block; position: absolute; right: 1px; top: 1px; z-index: 2; background: transparent; width: 26px; height: 28px; text-align: center; background: #fff; }
