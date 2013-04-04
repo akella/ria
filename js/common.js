@@ -129,7 +129,7 @@ $(document).ready(function() {
 // ------------------- Adaptive sidebar ------------------- //  
     function adaptive() {
         var width = $(window).width();
-        if (width > 1024) {
+        if (width > 1000) {
             $("body").addClass("is-withsidebar");
         }
         else {
@@ -348,8 +348,8 @@ $(document).ready(function() {
 // --------------  reinit columns width -------------- //
     $(window).resize(function(event) {
         if ($(".l-col-left").length > 0) {
-            column_width();
             resize_proportions();
+            column_width();
         }
     });
 

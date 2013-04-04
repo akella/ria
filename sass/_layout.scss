@@ -7,6 +7,19 @@
     .overlay {
         display: none !important
     }
+    .l-layout {
+        left: 210px;
+        right: 0;
+    }
+    .sidebar-mini {
+        left: -50px;
+    }
+    .l-wall-news.is-active {
+        right: 0px;
+    }
+    .show-wall {
+        left: -230px;
+    }
 }
 .is-withwall {
     .l-layout {
@@ -30,13 +43,13 @@
 }
 .l-layout {
     position: absolute;
-    left: 210px;
-    right: 0;
+    //left: 210px;
+    //right: 0;
     z-index: 1;
-    @include respond-to(wide) {
+   // @include respond-to(wide) {
         left: 50px;
         right: 0 !important;
-    }
+    //}
 }
 .l-wrapper,
 .l-layout,
@@ -57,11 +70,11 @@
     z-index: 2;
     background: #2f373d;
     //@include transition(left .2s ease-in-out);
-    @include respond-to(wide) {
+    //@include respond-to(wide) {
         left: -210px;
         //@include transform(translate(-210px,0) 500ms ease-in-out);
         //@include translate(-210px,0);
-    }
+    //}
     .scroller__bar {
         right: 4px;
         span {
@@ -75,17 +88,17 @@
 .sidebar-mini {
     position: absolute;
     top: 0;
-    left: -50px;
+    //left: -50px;
     bottom: 0;
     z-index: 2000;
     padding-top: 15px;
     width: 50px;
     background: #2f373d;
     //@include transition(left .2s ease-in-out);
-    @include respond-to(wide) {
+    //@include respond-to(wide) {
         left: 210px;
         //@include translate(260px,0);
-    }
+    //}
     .is-new {
         position: relative;
         &:after {
@@ -213,9 +226,9 @@
     width: 210px;
     background: #2f373d;
     @include transition(left, .5s ease-in-out);
-    @include respond-to(wide) {
-        right: -210px !important;
-    }
+    // @include respond-to(wide) {
+    //     right: -210px !important;
+    // }
     .scroller-wrap {
         height: 96%;
     }
@@ -228,9 +241,7 @@
         }
     }
 }
-.l-wall-news.is-active {
-    right: 0;
-}
+
 
 // Other
 .overlay,

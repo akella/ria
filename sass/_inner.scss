@@ -14,6 +14,9 @@
     span, .check {
         vertical-align: middle;
     }
+    .check {
+        height: 14px;
+    }
 }
 .news-top__fixed {
     right: 14px;  
@@ -287,7 +290,8 @@
 .show-wall {
     position: absolute;
     bottom: 0;
-    left: -230px;
+    //left: -230px;
+    left: 0;
     padding-left: 11px;
     width: 190px;
     height: 28px;
@@ -301,9 +305,9 @@
     @include box-sizing(border-box);
     @include border-radius(2px 2px 0 0);
     @include transition(all .2s ease-in-out);
-    @include respond-to(wide) {
-        left: 0 !important;
-    }
+    // @include respond-to(wide) {
+    //     left: 0 !important;
+    // }
     &:after {
         content: "";
         position: absolute;
