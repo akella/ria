@@ -48,7 +48,7 @@
     z-index: 1;
    // @include respond-to(wide) {
         left: 50px;
-        right: 0 !important;
+        right: 0;
     //}
 }
 .l-wrapper,
@@ -122,7 +122,7 @@
     .scroller-wrap { 
         position: absolute;
         top: 50px;
-        //top: 574px;
+        //top: 0px;
         bottom: 0;
         left: 0;
         right: 0;
@@ -140,7 +140,6 @@
         padding: 0;
     }
 }
-
 // Right column
 .l-col-right {
     right: 0;

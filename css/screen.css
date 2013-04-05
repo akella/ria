@@ -105,7 +105,7 @@ a:hover { text-decoration: none; }
 .search-ext__input { position: relative; }
 .search-ext__input .check_mod { position: absolute; right: 0; top: -4px; }
 .search-ext__input .check_mod strong { font-size: 14px; color: #404040; vertical-align: top; }
-.search-ext__input .input button { top: 19px; }
+.search-ext__input .input button { top: 20px; }
 .search-ext__input .search-list { top: 50px; width: 80%; }
 
 .search-ext__input_obj .input { margin-bottom: 10px; }
@@ -352,7 +352,7 @@ a:hover { text-decoration: none; }
 
 .l-wrapper { overflow: hidden; left: 0; right: 0; }
 
-.l-layout { position: absolute; z-index: 1; left: 50px; right: 0 !important; }
+.l-layout { position: absolute; z-index: 1; left: 50px; right: 0; }
 
 .l-wrapper, .l-layout, .l-sidebar, .l-col-left, .l-col-right, .l-wall-news { position: absolute; top: 0; bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -425,12 +425,6 @@ a:hover { text-decoration: none; }
 .news-top div { padding: 4px 10px; background: #f3f3f3; border-right: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .news-top span, .news-top .check { vertical-align: middle; }
 .news-top .check { height: 14px; }
-
-.news-top__fixed { right: 14px; left: 0; }
-
-.news-top__position-top { position: absolute; z-index: 2; top: 0 !important; }
-
-.news-top__position-bottom { position: static; }
 
 .news-top__date { margin-left: 13px; color: #404040; font-size: 10px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
 
@@ -583,6 +577,12 @@ a:hover { text-decoration: none; }
 .settings .check .icon { margin-left: 6px; }
 
 .settings__title { display: block; margin-bottom: 16px; font-size: 10px; color: #000; text-transform: uppercase; }
+
+.followMeBar { position: relative; z-index: 2; }
+
+.followMeBar.fixed { position: absolute; top: 0; left: 0; right: 14px; }
+
+.followMeBar.fixed.absolute { position: absolute; }
 
 @font-face { font-family: 'PT Sans regular'; src: url("../files/fonts/pts55f_w.eot"); src: local("PT Sans"), url("../files/fonts/PTS55F_W.woff") format("woff"), url("../files/fonts/PTS55F_W.ttf") format("truetype"), url("../files/fonts/PTS55F_W.svg#PTSans-Regular") format("svg"); }
 
