@@ -553,10 +553,17 @@
     height: 16px;
     //background-image: inline-image("loader.gif", gif);
 } 
-
+.wrap-set {
+    margin: 0 2.2%;
+    border-top: 1px solid #e7e7e7;
+    @extend %clr;
+    &:first-child {
+        border: 0;
+    }
+}
 .set-col  { 
     float: left;
-    margin-top: 24px;
+    margin: 29px 0;
     padding: 0 10px 0 39px;
     width: 35%; 
     color: #666;
@@ -570,7 +577,14 @@
         border-left: 1px solid #e8e8e8;
         border-right: 1px solid #e8e8e8;
     }
-
+    a {
+        color: #00659b;
+        @include b;
+        text-decoration: none;
+    } 
+    p {
+        margin-bottom: 15px;
+    }
 }
 
 .set-col__title {
