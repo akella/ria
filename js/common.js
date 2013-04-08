@@ -1,4 +1,65 @@
 
+    function stickyTitles(stickies) {
+
+        this.load = function() {
+            stickies.each(function(){
+                var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
+                    thisSticky.parent().height(thisSticky.outerHeight());
+                jQuery.data(thisSticky[0], 'pos', thisSticky.position().top);
+            });
+        }
+
+        this.scroll = function() {
+            stickies.each(function(i){                
+                var thisSticky = jQuery(this),
+                      nextSticky = stickies.eq(i+1),
+                      prevSticky = stickies.eq(i-1),
+                      pos = jQuery.data(thisSticky[0], 'pos');
+                      
+                      
+                if (pos <= jQuery(".js-scroller-2 .scroller").scrollTop()) {
+                    var pos_parent = $(".js-scroller-2 .scroller__container").position().top;  
+                    thisSticky.addClass("fixed");
+
+                    // $(".search input").val(pos_parent);
+                    $(".main-head__title").text(jQuery.data(nextSticky[0], 'pos'));
+                    $(".info-item__title").text(pos_parent);
+
+                    if (Math.abs(pos_parent) >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
+                        thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - Math.abs(pos_parent) - thisSticky.outerHeight());
+                    }
+                    else {
+                        //alert();
+                    }
+                } 
+                else {
+                    thisSticky.removeClass("fixed");
+                    if (prevSticky.length > 0 && jQuery(".js-scroller-2 .scroller").scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
+                          prevSticky.removeClass("absolute").removeAttr("style");
+                    }
+                }
+            });         
+        }
+    }
+    jQuery(document).ready(function(){
+        var newStickies = new stickyTitles(jQuery(".followMeBar"));
+        newStickies.load(); 
+        jQuery(".js-scroller-2 .scroller").on("scroll", function() {
+            newStickies.scroll();
+        });
+    });
+
+
+// $(document).ready(function(){
+//     $(".followMeBar").each(function(){
+//         var thisSticky = $(this).wrap('<div class="followWrap" />');
+//         var height = thisSticky.parent().height(thisSticky.outerHeight());
+//         jQuery.data(thisSticky[0], 'pos', thisSticky.position().top);
+//     });
+// });
+
+
+
 // ------------------- Buron scroller ------------------- //
 window.onload = function() {
     if ($('.js-scroller-1').length > 0) {
@@ -481,79 +542,6 @@ $(document).ready(function() {
         }
     });
 
-    // function ilist() {
-    //     var t = $('.js-scroller-2 .scroller').scrollTop();
-    //     $(".main-head__title").text(t);
-    //     $(".js-head-1").css({"position":"absolute", "top":0});
-    //     var top_1 = $(".js-head-1").position().top;
-    //     var top_2 = $(".js-head-2").position().top;
-    //     //alert(top_1);
-    //     $(".search input").val(top_2);
-    //     $(".nav__title").text(top_1);
-    //     if (top_2 <= (top_1 + 27)) {
-    //         //$(".js-head-2").css({"position":"absolute", "top":top_2});
-    //         $(".js-head-1").css({"position":"absolute", "top": top_2-27});
-    //     } 
-    //     else {}
-    //     if (top_2 <= 0) {
-    //         $(".js-head-2").css({"position":"absolute", "top": 0});
-    //     }
-    //     else {}
-    //     var height_1 = $(".js-news-1").height();
-    //     var height_2 = $(".js-news-2").height();
-    //     if (height_1 <= t) {
-    //         $(".js-head-1").css({"position":"absolute", "top":0});
-    //     }
-    //     if (height_1 <= t) {
-    //         $(".js-head-1").css({"position":"absolute", "top":0});
-    //     }
-    // }
-    // ilist();
-    // $(".js-scroller-2 .scroller").scroll(function() {
-    //     ilist();
-    //     //alert(top_2);
-    // });
-
-
 
 });
 
-    function stickyTitles(stickies) {
-
-        this.load = function() {
-            stickies.each(function(){
-                var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
-                    thisSticky.parent().height(thisSticky.outerHeight());
-                jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
-            });
-        }
-
-        this.scroll = function() {
-            stickies.each(function(i){                
-                var thisSticky = jQuery(this),
-                      nextSticky = stickies.eq(i+1),
-                      prevSticky = stickies.eq(i-1),
-                      pos = jQuery.data(thisSticky[0], 'pos');
-                if (pos <= jQuery(".js-scroller-2 .scroller").scrollTop() + 50) {
-                    var pos_parent = $(".js-scroller-2 .scroller__container").offset().top;  
-                    thisSticky.addClass("fixed");
-                    if (nextSticky.length > 0 && Math.abs(pos_parent) >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
-                        thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - Math.abs(pos_parent) - thisSticky.outerHeight());
-                    }
-                } 
-                else {
-                    thisSticky.removeClass("fixed");
-                    if (prevSticky.length > 0 && jQuery(".js-scroller-2 .scroller").scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
-                          prevSticky.removeClass("absolute").removeAttr("style");
-                    }
-                }
-            });         
-        }
-    }
-    jQuery(document).ready(function(){
-        var newStickies = new stickyTitles(jQuery(".followMeBar"));
-        newStickies.load(); 
-        jQuery(".js-scroller-2 .scroller").on("scroll", function() {
-            newStickies.scroll();
-        });
-    });
