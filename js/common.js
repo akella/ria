@@ -16,7 +16,7 @@
                     nextSticky = stickies.eq(i+1),
                     prevSticky = stickies.eq(i-1),
                     pos = jQuery.data(thisSticky[0], 'pos');
-                    $(".search input").val(pos);
+                    //$(".search input").val(pos);
                     
                 if (pos <= jQuery(".js-scroller-2 .scroller").scrollTop()) {
                     var pos_parent = $(".js-scroller-2 .scroller__container").position().top;
@@ -111,30 +111,38 @@ $(document).ready(function() {
             title : {
                 type : 'outside'
             }
-        }
-        
+        } 
     });
-
+    $(".js-create").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+        padding: 20,
+        helpers : {
+            title : {
+                type : 'outside'
+            }
+        } 
+    });
 // ------------------- Popup  ------------------- //
     $(".email").click(function(){
         if($(this).hasClass("js-active")) {
             $(this).removeClass("js-active");
-            $(".popup-send").fadeOut("fast");
+            $(".js-popup-send").fadeOut("fast");
             $(".overlay-popup").fadeOut()
         }
         else {
             $(this).addClass("js-active");
-            $(".popup-send").fadeIn("fast");
+            $(".js-popup-send").fadeIn("fast");
             $(".overlay-popup").fadeIn()
         }
     });
 
     $(".overlay-popup, .popup-close").click(function(){
-        $(".popup-send").fadeOut();
+        $(".popup-easy").fadeOut();
         $(".overlay-popup").fadeOut();
         $(".email").removeClass("js-active");
     });
-
+    $(".js-popup-create").show();
 // ------------------- View type ------------------- //
     $(".js-btn-opt").click(function(){
         var overlay = $(this).parent().parent().parent().children(".toolbar__overlay");

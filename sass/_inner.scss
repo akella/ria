@@ -5,6 +5,8 @@
 // news
 .news-top {
     border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    z-index: 2; 
     div {
         padding: 4px 10px;
         background: #f3f3f3;
@@ -18,19 +20,16 @@
         height: 14px;
     }
 }
-// .news-top__fixed {
-//     right: 14px;  
-//     left: 0;
-// }
-// .news-top__position-top {
-//     position: absolute; 
-//     z-index: 2;
-//     //top: 0 !important;
-//     top: 0;
-// }
-// .news-top__position-bottom {
-//     position: static; 
-// }
+.news-top.fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 14px;
+}
+.news-top.fixed.absolute {
+    position: absolute;
+}  
+
 .news-top__date {
     margin-left: 13px;
     color: #404040; 
@@ -609,21 +608,11 @@
     display: block;
     margin-bottom: 16px;
     font-size: 10px;
-    color: #000;
+    color: #666;
+    @include b;
     text-transform: uppercase;
 }
-        .news-top {
-            //padding: 1%;
-            position: relative;
-            z-index: 2; 
-        }
-        .news-top.fixed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 14px;
-            //z-index: 0;
-        }
-        .news-top.fixed.absolute {
-            position: absolute;
-        }  
+        
+.popup-create {
+    display: block;
+}

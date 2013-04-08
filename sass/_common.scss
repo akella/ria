@@ -299,33 +299,7 @@ a{
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7; 
 }
-.search-ext__input { 
-    position: relative;
-    .check_mod {
-        position: absolute;
-        right: 0;
-        top: -4px;
-        strong {
-            font-size: 14px;
-            color: #404040;
-            vertical-align: top;
-        }
-    }
-    .input {
-        button {
-            top: 20px;
-        }
-    }
-    .search-list {
-        top: 50px;
-        width: 80%;
-    }
-}
-.search-ext__input_obj {
-    .input {
-        margin-bottom: 10px;
-    }
-}
+
 .tags-cloud {
     margin-bottom: 20px;
 }
@@ -866,6 +840,33 @@ a{
     }
 }
 
+.input-extend { 
+    position: relative;
+    .check_mod {
+        position: absolute;
+        right: 0;
+        top: -4px;
+        strong {
+            font-size: 14px;
+            color: #404040;
+            vertical-align: top;
+        }
+    }
+    .input {
+        button {
+            top: 20px;
+        }
+    }
+    .search-list {
+        top: 50px;
+        width: 80%;
+    }
+}
+.input-extend_obj {
+    .input {
+        margin-bottom: 10px;
+    }
+}
 .input {
     margin-bottom: 31px;
     text-align: left;
@@ -986,7 +987,7 @@ a{
     }
 }
 
-.popup-send {
+.popup-easy {
     display: none;
     position: absolute;
     top: 50%;
@@ -996,9 +997,17 @@ a{
     padding: 40px;
     width: 620px;
     @include border-radius(3px);
-    background: #fff url(../i/popup-border.png) 0 0 repeat-x;
+    background: #fff;
+    .settings {
+        @extend %clr;
+        .check {
+            float: left;
+            width: 50%;
+            @include box-sizing(border-box);
+        }
+    }
 }
-.popup__left {
+.popup-easy__left {
     float: left;
     width: 185px;
     text-align: left;
@@ -1008,11 +1017,23 @@ a{
         margin-bottom: 25px;
     }
 }
-.popup__right {
+.popup-easy__right {
     float: right;
     width: 380px;
 }
-.popup__title {
+.popup-easy__item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.popup-easy__label {
+    display: block;
+    margin-bottom: 17px;
+    color: #666;
+    font-size: 10px;
+    @include b;
+    text-transform: uppercase;
+}
+.popup-easy__title {
     display: block;
     margin: 3px 0 12px;
     font-size: 18px;
@@ -1029,6 +1050,9 @@ a{
     &:hover {
         @include sized-sprite($icons, close2-h);
     }
+}
+.popup-easy_send {
+    background: #fff url(../i/popup-border.png) 0 0 repeat-x;
 }
 
 .window {
