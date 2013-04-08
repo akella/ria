@@ -598,18 +598,18 @@
     color: #000;
     text-transform: uppercase;
 }
-        .followMeBar {
+        .news-top {
             //padding: 1%;
             position: relative;
-            z-index: 2;
+            z-index: 2; 
         }
-        .followMeBar.fixed {
+        .news-top.fixed {
             position: absolute;
             top: 0;
             left: 0;
             right: 14px;
             //z-index: 0;
         }
-        .followMeBar.fixed.absolute {
+        .news-top.fixed.absolute {
             position: absolute;
-        }
+        }  
