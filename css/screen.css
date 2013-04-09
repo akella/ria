@@ -596,6 +596,7 @@ a:hover { text-decoration: none; }
 .settings { margin-bottom: 33px; }
 .settings .check { display: block; margin-bottom: 16px; }
 .settings .check .icon { margin-left: 6px; }
+.settings .check input, .settings .check span { top: 2px; }
 
 .settings__title { display: block; margin-bottom: 16px; font-size: 10px; color: #666; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
 
