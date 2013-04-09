@@ -614,5 +614,43 @@
 }
         
 .popup-create {
-    display: block;
+    top: 20px;
+    margin-top: 0;
+}
+.popup-easy__item {
+    .tags-wrap {
+        margin: -20px 0 20px;
+    }
+}
+.popup-easy__number {
+    color: #666;
+    @include b;
+    font-size: 48px;
+}
+
+.input-extend {
+    position: relative;
+    .drop-list {
+        display: block;
+        top: 50px;
+        width: 100%;
+        .is-selected {
+            position: relative;
+            @include b;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -8px;
+                @include sized-sprite($icons, check);
+            }
+            &:hover {
+                &:after {
+                    content: "";
+                    @include sized-sprite($icons, check-h);
+                }
+            }
+        }
+    }
 }

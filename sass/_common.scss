@@ -334,10 +334,16 @@ a{
         @include sized-sprite($icons, del-tag);
         vertical-align: middle;
     }
+    .icon {
+        position: relative;
+        top: -2px;
+        margin-right: 4px;
+        vertical-align: middle;
+    }
 }
 .filter-result {
     padding: 10px 10px 0;
-    height: 40px;
+    height: 40px; 
     font-size: 12px;
     overflow: hidden;
     border-top: 1px solid #e7e7e7;
@@ -569,6 +575,8 @@ a{
 .icon_photo {@include sized-sprite($icons, photo);}
 .icon_video {@include sized-sprite($icons, video);}
 .icon_media {@include sized-sprite($icons, is-media);}
+.icon_man {@include sized-sprite($icons, man);}
+.icon_pin {@include sized-sprite($icons, pin);}
 
 .icon_close {
     @include sized-sprite($icons, close);
