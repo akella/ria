@@ -91,7 +91,7 @@ a{
 }
 // sidebar nav
 .nav {
-    margin: 15px 0;
+    margin: 15px 0 0;
     padding: 0 10px;
     border-top: 1px solid #474e53;
     li {
@@ -643,7 +643,6 @@ a{
         @include box-shadow(0 1px 2px rgba(0,0,0,.15));
         + .tooltip {
             @include opacity(1);
-            z-index: 1000;
         }
     }
     &:active {
@@ -1116,6 +1115,16 @@ a{
         padding-bottom: 23px;
         border-bottom: 1px solid #e7e7e7;
     }
+}
+.window__overlay {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
 }
 .window__main {
     margin: 0 16px 0 0;  

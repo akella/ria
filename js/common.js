@@ -1,66 +1,4 @@
 
-    function stickyTitles(stickies) {
-
-        this.load = function() {
-            $('.js-scroller-2').baron({barOnCls: 'baron'});
-            stickies.each(function(){
-                var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
-                    thisSticky.parent().height(thisSticky.outerHeight());
-                jQuery.data(thisSticky[0], 'pos', thisSticky.position().top);
-            });
-        }
-
-        this.scroll = function() {
-            stickies.each(function(i){                
-                var thisSticky = jQuery(this),
-                    nextSticky = stickies.eq(i+1),
-                    prevSticky = stickies.eq(i-1),
-                    pos = jQuery.data(thisSticky[0], 'pos');
-                    //$(".search input").val(pos);
-                    
-                if (pos <= jQuery(".js-scroller-2 .scroller").scrollTop()) {
-                    var pos_parent = $(".js-scroller-2 .scroller__container").position().top;
-                    thisSticky.addClass("fixed");
-                    if (Math.abs(pos_parent) >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
-                        thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - Math.abs(pos_parent) - thisSticky.outerHeight());
-                    }
-                } 
-                else {
-                    thisSticky.removeClass("fixed");
-                    if (prevSticky.length > 0 && jQuery(".js-scroller-2 .scroller").scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
-                        prevSticky.removeClass("absolute").removeAttr("style");
-                    }
-                }
-
-            });         
-        }
-    }
-    jQuery(document).ready(function(){
-        //var newStickies = new stickyTitles(jQuery(".news-top"));
-        //newStickies.load(); 
-        //$('.js-scroller-2').baron({barOnCls: 'baron'});
-        // jQuery(".js-scroller-2 .scroller").on("scroll", function() {
-        //     newStickies.scroll();
-        // });
-        if ($(".js-scroller-2 .scroller").length > 0) {
-            var newStickies = new stickyTitles(jQuery(".news-top"));
-            newStickies.load(); 
-            jQuery(".js-scroller-2 .scroller").on("scroll", function() {
-                newStickies.scroll();
-            });
-        }
-    });
-
-// $(document).ready(function(){
-//     $(".followMeBar").each(function(){
-//         var thisSticky = $(this).wrap('<div class="followWrap" />');
-//         var height = thisSticky.parent().height(thisSticky.outerHeight());
-//         jQuery.data(thisSticky[0], 'pos', thisSticky.position().top);
-//     });
-// });
-
-
-
 // ------------------- Buron scroller ------------------- //
 window.onload = function() {
     if ($('.js-scroller-1').length > 0) {
@@ -102,6 +40,46 @@ window.onload = function() {
 
 $(document).ready(function() {
 
+    function sticky_load() {
+        $('.js-scroller-2').baron({barOnCls: 'baron'});
+        $(".news-top").each(function(){
+            var thisSticky = $(this).wrap('<div class="followWrap" />');
+            var height = thisSticky.parent().height(thisSticky.outerHeight());
+            $.data(thisSticky[0], 'pos', thisSticky.position().top);
+        });
+    }
+    function sticky_scroll() {
+        $(".news-top").each(function(i){                
+            var thisSticky = $(this),
+                nextSticky = $(".news-top").eq(i+1),
+                prevSticky = $(".news-top").eq(i-1),
+                position = $.data(thisSticky[0], 'pos'); 
+            if (position <= $(".js-scroller-2 .scroller").scrollTop()) {
+                var pos_parent = Math.abs($(".js-scroller-2 .scroller__container").position().top);
+                thisSticky.addClass("fixed");
+                $(".search input").val(pos_parent);
+                $(".main-head__title").text($.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
+                if (pos_parent >= $.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
+                    thisSticky.addClass("absolute").css("top", $.data(nextSticky[0], 'pos') - pos_parent - thisSticky.outerHeight());
+                }
+            } 
+            else {
+                thisSticky.removeClass("fixed");
+                if (prevSticky.length > 0 && $(".js-scroller-2 .scroller").scrollTop() <= $.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
+                    prevSticky.removeClass("absolute").removeAttr("style");
+                }
+            }
+
+        });         
+    }
+
+    if ($(".js-scroller-2 .scroller").length > 0) {
+        sticky_load();
+        $(".js-scroller-2 .scroller").on("scroll", function() {
+            sticky_scroll();
+        });
+    }
+    
 // ------------------- Fancybox ----------------------// 
     $(".media-link").fancybox({
         openEffect  : 'none',
@@ -164,6 +142,8 @@ $(document).ready(function() {
         $(".btn-opt").removeClass("is-active");
         $(".js-drop-down").slideUp("fast");
     });
+
+
 
 // ------------------- Show nav ------------------- //
     $(".js-show-nav").click(function(){
@@ -253,6 +233,19 @@ $(document).ready(function() {
         column_width();
     });
 
+// ------------------- Show tooltip ------------------- //
+    $(".btn-opt").hover(
+        function () {
+            $(this).parent().children(".tooltip").css("zIndex", 1000);
+        },
+        function () {
+
+            $(this).parent().children(".tooltip").afterTransition(function () {
+                $(this).parent().children(".tooltip").css("zIndex", 1);
+            });
+        }
+    )
+
 // ------------------- Checkbox ------------------- //
     function checkbox() {
         $(".check").click(function(){
@@ -300,7 +293,7 @@ $(document).ready(function() {
             }
         });
     }
-     block_input();
+    block_input();
     
 
 
@@ -482,6 +475,7 @@ $(document).ready(function() {
     $(".window .icon_close").click(function(){
         hide_window();   
     });
+
 
 //-------------------- show/hide extend search --------------------- //
     function extend_search() {
