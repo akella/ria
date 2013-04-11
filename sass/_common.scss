@@ -574,6 +574,7 @@ a{
 .icon_info {@include sized-sprite($icons, info);}
 .icon_photo {@include sized-sprite($icons, photo);}
 .icon_video {@include sized-sprite($icons, video);}
+.icon_audio {@include sized-sprite($icons, audio);}
 .icon_media {@include sized-sprite($icons, is-media);}
 .icon_man {@include sized-sprite($icons, man);}
 .icon_pin {@include sized-sprite($icons, pin);}
@@ -680,6 +681,12 @@ a{
 }
 
 // dropdown list
+.drop-list-wrap {
+    display: none;
+    .drop-list {
+        display: block;
+    }
+}
 .drop-list {
     display: none;
     position: absolute;
@@ -714,7 +721,63 @@ a{
         margin-right: 17px;
     }
 }
-
+.drop-list_extend {
+    width: 280px;
+    height: 240px;
+    overflow: hidden;
+}
+.l-col-left {
+    .drop-list_extend {
+        .scroller-wrap {
+            top: 29px;
+            bottom: 49px;
+            border: 0;
+        }
+        .scroller__container {
+            padding: 0;
+            margin-right: 14px;
+            border-right: 1px solid #e7e7e7;
+        }
+    }
+}
+.drop-list__head {
+    position: absolute;
+    top: 0;
+    padding: 0 11px;
+    height: 29px;
+    width: 100%;
+    line-height: 29px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #b9b9b9;
+    @include box-sizing(border-box);
+    @extend %clr;
+    strong {
+        float: left;
+        font-size: 12px;
+        @include b;
+        color: #333;
+    }
+    span {
+        float: right;
+        color: #00659b;
+        font-size: 12px;
+        @include b;
+        cursor: pointer; 
+        .icon {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    }
+}
+.drop-list__footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background: #f3f3f3;
+    border-top: 1px solid #b9b9b9;
+    @include box-sizing(border-box);
+}
 // form's elements
 .check {
     position: relative;
@@ -1002,9 +1065,10 @@ a{
     z-index: 2000;
     margin: -190px 0 0 -350px;
     padding: 40px;
-    width: 620px;
+    width: 700px;
     @include border-radius(3px);
     background: #fff;
+    @include box-sizing(border-box);
     .settings {
         @extend %clr;
         .check {

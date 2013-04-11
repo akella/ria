@@ -154,13 +154,15 @@
     .content {
         background: #fff;
         border-right: 1px solid #cfcfcf;
-        .scroller__bar {
-            top: 55px;
-        }
         .scroller__container {
             margin-right: 15px;
             border-right: 1px solid #cfcfcf;
         }
+    }
+}
+.content {
+    .scroller__bar {
+        top: 55px;
     }
 }
 .l-col-right_width {

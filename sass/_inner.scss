@@ -87,13 +87,20 @@
         }
     }
 }
-.news_headers-only {
+.is-news-headers {
     .news__title {
         display: inline;
     }
     .news__meta {
         position: relative;
         top: -2px;
+    }
+}
+.is-news-lid {
+    .news__cont {
+        p {
+            display: none;
+        }
     }
 }
 .news__cont {
@@ -542,6 +549,14 @@
         top: 5px;
         left: 5px;
     }
+    span {
+        position: absolute;
+        top: 49px;
+        left: 64px;
+        font-size: 11px;
+        color: #404040;
+        text-transform: uppercase;
+    }
 }
 
 .loader {
@@ -617,8 +632,13 @@
 }
         
 .popup-create {
+
+    padding: 40px 5px 40px 40px;
     top: 20px;
     margin-top: 0;
+    .popup-easy__right {
+        margin-right: 35px;
+    }
 }
 .popup-easy__item {
     .tags-wrap {
