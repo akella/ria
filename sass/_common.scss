@@ -293,9 +293,15 @@ a{
 }
 .search-ext__cols  {
     margin-bottom: 14px;
-    .radio {
+    .radio, .check_mod {
         display: inline-block;
         width: 49%;
+        @include box-sizing(border-box);
+    }
+    .check_mod {
+        input,span {
+            top: 2px;
+        }
     }
 }
 .search-ext__filter {
