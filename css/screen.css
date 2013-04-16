@@ -246,6 +246,9 @@ a:hover { text-decoration: none; }
 
 .drop-list_extend { width: 280px; height: 240px; overflow: hidden; }
 
+.drop-list_fixed-height { height: 200px; }
+.drop-list_fixed-height .scroller__container { margin-right: 14px; border-right: 1px solid #b9b9b9; }
+
 .l-col-left .drop-list_extend .scroller-wrap { top: 29px; bottom: 49px; border: 0; }
 .l-col-left .drop-list_extend .scroller__container { padding: 0; margin-right: 14px; border-right: 1px solid #e7e7e7; }
 
@@ -444,7 +447,7 @@ a:hover { text-decoration: none; }
 .l-col-right_width .article { float: left; width: 65%; }
 .l-col-right_width .article-nav { position: absolute; right: 0; top: 0; margin: 0; padding: 98px 30px 46px 0; width: 35%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.drag { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 360px; }
+.drag { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 375px; }
 .drag span { position: absolute; top: 0; left: 40%; bottom: 0; z-index: 4; width: 9px; cursor: ew-resize; background: #fff; border-left: 1px solid #cfcfcf; border-right: 1px solid #cfcfcf; }
 .drag span:before, .drag span:after { content: ""; position: absolute; top: 50%; margin-top: -6px; width: 1px; height: 12px; background: #c0c2c4; }
 .drag span:before { left: 3px; }
@@ -465,7 +468,7 @@ a:hover { text-decoration: none; }
 
 .scroller-wrap { position: relative; overflow: hidden; height: 100%; }
 
-.scroller-wrap__overlay { display: none; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 2; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; background: #000; }
+.scroller-wrap__overlay { display: none; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 3; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40); opacity: 0.4; background: #000; }
 
 .scroller { height: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 
@@ -660,9 +663,12 @@ a:hover { text-decoration: none; }
 
 .popup-create { padding: 40px 5px 0 40px; top: 20px; margin-top: 0; }
 .popup-create .scroller__container { padding-bottom: 40px; }
+.popup-create .drop-list_fixed-height .scroller__container { padding-bottom: 0; }
 .popup-create .popup-easy__right { margin-right: 35px; }
 
 .popup-easy__item .tags-wrap { margin: -20px 0 20px; }
+
+.popup-easy_small { top: 50%; margin-top: -110px; }
 
 .popup-easy__number { color: #666; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; font-size: 48px; }
 

@@ -41,6 +41,9 @@ window.onload = function() {
     if ($('.js-scroller-list').length > 0) {
         $('.js-scroller-list').baron({barOnCls: 'baron'});
     }
+    if ($('.js-scroller-var').length > 0) {
+        $('.js-scroller-var').baron({barOnCls: 'baron'});
+    }
 
 }
 
@@ -568,6 +571,9 @@ $(document).ready(function() {
             $(".js-popup-create").height(window_height - 100);
             if ($('.js-scroller-popup').length > 0) {
                 $('.js-scroller-popup').baron({barOnCls: 'baron'});
+            }
+            if ($('.js-scroller-var').length > 0) {
+                $('.js-scroller-var').baron({barOnCls: 'baron'});
             }
         }
         else {

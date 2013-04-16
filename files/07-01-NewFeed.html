@@ -265,13 +265,11 @@
                                     <span>Все слова</span>
                                 </label>
                             </div>
-                            <div class="radio">
-                                <label for="radio_s4">
-                                    <input type="radio" name="radio" id="radio_s4">
-                                    <i></i>
-                                    <span>Заголовки</span>
-                                </label>
-                            </div>
+                            <label class="check check_mod">
+                                <input type="checkbox">
+                                <span><i></i></span>
+                                <strong>Заголовки</strong>
+                            </label>
                             <div class="radio">
                                 <label for="radio_s2">
                                     <input type="radio" name="radio" id="radio_s2">
@@ -279,13 +277,11 @@
                                     <span>Совпадение фразы</span>
                                 </label>
                             </div>
-                            <div class="radio">
-                                <label for="radio_s5">
-                                    <input type="radio" name="radio" id="radio_s5">
-                                    <i></i>
-                                    <span>Текст новости</span>
-                                </label>
-                            </div>
+                            <label class="check check_mod">
+                                <input type="checkbox">
+                                <span><i></i></span>
+                                <strong>Текст новости</strong>
+                            </label>
                             <div class="radio">
                                 <label for="radio_s3">
                                     <input type="radio" name="radio" id="radio_s3">
@@ -293,13 +289,11 @@
                                     <span>Одно из слов</span>
                                 </label>
                             </div>
-                            <div class="radio">
-                                <label for="radio_s6">
-                                    <input type="radio" name="radio" id="radio_s6">
-                                    <i></i>
-                                    <span>Ключевые слова</span>
-                                </label>
-                            </div>
+                            <label class="check check_mod">
+                                <input type="checkbox">
+                                <span><i></i></span>
+                                <strong>Ключевые слова</strong>
+                            </label>
                         </div>
                         <div class="search-ext__filter">
                             <div class="input-extend">
@@ -1154,13 +1148,30 @@
                                             <i></i>
                                         </button>
                                     </div>
-                                    <ul class="drop-list js-drop-down" style="display: block;">
-                                        <li>Продукты РИА</li>
-                                        <li class="is-selected">Все ленты</li>
-                                        <li>Политика</li>
-                                        <li>Экономика</li>
-                                        <li>Культура</li>
-                                    </ul>
+                                    <div class="drop-list drop-list_fixed-height">  
+                                        <div class="scroller-wrap js-scroller-var">
+                                            <div class="scroller">
+                                                <div class="scroller__container">
+                                                    <ul class="js-drop-down">
+                                                        <li>Продукты РИА</li>
+                                                        <li class="is-selected">Все ленты</li>
+                                                        <li>Политика</li>
+                                                        <li>Экономика</li>
+                                                        <li>Культура</li>
+                                                        <li>............</li>
+                                                        <li>............</li>
+                                                        <li>............</li>
+                                                        <li>............</li>
+                                                        <li>............</li>
+                                                        <li>............</li>
+                                                    </ul>
+                                                    <div class="scroller__bar">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <label for="check_ps3" class="check check_mod js-block-input">
                                         <input type="checkbox" id="check_ps3">
                                         <span><i></i></span>

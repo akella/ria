@@ -747,6 +747,16 @@ a{
     height: 240px;
     overflow: hidden;
 }
+.drop-list_fixed-height {
+    height: 200px;
+    .scroller__container {
+        margin-right: 14px;
+        border-right: 1px solid #b9b9b9;
+    }
+    ul {
+        
+    }
+}
 .l-col-left {
     .drop-list_extend {
         .scroller-wrap {

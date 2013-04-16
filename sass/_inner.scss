@@ -650,6 +650,11 @@
     .scroller__container {
         padding-bottom: 40px;
     }
+    .drop-list_fixed-height {
+        .scroller__container {
+            padding-bottom: 0;
+        }
+    }
     .popup-easy__right {
         margin-right: 35px;
     }
@@ -658,6 +663,10 @@
     .tags-wrap {
         margin: -20px 0 20px;
     }
+}
+.popup-easy_small {
+    top: 50%;
+    margin-top: -110px;
 }
 .popup-easy__number {
     color: #666;
