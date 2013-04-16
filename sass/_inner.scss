@@ -644,10 +644,12 @@
 }
         
 .popup-create {
-
-    padding: 40px 5px 40px 40px;
+    padding: 40px 5px 0 40px;
     top: 20px;
     margin-top: 0;
+    .scroller__container {
+        padding-bottom: 40px;
+    }
     .popup-easy__right {
         margin-right: 35px;
     }

@@ -565,7 +565,7 @@ $(document).ready(function() {
         var popup_height = $(".js-popup-create").outerHeight();
         var window_height = $(window).height();
         if (popup_height > window_height) {
-            $(".js-popup-create").height(window_height - 50);
+            $(".js-popup-create").height(window_height - 100);
             if ($('.js-scroller-popup').length > 0) {
                 $('.js-scroller-popup').baron({barOnCls: 'baron'});
             }

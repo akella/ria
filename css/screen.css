@@ -658,7 +658,8 @@ a:hover { text-decoration: none; }
 
 .settings__title { display: block; margin-bottom: 16px; font-size: 10px; color: #666; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
 
-.popup-create { padding: 40px 5px 40px 40px; top: 20px; margin-top: 0; }
+.popup-create { padding: 40px 5px 0 40px; top: 20px; margin-top: 0; }
+.popup-create .scroller__container { padding-bottom: 40px; }
 .popup-create .popup-easy__right { margin-right: 35px; }
 
 .popup-easy__item .tags-wrap { margin: -20px 0 20px; }

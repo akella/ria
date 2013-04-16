@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>07-01-NewSelection</title>
+	<title>07-02-NewSelection</title>
     <link rel="stylesheet" media="screen" href="../css/screen.css" >
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="../js/baron.min.js"></script>  
@@ -1089,94 +1089,103 @@
     </section>
     <div class="overlay"></div>
     <div class="popup-easy popup-create js-popup-create" style="display:block;">
-        <div class="popup-easy__left">
-            <strong class="popup-easy__title">Создание новой ленты</strong>
-            <p>Установите параметры, по которым должны отбираться новостные сообщения.</p>
-            <p>Ожидаемое количество сообщений в сутки</p>
-            <span class="popup-easy__number">24</span>
-        </div>
-        <div class="popup-easy__right">
-            <form>
-                <div class="popup-easy__item">
-                    <div class="input">
-                        <label for="input_cr1">НАЗВАНИЕ ЛЕНТЫ</label>
-                        <input type="text" id="input_cr1">
+        <div class="scroller-wrap js-scroller-popup">
+            <div class="scroller">
+                <div class="scroller__container">
+                    <div class="popup-easy__left">
+                        <strong class="popup-easy__title">Создание новой ленты</strong>
+                        <p>Установите параметры, по которым должны отбираться новостные сообщения.</p>
+                        <p>Ожидаемое количество сообщений в сутки</p>
+                        <span class="popup-easy__number">24</span>
                     </div>
-                    <div class="input">
-                        <label for="input_cr2">ПОИСКОВЫЙ ЗАПРОС</label>
-                        <input type="text" id="input_cr2">
+                    <div class="popup-easy__right">
+                        <form>
+                            <div class="popup-easy__item">
+                                <div class="input">
+                                    <label for="input_cr1">НАЗВАНИЕ ЛЕНТЫ</label>
+                                    <input type="text" id="input_cr1">
+                                </div>
+                                <div class="input">
+                                    <label for="input_cr2">ПОИСКОВЫЙ ЗАПРОС</label>
+                                    <input type="text" id="input_cr2">
+                                </div>
+                            </div>
+                            <div class="popup-easy__item">
+                                <div class="settings">
+                                    <span class="settings__title">ЧТО И ГДЕ ИСКАТЬ?</span>
+                                    <label class="check check_mod">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                        <strong>Все слова</strong>
+                                    </label>
+                                    <label class="check check_mod">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                        <strong>Заголовки</strong>
+                                    </label>
+                                    <label class="check check_mod">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                        <strong>Совпадение фразы</strong>
+                                    </label>
+                                    <label class="check check_mod">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                        <strong>Текст новости</strong>
+                                    </label>
+                                    <label class="check check_mod">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                        <strong>Одно из слов</strong>
+                                    </label>
+                                    <label class="check check_mod">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                        <strong>Ключевые слова</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="popup-easy__item">
+                                <div class="input-extend">
+                                    <div class="input">
+                                        <label for="input_ps2">ПО ЛЕНТАМ</label>
+                                        <input type="text" id="input_ps2">
+                                        <button>
+                                            <i></i>
+                                        </button>
+                                    </div>
+                                    <ul class="drop-list js-drop-down" style="display: block;">
+                                        <li>Продукты РИА</li>
+                                        <li class="is-selected">Все ленты</li>
+                                        <li>Политика</li>
+                                        <li>Экономика</li>
+                                        <li>Культура</li>
+                                    </ul>
+                                    <label for="check_ps3" class="check check_mod js-block-input">
+                                        <input type="checkbox" id="check_ps3">
+                                        <span><i></i></span>
+                                        <strong>Все ленты</strong>
+                                    </label>
+                                </div>
+                                <div class="input">
+                                    <label for="input_ps4">Обьекты</label>
+                                    <input type="text" id="input_ps4">
+                                </div>
+                                <div class="tags-wrap">
+                                    <span class="tag"><b class="icon icon_man"></b>Путин<i></i></span>
+                                    <span class="tag"><b class="icon icon_pin"></b>Путин<i></i></span>
+                                </div>
+                            </div>
+                            <div class="submit-wrap">
+                                <input type="submit" class="submit" value="СОЗДАТЬ ЛЕНТУ">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="scroller__bar">
+                        <span></span>
                     </div>
                 </div>
-                <div class="popup-easy__item">
-                    <div class="settings">
-                        <span class="settings__title">ЧТО И ГДЕ ИСКАТЬ?</span>
-                        <label class="check check_mod">
-                            <input type="checkbox">
-                            <span><i></i></span>
-                            <strong>Все слова</strong>
-                        </label>
-                        <label class="check check_mod">
-                            <input type="checkbox">
-                            <span><i></i></span>
-                            <strong>Заголовки</strong>
-                        </label>
-                        <label class="check check_mod">
-                            <input type="checkbox">
-                            <span><i></i></span>
-                            <strong>Совпадение фразы</strong>
-                        </label>
-                        <label class="check check_mod">
-                            <input type="checkbox">
-                            <span><i></i></span>
-                            <strong>Текст новости</strong>
-                        </label>
-                        <label class="check check_mod">
-                            <input type="checkbox">
-                            <span><i></i></span>
-                            <strong>Одно из слов</strong>
-                        </label>
-                        <label class="check check_mod">
-                            <input type="checkbox">
-                            <span><i></i></span>
-                            <strong>Ключевые слова</strong>
-                        </label>
-                    </div>
-                </div>
-                <div class="popup-easy__item">
-                    <div class="input-extend">
-                        <div class="input">
-                            <label for="input_ps2">ПО ЛЕНТАМ</label>
-                            <input type="text" id="input_ps2">
-                            <button>
-                                <i></i>
-                            </button>
-                        </div>
-                        <ul class="drop-list js-drop-down" style="display: block;">
-                            <li>Продукты РИА</li>
-                            <li class="is-selected">Все ленты</li>
-                            <li>Политика</li>
-                            <li>Экономика</li>
-                            <li>Культура</li>
-                        </ul>
-                        <label for="check_ps3" class="check check_mod js-block-input">
-                            <input type="checkbox" id="check_ps3">
-                            <span><i></i></span>
-                            <strong>Все ленты</strong>
-                        </label>
-                    </div>
-                    <div class="input">
-                        <label for="input_ps4">Обьекты</label>
-                        <input type="text" id="input_ps4">
-                    </div>
-                    <div class="tags-wrap">
-                        <span class="tag"><b class="icon icon_man"></b>Путин<i></i></span>
-                        <span class="tag"><b class="icon icon_pin"></b>Путин<i></i></span>
-                    </div>
-                </div>
-                <div class="submit-wrap">
-                    <input type="submit" class="submit" value="СОЗДАТЬ ЛЕНТУ">
-                </div>
-            </form>
+            </div>
         </div>
         <button class="popup-close"></button>
     </div>
