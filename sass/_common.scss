@@ -599,6 +599,7 @@ a{
 .icon_media {@include sized-sprite($icons, is-media);}
 .icon_man {@include sized-sprite($icons, man);}
 .icon_pin {@include sized-sprite($icons, pin);}
+.icon_string {@include sized-sprite($icons, string);}
 
 .icon_close {
     @include sized-sprite($icons, close);
