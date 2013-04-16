@@ -503,7 +503,7 @@ $(document).ready(function() {
             $(this).hide();
             search.animate({
                 top: 0,
-                zIndex: 3
+                zIndex: 4
             }, 300);
             $(".scroller-wrap__overlay").fadeIn("fast");
             $(".js-scroller-2").animate({
