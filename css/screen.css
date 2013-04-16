@@ -89,7 +89,7 @@ a:hover { text-decoration: none; }
 .search-list__text { overflow: hidden; }
 .search-list__text span { display: block; color: #999; font-size: 12px; }
 
-.search-ext { position: relative; z-index: -1; padding: 30px 40px; background: #fff; max-height: 530px; overflow: hidden; border-top: 1px solid #e7e7e7; }
+.search-ext { position: relative; z-index: -1; padding: 30px 40px; background: #fff; max-height: 530px; border-top: 1px solid #e7e7e7; }
 .search-ext .btn-close { position: absolute; top: 10px; right: 12px; cursor: pointer; }
 .search-ext .btn-close .icon:hover + .tooltip { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .search-ext .btn-close .tooltip { top: 28px; margin-left: -50px; }
