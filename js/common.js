@@ -478,7 +478,8 @@ function calendar_width() {
         var pt = $(this).position().top;
         var h = $(".window").height() + 51;
         var bottom = wh - pt - h;
-        $(".window").css({"bottom":bottom, "right":210});
+        $(".window").css({"bottom":bottom});
+        $(".window").fadeIn();
         if (wh - pt - h < 0) {
             $(".window").css("bottom", 0);
             $(".window__arr").addClass("is-floating").css({"top":pt});
@@ -494,6 +495,9 @@ function calendar_width() {
             $(".wall li").removeClass("is-active");
             $(this).addClass("is-active");
         }
+        if ($('.js-scroller-5').length > 0) {
+            $('.js-scroller-5').baron({barOnCls: 'baron'});
+        }
     });
     $(".js-scroller-4 .scroller").scroll(function() {
         // animate shadow 1        
@@ -503,14 +507,16 @@ function calendar_width() {
 //-------------------- show/hide window  --------------------- //
     function hide_window() {
         $(".wall li").removeClass("is-active");
-        $(".window").css("right", -456);
+        //$(".window").fadeOut();
+        //$(".window").css("right", -456);
+        $(".window").fadeOut();
         $(".window__arr").removeClass("is-floating").css({"top":21});
+        
     }
     hide_window();
     $(".window .icon_close").click(function(){
         hide_window();   
     });
-
 
 
 //-------------------- show/hide extend search --------------------- //
