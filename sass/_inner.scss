@@ -26,7 +26,7 @@
     left: 0;
     right: 14px;
 }
-.news-top.fixed.absolute {
+.news-top.fixed.absolute { 
     position: absolute;
 }  
 
@@ -572,12 +572,17 @@
 }
 
 .loader {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0;
-    width: 16px;
-    height: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    @include b;
+    font-size: 12px;
+    border-right: 1px solid #e7e7e7;
     //background-image: inline-image("loader.gif", gif);
+    img, span {
+        vertical-align: middle;
+    }
 } 
 .wrap-set {
     margin: 0 2.2%;

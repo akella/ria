@@ -95,7 +95,7 @@ a:hover { text-decoration: none; }
 .search-ext .btn-close .tooltip { top: 28px; margin-left: -50px; }
 .search-ext .btn-close .tooltip:before { right: 7px; left: auto; }
 .search-ext .submit-wrap { text-align: center; }
-.search-ext .calendar-wrap { position: absolute; top: 50px; left: 0; z-index: 1000; width: 100%; min-width: 630px; }
+.search-ext .calendar-wrap { position: absolute; top: 50px; left: 0; z-index: 1000; width: 100%; }
 .search-ext .calendar-main { padding: 0 10px 10px; }
 
 .search-ext__title { display: block; margin-bottom: 17px; color: #666; font-size: 10px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
@@ -370,7 +370,7 @@ a:hover { text-decoration: none; }
 
 .article-window__meta { font-size: 12px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; color: #999; }
 
-.calendar-wrap { background: #fff; border: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.calendar-wrap { min-width: 630px; background: #fff; border: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .calendar-main { position: relative; padding: 15px 10px 10px; float: left; width: 70%; border-right: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -644,7 +644,8 @@ a:hover { text-decoration: none; }
 .media-link .icon { position: absolute; top: 5px; left: 5px; }
 .media-link span { position: absolute; top: 49px; left: 64px; font-size: 11px; color: #404040; text-transform: uppercase; }
 
-.loader { display: inline-block; vertical-align: middle; padding: 0; width: 16px; height: 16px; }
+.loader { height: 50px; line-height: 50px; text-align: center; color: #666; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; font-size: 12px; border-right: 1px solid #e7e7e7; }
+.loader img, .loader span { vertical-align: middle; }
 
 .wrap-set { margin: 0 2.2%; border-top: 1px solid #e7e7e7; }
 .wrap-set:first-child { border: 0; }

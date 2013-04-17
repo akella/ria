@@ -286,7 +286,6 @@ a{
         left: 0;
         z-index: 1000;
         width: 100%;
-        min-width: 630px;
     }
     .calendar-main {
         padding: 0 10px 10px;
@@ -1255,6 +1254,7 @@ a{
 }
 
 .calendar-wrap {
+    min-width: 630px;
     background: #fff;
     @extend %clr; 
     border: 1px solid #c0c2c4;
