@@ -4,7 +4,7 @@
 
 @font-face { font-family: 'PT Sans bold'; src: url("../files/fonts/pts75f_w.eot"); font-style: normal; font-weight: bold; src: local("PT Sans Bold"), url("../files/fonts/PTS75F_W.woff") format("woff"), url("../files/fonts/PTS75F_W.ttf") format("truetype"), url("../files/fonts/PTS75F_W.svg#PTSans-Bold") format("svg"); }
 
-.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news-top:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 /* ------------------------------------- Reset css -------------------------------------------- */
 /* ------------------------------------- Reset css -------------------------------------------- */
@@ -409,7 +409,7 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'PT Sans bold'; src: url("../files/fonts/pts75f_w.eot"); font-style: normal; font-weight: bold; src: local("PT Sans Bold"), url("../files/fonts/PTS75F_W.woff") format("woff"), url("../files/fonts/PTS75F_W.ttf") format("truetype"), url("../files/fonts/PTS75F_W.svg#PTSans-Bold") format("svg"); }
 
-.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news-top:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .is-withsidebar .l-sidebar { left: 0 !important; }
 .is-withsidebar .overlay { display: none !important; }
@@ -494,7 +494,7 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'PT Sans bold'; src: url("../files/fonts/pts75f_w.eot"); font-style: normal; font-weight: bold; src: local("PT Sans Bold"), url("../files/fonts/PTS75F_W.woff") format("woff"), url("../files/fonts/PTS75F_W.ttf") format("truetype"), url("../files/fonts/PTS75F_W.svg#PTSans-Bold") format("svg"); }
 
-.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news-top:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .news-top { border-bottom: 1px solid #e7e7e7; position: relative; z-index: 2; }
 .news-top div { padding: 4px 10px; background: #f3f3f3; border-right: 1px solid #e7e7e7; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -504,6 +504,9 @@ a:hover { text-decoration: none; }
 .news-top.fixed { position: absolute; top: 0; left: 0; right: 14px; }
 
 .news-top.fixed.absolute { position: absolute; }
+
+.add-new-string { float: right; color: #00659b; font-size: 12px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; }
+.add-new-string .icon { margin-left: 5px; vertical-align: middle; }
 
 .news-top__date { margin-left: 13px; color: #404040; font-size: 10px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
 
@@ -700,7 +703,7 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'PT Sans bold'; src: url("../files/fonts/pts75f_w.eot"); font-style: normal; font-weight: bold; src: local("PT Sans Bold"), url("../files/fonts/PTS75F_W.woff") format("woff"), url("../files/fonts/PTS75F_W.ttf") format("truetype"), url("../files/fonts/PTS75F_W.svg#PTSans-Bold") format("svg"); }
 
-.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news-top:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 /* fancyBox v2.1.4 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap, .fancybox-skin, .fancybox-outer, .fancybox-inner, .fancybox-image, .fancybox-wrap iframe, .fancybox-wrap object, .fancybox-nav, .fancybox-nav span, .fancybox-tmp { padding: 0; margin: 0; border: 0; outline: none; vertical-align: top; }
@@ -776,6 +779,6 @@ a:hover { text-decoration: none; }
 
 @font-face { font-family: 'PT Sans bold'; src: url("../files/fonts/pts75f_w.eot"); font-style: normal; font-weight: bold; src: local("PT Sans Bold"), url("../files/fonts/PTS75F_W.woff") format("woff"), url("../files/fonts/PTS75F_W.ttf") format("truetype"), url("../files/fonts/PTS75F_W.svg#PTSans-Bold") format("svg"); }
 
-.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.search-list li:after, .drop-list__head:after, .popup-easy .settings:after, .calendar-wrap:after, .calendar-main:after, .wrap:after, .news-top:after, .news li:after, .main-head:after, .info-item__title:after, .article-nav:after, .article-nav__media div:after, .wrap-set:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .lteie8 .input input { line-height: 28px; }

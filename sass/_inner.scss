@@ -6,6 +6,7 @@
 .news-top {
     border-bottom: 1px solid #e7e7e7;
     position: relative;
+    @extend %clr;
     z-index: 2; 
     div {
         padding: 4px 10px;
@@ -29,7 +30,16 @@
 .news-top.fixed.absolute { 
     position: absolute;
 }  
-
+.add-new-string {
+    float: right;
+    color: #00659b;
+    font-size: 12px;
+    @include b;
+    .icon {
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}
 .news-top__date {
     margin-left: 13px;
     color: #404040; 

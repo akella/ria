@@ -476,7 +476,7 @@ function calendar_width() {
     $(".wall li").click(function(){
         var wh = $(window).height();
         var pt = $(this).position().top;
-        var h = $(".window").height() + 51;
+        var h = $(".window").outerHeight();
         var bottom = wh - pt - h;
         $(".window").css({"bottom":bottom});
         $(".window").fadeIn();
