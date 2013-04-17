@@ -286,6 +286,7 @@ a{
         left: 0;
         z-index: 1000;
         width: 100%;
+        min-width: 630px;
     }
     .calendar-main {
         padding: 0 10px 10px;
@@ -1254,11 +1255,28 @@ a{
 }
 
 .calendar-wrap {
-    min-width: 630px;
+    //min-width: 630px;
     background: #fff;
     @extend %clr; 
     border: 1px solid #c0c2c4;
     @include box-sizing(border-box);
+}
+.calendar-wrap_middle,
+.calendar-wrap_small {
+    .calendar-main,
+    .calendar-period {
+        float: none;
+        width: 100%;
+    }
+}
+.calendar-wrap_small {
+    .calendar {
+        float: none;
+        margin: 0 auto 15px;
+        &:first-child {
+            float: none;
+        }
+    }
 }
 .calendar-main {
     position: relative;

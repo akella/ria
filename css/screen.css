@@ -95,7 +95,7 @@ a:hover { text-decoration: none; }
 .search-ext .btn-close .tooltip { top: 28px; margin-left: -50px; }
 .search-ext .btn-close .tooltip:before { right: 7px; left: auto; }
 .search-ext .submit-wrap { text-align: center; }
-.search-ext .calendar-wrap { position: absolute; top: 50px; left: 0; z-index: 1000; width: 100%; }
+.search-ext .calendar-wrap { position: absolute; top: 50px; left: 0; z-index: 1000; width: 100%; min-width: 630px; }
 .search-ext .calendar-main { padding: 0 10px 10px; }
 
 .search-ext__title { display: block; margin-bottom: 17px; color: #666; font-size: 10px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; text-transform: uppercase; }
@@ -370,7 +370,12 @@ a:hover { text-decoration: none; }
 
 .article-window__meta { font-size: 12px; font-weight: normal; font-style: normal; font-family: 'PT Sans bold', sans-serif; color: #999; }
 
-.calendar-wrap { min-width: 630px; background: #fff; border: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.calendar-wrap { background: #fff; border: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.calendar-wrap_middle .calendar-main, .calendar-wrap_middle .calendar-period, .calendar-wrap_small .calendar-main, .calendar-wrap_small .calendar-period { float: none; width: 100%; }
+
+.calendar-wrap_small .calendar { float: none; margin: 0 auto 15px; }
+.calendar-wrap_small .calendar:first-child { float: none; }
 
 .calendar-main { position: relative; padding: 15px 10px 10px; float: left; width: 70%; border-right: 1px solid #c0c2c4; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
