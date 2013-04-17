@@ -332,61 +332,77 @@
                                 <div class="tags-wrap">
                                     <span class="tag">Путин<i></i></span>
                                 </div>
-                                <ul class="search-list">
-                                    <li>
-                                        <a href="#">
-                                            <div class="search-list__img">
-                                                <i class="icon icon_glass"></i>
+                                <div class="search-list">
+                                    <div class="scroller-wrap js-scroller-search">
+                                        <div class="scroller">
+                                            <div class="scroller__container">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <i class="icon icon_glass"></i>
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Путешествия
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <img src="http://placehold.it/32x32" alt="">
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Владимир Путин
+                                                                <span>Президент Российской Федерации</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <img src="http://placehold.it/32x32" alt="">
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Людмила Путина
+                                                                <span>Супруга Владимира Путина</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <i class="icon icon_point"></i>
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Путино
+                                                                <span>Село | Приморский край</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <i class="icon icon_all"></i>
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Искать во всех лентах
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                </ul>
+                                                <div class="scroller__bar">
+                                                    <span></span>
+                                                </div>
                                             </div>
-                                            <div class="search-list__text">
-                                                Путешествия
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="search-list__img">
-                                                <img src="http://placehold.it/32x32" alt="">
-                                            </div>
-                                            <div class="search-list__text">
-                                                Владимир Путин
-                                                <span>Президент Российской Федерации</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="search-list__img">
-                                                <img src="http://placehold.it/32x32" alt="">
-                                            </div>
-                                            <div class="search-list__text">
-                                                Людмила Путина
-                                                <span>Супруга Владимира Путина</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="search-list__img">
-                                                <i class="icon icon_point"></i>
-                                            </div>
-                                            <div class="search-list__text">
-                                                Путино
-                                                <span>Село | Приморский край</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="search-list__img">
-                                                <i class="icon icon_all"></i>
-                                            </div>
-                                            <div class="search-list__text">
-                                                Искать во всех лентах
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="submit-wrap">
@@ -1107,36 +1123,44 @@
                             <div class="popup-easy__item">
                                 <div class="settings">
                                     <span class="settings__title">ЧТО И ГДЕ ИСКАТЬ?</span>
-                                    <label class="check check_mod">
-                                        <input type="checkbox">
-                                        <span><i></i></span>
-                                        <strong>Все слова</strong>
-                                    </label>
-                                    <label class="check check_mod">
-                                        <input type="checkbox">
-                                        <span><i></i></span>
-                                        <strong>Заголовки</strong>
-                                    </label>
-                                    <label class="check check_mod">
-                                        <input type="checkbox">
-                                        <span><i></i></span>
-                                        <strong>Совпадение фразы</strong>
-                                    </label>
-                                    <label class="check check_mod">
-                                        <input type="checkbox">
-                                        <span><i></i></span>
-                                        <strong>Текст новости</strong>
-                                    </label>
-                                    <label class="check check_mod">
-                                        <input type="checkbox">
-                                        <span><i></i></span>
-                                        <strong>Одно из слов</strong>
-                                    </label>
-                                    <label class="check check_mod">
-                                        <input type="checkbox">
-                                        <span><i></i></span>
-                                        <strong>Ключевые слова</strong>
-                                    </label>
+                                    <div class="js-radio-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="radio" ckecked="checked">
+                                                <i class="is-active"></i>
+                                                <span>Все слова</span>
+                                            </label>
+                                        </div>
+                                        <label class="check check_mod">
+                                            <input type="checkbox">
+                                            <span><i></i></span>
+                                            <strong>Заголовки</strong>
+                                        </label>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="radio">
+                                                <i></i>
+                                                <span>Совпадение фразы</span>
+                                            </label>
+                                        </div>
+                                        <label class="check check_mod">
+                                            <input type="checkbox">
+                                            <span><i></i></span>
+                                            <strong>Текст новости</strong>
+                                        </label>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="radio">
+                                                <i></i>
+                                                <span>Одно из слов</span>
+                                            </label>
+                                        </div>
+                                        <label class="check check_mod">
+                                            <input type="checkbox">
+                                            <span><i></i></span>
+                                            <strong>Ключевые слова</strong>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="popup-easy__item">

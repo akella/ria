@@ -160,6 +160,8 @@
     }
 }
 .news__date {
+    display: inline-block;
+    margin-left: 5px;
     @include b;
 }
 .news__star {

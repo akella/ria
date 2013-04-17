@@ -44,6 +44,12 @@ window.onload = function() {
     if ($('.js-scroller-var').length > 0) {
         $('.js-scroller-var').baron({barOnCls: 'baron'});
     }
+    if ($('.js-scroller-search').length > 0) {
+        $('.js-scroller-search').baron({barOnCls: 'baron'});
+    }
+    if ($('.js-scroller-search-small').length > 0) {
+        $('.js-scroller-search-small').baron({barOnCls: 'baron'});
+    }
 
 }
 
