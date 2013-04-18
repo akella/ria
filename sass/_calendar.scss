@@ -1,0 +1,67 @@
+div.datepicker {
+  position: relative;
+    position: absolute;
+  cursor: default;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.datepickerContainer {
+  position: absolute;
+}
+
+/* Hide border divs by default */
+.datepickerBorderT,
+.datepickerBorderB,
+.datepickerBorderL,
+.datepickerBorderR,
+.datepickerBorderTL,
+.datepickerBorderTR,
+.datepickerBorderBL,
+.datepickerBorderBR {
+  display:none;
+}
+ 
+.datepickerHidden {
+  display: none;
+}  
+
+// div.datepicker th a.datepickerGoNext,
+// div.datepicker th a.datepickerGoPrev {
+
+//   display:none;
+// }
+/* Only display the previous/next arrows on the first/last calendars */
+div.datepicker .datepickerFirstView th a.datepickerGoPrev,
+div.datepicker .datepickerLastView th a.datepickerGoNext {
+  display:block;
+}
+/* Day mode calendar body */
+table.datepickerViewDays tbody.datepickerMonths,
+table.datepickerViewDays tbody.datepickerYears {
+  display: none;
+}
+/* Month mode calendar body */
+table.datepickerViewMonths tbody.datepickerDays,
+table.datepickerViewMonths tbody.datepickerYears,
+table.datepickerViewMonths tr.datepickerDoW {
+  display: none;
+}
+/* Year mode calendar body */
+table.datepickerViewYears tbody.datepickerDays,
+table.datepickerViewYears tbody.datepickerMonths,
+table.datepickerViewYears tr.datepickerDoW {
+  display: none;
+}
+
+// /* style the 'not in month' day cell away */
+// tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
+//   background-color:transparent;
+// }
+
+// div.datepicker td.datepickerNotInMonth a:hover span {
+//   display:none;
+// }
+// div.datepicker tbody.datepickerDays td.datepickerNotInMonth:hover {
+//   background-color: transparent;
+// }

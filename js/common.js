@@ -135,7 +135,7 @@ $(document).ready(function() {
         $(".overlay-popup").fadeOut();
         $(".email").removeClass("js-active");
     });
-    $(".js-popup-create").show();
+    //$(".js-popup-create").show();
 // ------------------- View type ------------------- //
     $(".js-btn-opt").click(function(){
         var overlay = $(this).parent().parent().parent().children(".toolbar__overlay");
@@ -538,9 +538,14 @@ function calendar_width() {
                 zIndex: 4
             }, 300);
             $(".scroller-wrap__overlay").fadeIn("fast");
+            // $(".js-scroller-2").animate({
+            //     top: top
+            //     }, 300);
             $(".js-scroller-2").animate({
                 top: top
-                }, 300);
+            }, 300, function() {
+                $(".toolbar .news-top").addClass("news-top_search");
+            });
             if ($('.js-scroller-2').length > 0) {
                 $('.js-scroller-2').baron({barOnCls: 'baron'});
             }
@@ -564,6 +569,7 @@ function calendar_width() {
             if ($('.js-scroller-2').length > 0) {
                 $('.js-scroller-2').baron({barOnCls: 'baron'});
             }
+            $(".toolbar .news-top").removeClass("news-top_search");
         });
 
     }
@@ -616,6 +622,31 @@ function calendar_width() {
     $(window).resize(function(){
         popup_height();
     });
+
+
+    var to = new Date();
+    var from = new Date(to.getTime() - 1000 * 60 * 60 * 24 * 14);
+
+    $('.js-calendar').DatePicker({
+      inline: true,
+      date: [from, to],
+      calendars: 2,
+      mode: 'range',
+      current: new Date(to.getFullYear(), to.getMonth() - 1, 1),
+      onChange: function(dates,el) {
+        // update the range display
+        $(".js-date-from, .js-date-to").addClass("is-focused");
+        $('.js-date-from').val(
+          dates[0].getDate()+' '+dates[0].getMonthName(true)+', '+
+          dates[0].getFullYear()
+        );
+        $('.js-date-to').val(
+          dates[1].getDate()+' '+dates[1].getMonthName(true)+', '+
+          dates[1].getFullYear()
+        );
+      }
+    });
+
 
 });
 

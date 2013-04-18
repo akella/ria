@@ -31,6 +31,13 @@
     @include respond-to(nout) {
         .article, .article-nav {
             width: 50%;
+            padding: 63px 50px 10px;
+        }
+        .article-bar__left {
+            left: 50px;
+        }
+        .article-bar__right {
+            right: 50px;
         }
     }
 }

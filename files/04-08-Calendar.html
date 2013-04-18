@@ -5,11 +5,13 @@
 	<meta charset="utf-8">
 	<title>04-08-Calendar</title>
     <link rel="stylesheet" media="screen" href="../css/screen.css" >
+    <link rel="stylesheet" media="screen" href="../css/base.css" >
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="../js/baron.min.js"></script>  
     <script src="../js/transition-events.js"></script>  
     <script src="../js/jquery-ui-1.10.0.custom.min.js"></script>  
     <script src="../js/jquery.fancybox.pack.js"></script>  
+    <script src="../js/datepicker.js"></script> 
     <script src="../js/common.js"></script>
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -221,11 +223,84 @@
                                 <i class="view__icon"></i>
                             </button>
                             <span class="tooltip">Добавить выбранные в подборку</span>
-                            <ul class="drop-list js-drop-down">
-                                <li>Отчет руководству</li>
-                                <li>К пресс-конференции</li>
-                                <li><i class="icon icon_plus"></i>Создать подборку</li>
-                            </ul>
+                            <div class="drop-list drop-list_extend js-drop-down">
+                                <!-- <form> -->
+                                    <div class="drop-list__head">
+                                        <strong>Выберите подборку</strong>
+                                        <span>Создать<i class="icon icon_plus"></i></span>
+                                    </div>
+                                    <div class="scroller-wrap js-scroller-list">
+                                        <div class="scroller">
+                                            <div class="scroller__container">
+                                                <ul>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Отчет руководству</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>К пресс-конференции</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Просто так</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Путин и Ко</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Отчет руководству</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>К пресс-конференции</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Просто так</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Путин и Ко</strong>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="scroller__bar">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="drop-list__footer">
+                                        <input type="submit" class="submit" value="ДОБАВИТЬ">
+                                    </div>
+                                <!-- </form> -->
+                            </div>
                         </div>
                         <div class="download">
                             <button class="btn-opt js-btn-opt">
@@ -310,143 +385,14 @@
                                     <strong>Все время</strong>
                                 </label>
                                 <div class="calendar-wrap">
-                                    <div class="calendar-main">
-                                        <div class="calendar">
-                                                <strong class="calendar__month">Февраль</strong>
-                                                <table>
-                                                    <thead>
-                                                        <tr> 
-                                                            <th>пн</th>
-                                                            <th>вт</th>
-                                                            <th>ср</th>
-                                                            <th>чт</th>
-                                                            <th>пт</th>
-                                                            <th>сб</th>
-                                                            <th>нд</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="is-inactive"><a href="#">28</a></td>
-                                                            <td class="is-inactive"><a href="#">29</a></td>
-                                                            <td class="is-inactive"><a href="#">30</a></td>
-                                                            <td><a href="#">31</a></td>
-                                                            <td><a href="#">1</a></td>
-                                                            <td><a href="#">2</a></td>
-                                                            <td><a href="#">3</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="#">4</a></td>
-                                                            <td><a href="#">5</a></td>
-                                                            <td><a href="#">6</a></td>
-                                                            <td><a href="#">7</a></td>
-                                                            <td><a href="#">8</a></td>
-                                                            <td><a href="#">9</a></td>
-                                                            <td class="is-selected"><a href="#">10</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-selected"><a href="#">11</a></td>
-                                                            <td class="is-selected"><a href="#">12</a></td>
-                                                            <td class="is-selected"><a href="#">13</a></td>
-                                                            <td class="is-selected"><a href="#">14</a></td>
-                                                            <td class="is-selected"><a href="#">15</a></td>
-                                                            <td class="is-selected"><a href="#">16</a></td>
-                                                            <td class="is-selected"><a href="#">17</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-selected"><a href="#">18</a></td>
-                                                            <td class="is-selected"><a href="#">19</a></td>
-                                                            <td class="is-selected"><a href="#">20</a></td>
-                                                            <td class="is-selected"><a href="#">21</a></td>
-                                                            <td class="is-selected"><a href="#">22</a></td>
-                                                            <td class="is-selected"><a href="#">23</a></td>
-                                                            <td class="is-selected"><a href="#">24</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-selected"><a href="#">25</a></td>
-                                                            <td class="is-selected"><a href="#">25</a></td>
-                                                            <td class="is-selected"><a href="#">27</a></td>
-                                                            <td class="is-selected"><a href="#">28</a></td>
-                                                            <td class="is-inactive"><a href="#">1</a></td>
-                                                            <td class="is-inactive"><a href="#">2</a></td>
-                                                            <td class="is-inactive"><a href="#">3</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <div class="calendar">
-                                                <strong class="calendar__month">март</strong>
-                                                <table>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>пн</th>
-                                                            <th>вт</th>
-                                                            <th>ср</th>
-                                                            <th>чт</th>
-                                                            <th>пт</th>
-                                                            <th>сб</th>
-                                                            <th>нд</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="is-inactive"><a href="#">25</a></td>
-                                                            <td class="is-inactive"><a href="#">26</a></td>
-                                                            <td class="is-inactive"><a href="#">27</a></td>
-                                                            <td class="is-inactive"><a href="#">28</a></td>
-                                                            <td class="is-selected"><a href="#">1</a></td>
-                                                            <td class="is-selected"><a href="#">2</a></td>
-                                                            <td class="is-selected"><a href="#">3</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-selected"><a href="#">4</a></td>
-                                                            <td class="is-selected"><a href="#">5</a></td>
-                                                            <td class="is-selected"><a href="#">6</a></td>
-                                                            <td class="is-selected"><a href="#">7</a></td>
-                                                            <td class="is-selected"><a href="#">8</a></td>
-                                                            <td class="is-selected"><a href="#">9</a></td>
-                                                            <td class="is-active"><a href="#">10</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-disabled"><a href="#">11</a></td>
-                                                            <td class="is-disabled"><a href="#">12</a></td>
-                                                            <td class="is-disabled"><a href="#">13</a></td>
-                                                            <td class="is-disabled"><a href="#">14</a></td>
-                                                            <td class="is-disabled"><a href="#">15</a></td>
-                                                            <td class="is-disabled"><a href="#">16</a></td>
-                                                            <td class="is-disabled"><a href="#">17</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-disabled"><a href="#">18</a></td>
-                                                            <td class="is-disabled"><a href="#">19</a></td>
-                                                            <td class="is-disabled"><a href="#">20</a></td>
-                                                            <td class="is-disabled"><a href="#">21</a></td>
-                                                            <td class="is-disabled"><a href="#">22</a></td>
-                                                            <td class="is-disabled"><a href="#">23</a></td>
-                                                            <td class="is-disabled"><a href="#">24</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="is-disabled"><a href="#">25</a></td>
-                                                            <td class="is-disabled"><a href="#">25</a></td>
-                                                            <td class="is-disabled"><a href="#">27</a></td>
-                                                            <td class="is-disabled"><a href="#">28</a></td>
-                                                            <td class="is-disabled"><a href="#">29</a></td>
-                                                            <td class="is-disabled"><a href="#">30</a></td>
-                                                            <td class="is-disabled"><a href="#">31</a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <button class="calendar__nav calendar__prev"></button>
-                                        <button class="calendar__nav calendar__next"></button>
-                                    </div>
+                                    <div class="calendar-main js-calendar"></div>
                                     <div class="calendar-period">
                                         <div class="input">
                                             <label>
                                                 <span>ЗА ПЕРИОД</span>
-                                                <input type="text">
+                                                <input class="js-date-from" type="text">
                                             </label>
-                                            <input type="text">
+                                            <input class="js-date-to" type="text">
                                         </div>
                                         <div class="submit-wrap">
                                             <input type="submit" class="submit" value="применить">
@@ -1224,144 +1170,15 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="calendar-wrap js-calendar">
-                                <div class="calendar-main">
-                                    <div class="calendar">
-                                            <strong class="calendar__month">Февраль</strong>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>пн</th>
-                                                        <th>вт</th>
-                                                        <th>ср</th>
-                                                        <th>чт</th>
-                                                        <th>пт</th>
-                                                        <th>сб</th>
-                                                        <th>нд</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="is-inactive"><a href="#">28</a></td>
-                                                        <td class="is-inactive"><a href="#">29</a></td>
-                                                        <td class="is-inactive"><a href="#">30</a></td>
-                                                        <td><a href="#">31</a></td>
-                                                        <td><a href="#">1</a></td>
-                                                        <td><a href="#">2</a></td>
-                                                        <td><a href="#">3</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a href="#">4</a></td>
-                                                        <td><a href="#">5</a></td>
-                                                        <td><a href="#">6</a></td>
-                                                        <td><a href="#">7</a></td>
-                                                        <td><a href="#">8</a></td>
-                                                        <td><a href="#">9</a></td>
-                                                        <td class="is-selected"><a href="#">10</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-selected"><a href="#">11</a></td>
-                                                        <td class="is-selected"><a href="#">12</a></td>
-                                                        <td class="is-selected"><a href="#">13</a></td>
-                                                        <td class="is-selected"><a href="#">14</a></td>
-                                                        <td class="is-selected"><a href="#">15</a></td>
-                                                        <td class="is-selected"><a href="#">16</a></td>
-                                                        <td class="is-selected"><a href="#">17</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-selected"><a href="#">18</a></td>
-                                                        <td class="is-selected"><a href="#">19</a></td>
-                                                        <td class="is-selected"><a href="#">20</a></td>
-                                                        <td class="is-selected"><a href="#">21</a></td>
-                                                        <td class="is-selected"><a href="#">22</a></td>
-                                                        <td class="is-selected"><a href="#">23</a></td>
-                                                        <td class="is-selected"><a href="#">24</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-selected"><a href="#">25</a></td>
-                                                        <td class="is-selected"><a href="#">25</a></td>
-                                                        <td class="is-selected"><a href="#">27</a></td>
-                                                        <td class="is-selected"><a href="#">28</a></td>
-                                                        <td class="is-inactive"><a href="#">1</a></td>
-                                                        <td class="is-inactive"><a href="#">2</a></td>
-                                                        <td class="is-inactive"><a href="#">3</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                    </div>
-                                    <div class="calendar">
-                                            <strong class="calendar__month">март</strong>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>пн</th>
-                                                        <th>вт</th>
-                                                        <th>ср</th>
-                                                        <th>чт</th>
-                                                        <th>пт</th>
-                                                        <th>сб</th>
-                                                        <th>нд</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="is-inactive"><a href="#">25</a></td>
-                                                        <td class="is-inactive"><a href="#">26</a></td>
-                                                        <td class="is-inactive"><a href="#">27</a></td>
-                                                        <td class="is-inactive"><a href="#">28</a></td>
-                                                        <td class="is-selected"><a href="#">1</a></td>
-                                                        <td class="is-selected"><a href="#">2</a></td>
-                                                        <td class="is-selected"><a href="#">3</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-selected"><a href="#">4</a></td>
-                                                        <td class="is-selected"><a href="#">5</a></td>
-                                                        <td class="is-selected"><a href="#">6</a></td>
-                                                        <td class="is-selected"><a href="#">7</a></td>
-                                                        <td class="is-selected"><a href="#">8</a></td>
-                                                        <td class="is-selected"><a href="#">9</a></td>
-                                                        <td class="is-active"><a href="#">10</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-disabled"><a href="#">11</a></td>
-                                                        <td class="is-disabled"><a href="#">12</a></td>
-                                                        <td class="is-disabled"><a href="#">13</a></td>
-                                                        <td class="is-disabled"><a href="#">14</a></td>
-                                                        <td class="is-disabled"><a href="#">15</a></td>
-                                                        <td class="is-disabled"><a href="#">16</a></td>
-                                                        <td class="is-disabled"><a href="#">17</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-disabled"><a href="#">18</a></td>
-                                                        <td class="is-disabled"><a href="#">19</a></td>
-                                                        <td class="is-disabled"><a href="#">20</a></td>
-                                                        <td class="is-disabled"><a href="#">21</a></td>
-                                                        <td class="is-disabled"><a href="#">22</a></td>
-                                                        <td class="is-disabled"><a href="#">23</a></td>
-                                                        <td class="is-disabled"><a href="#">24</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="is-disabled"><a href="#">25</a></td>
-                                                        <td class="is-disabled"><a href="#">25</a></td>
-                                                        <td class="is-disabled"><a href="#">27</a></td>
-                                                        <td class="is-disabled"><a href="#">28</a></td>
-                                                        <td class="is-disabled"><a href="#">29</a></td>
-                                                        <td class="is-disabled"><a href="#">30</a></td>
-                                                        <td class="is-disabled"><a href="#">31</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                    </div>
-                                    <button class="calendar__nav calendar__prev"></button>
-                                    <button class="calendar__nav calendar__next"></button>
-                                </div>
+                            <div class="calendar-wrap">
+                                <div class="calendar-main js-calendar"></div>
                                 <div class="calendar-period">
                                     <div class="input">
                                         <label>
                                             <span>ЗА ПЕРИОД</span>
-                                            <input type="text">
+                                            <input class="js-date-from" type="text">
                                         </label>
-                                        <input type="text">
+                                        <input class="js-date-to" type="text">
                                     </div>
                                     <div class="submit-wrap">
                                         <input type="submit" class="submit" value="применить">
