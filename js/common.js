@@ -407,7 +407,7 @@ $(document).ready(function() {
         else {
               $('.l-col-right').removeClass("l-col-right_width");
         }
-        //calendar_width();
+        calendar_width();
     }
     if ($(".l-col-left").length > 0) {
         column_width();
@@ -437,20 +437,20 @@ $(document).ready(function() {
             resize_proportions();
             column_width();
         }
-       // calendar_width();
+        calendar_width();
     });
 
 // -------------- calendar width -------------- //
-// function calendar_width() {
-//     var cal_width = $(".js-calendar").outerWidth();
-//     if (cal_width < 630) {
-//         $(".js-calendar").addClass("calendar-wrap_middle");
-//     }
-//     else {
-//         $(".js-calendar").removeClass("calendar-wrap_middle");
-//     }
-// }
-//     calendar_width();
+function calendar_width() {
+    var cal_width = $(".js-calendar").outerWidth();
+    if (cal_width < 630) {
+        $(".js-calendar").addClass("calendar-wrap_middle");
+    }
+    else {
+        $(".js-calendar").removeClass("calendar-wrap_middle");
+    }
+}
+    calendar_width();
 
 //-------------------- show/hide shadow --------------------- //
     $(".window .scroller").scroll(function() {
