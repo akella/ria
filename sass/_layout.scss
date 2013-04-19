@@ -326,9 +326,11 @@
         background: #2f363c;
         @include opacity(.3);
         @include transition(width .2s linear);
-        &:hover {
+        &:hover,
+        &:active {
             opacity: .8;
         }
+
     }
 }
 .baron  {

@@ -105,6 +105,9 @@ a{
     }
     .is-active {
         background: #474e53;
+        &:hover {
+            background: #474e53;
+        }
         a {
             @include b;
             color: #fff;
@@ -169,25 +172,36 @@ a{
     position: relative;
     display: block;
     float: none;
-    margin: 17px 0 11px 5px;
+    margin-left: 5px;
+    padding: 17px 0 11px;
     @include b;
     font-size: 10px; 
     color: #858f97;
     text-transform: uppercase;
+    &:hover {
+        button {
+            display: block;
+        }
+    }
     button {
+        display: none;
         position: absolute;
-        top: -7px;
+        top: 10px;
         right: 0;
-        width: 24px;
+        width: 24px; 
         height: 24px;
-        background: #474e53;
+        background: none;
         text-align: center;
         .icon {
             margin: -3px 0 0;
             vertical-align: middle;
         }
     }
-
+}
+.nav__title_admin {
+    button {
+        background: #474e53;
+    }
 }
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
@@ -794,6 +808,20 @@ a{
     li {
         cursor: default;
     }
+    .scroller-wrap { 
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        background: #fff;
+        border-top: 1px solid #e7e7e7;
+        @include box-sizing(border-box);
+        .scroller__bar {
+            top: 0;
+        }
+    }
 }
 .drop-list_fixed-height {
     height: 200px;
@@ -805,7 +833,8 @@ a{
         
     }
 }
-.l-col-left {
+.l-col-left,
+.l-col-right {
     .drop-list_extend {
         .scroller-wrap {
             top: 29px;
@@ -862,13 +891,19 @@ a{
     position: relative;
     display: inline-block;
     width: 14px;
-    &:hover {
-        span {
-            border: 1px solid #4094d4;
-        }
-        .is-checked {
-            i {
-                @include sized-sprite($icons, check-h);
+    label {
+        &:hover {
+            span {
+                border: 1px solid #4094d4;
+                color: #404040;
+            }
+            .is-checked {
+                i {
+                    @include sized-sprite($icons, check-h);
+                }
+                + strong {
+                    color: #404040;
+                }
             }
         }
     }
@@ -887,6 +922,7 @@ a{
     }
     strong {
         @include r;
+        color: #666;
     }
     input {
         @include opacity(0);
@@ -904,7 +940,7 @@ a{
         i {
             display: block;
         }
-        &:hover {
+        &:hover { 
             i {
                 @include sized-sprite($icons, check-h);
             }
@@ -951,6 +987,22 @@ a{
         font-size: 12px;
     }
 }
+label.check {
+    &:hover {
+        span {
+            border: 1px solid #4094d4;
+            color: #404040;
+        }
+        .is-checked {
+            i {
+                @include sized-sprite($icons, check-h);
+            }
+            + strong {
+                color: #404040;
+            }
+        }
+    }
+}
 .check_mod {
     width: auto;
     padding-left: 24px;
@@ -958,23 +1010,27 @@ a{
 }
 
 .radio {
-    color: #404040;
+    color: #666;
     font-size: 14px;
     margin-bottom: 14px;
-    &:hover {
-        i {
-            @include sized-sprite($icons, radio-h);
-        }
-        .is-active {
-            @include sized-sprite($icons, radio-act-h);
-        }
-        .is-blocked {
-            @include sized-sprite($icons, radio-b);
-        }
-    }
+    
     label {
         position: relative;
         padding-left: 24px;
+        &:hover {
+            i {
+                @include sized-sprite($icons, radio-h);
+            }
+            .is-active {
+                @include sized-sprite($icons, radio-act-h);
+            }
+            .is-blocked {
+                @include sized-sprite($icons, radio-b);
+            }
+            span {
+                color: #404040;
+            }
+        }
     }
     input,i {
         position: absolute;
@@ -993,6 +1049,9 @@ a{
     }
     .is-active {
         @include sized-sprite($icons, radio-act);
+        + span {
+            color: #404040;
+        }
     }
     .is-blocked {
         @include sized-sprite($icons, radio-b);

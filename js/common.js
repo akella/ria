@@ -39,7 +39,9 @@ window.onload = function() {
         $('.js-scroller-popup').baron({barOnCls: 'baron'});
     }
     if ($('.js-scroller-list').length > 0) {
-        $('.js-scroller-list').baron({barOnCls: 'baron'});
+        $('.js-scroller-list').each(function(){
+            $(this).baron({barOnCls: 'baron'});
+        });  
     }
     if ($('.js-scroller-var').length > 0) {
         $('.js-scroller-var').baron({barOnCls: 'baron'});
@@ -221,6 +223,9 @@ $(document).ready(function() {
             $(this).removeClass("is-active");
             $(this).text("Все ленты");
             $("body").removeClass("is-withwall");
+            // $(".l-layout").animate({
+            //     right: 0
+            // }, 500);
             $(".l-wall-news").removeClass("is-active").afterTransition(function () {
                 if ($('.js-scroller-2').length > 0) {
                     $('.js-scroller-2').baron({barOnCls: 'baron'});
@@ -238,6 +243,9 @@ $(document).ready(function() {
             $(this).addClass("is-active");
             $(this).text("Скрыть");
             $("body").addClass("is-withwall");
+            // $(".l-layout").animate({
+            //     right: 210
+            // }, 500);
             $(".l-wall-news").addClass("is-active").afterTransition(function () {
                 if ($('.js-scroller-2').length > 0) {
                     $('.js-scroller-2').baron({barOnCls: 'baron'});
@@ -298,9 +306,15 @@ $(document).ready(function() {
                 input.attr("checked", "checked");
             }
         });
+        $(".check").click(function(){
+            var check = $(this).find(".is-blocked");
+            var input = $(this).find("input");
+            check.removeClass("is-checked");
+            input.removeAttr("checked");
+        });
     }
     checkbox();
-
+    
 // ------------------- Block input on check ------------------- //
     function block_input() {
         $(".js-block-input input").click(function(){
@@ -408,6 +422,7 @@ $(document).ready(function() {
               $('.l-col-right').removeClass("l-col-right_width");
         }
         calendar_width();
+        media_cont_width();
     }
     if ($(".l-col-left").length > 0) {
         column_width();
@@ -437,7 +452,10 @@ $(document).ready(function() {
             resize_proportions();
             column_width();
         }
-        calendar_width();
+        if ($(".l-col-right").length > 0) {
+            calendar_width();
+            media_cont_width();
+        }
     });
 
 // -------------- calendar width -------------- //
@@ -456,8 +474,20 @@ function calendar_width() {
         $(".js-calendar").removeClass("calendar-wrap_small");
     }
 }
-    calendar_width();
 
+// -------------- adaptive width -------------- //
+function media_cont_width() {
+    var col_width = $(".l-col-right").outerWidth();
+    if (col_width < 520) {
+        $(".article-nav__left").addClass("is-width");
+        $(".article-nav__media").addClass("is-width");
+    }
+}
+
+if ($(".l-col-right").length > 0) {
+    calendar_width();
+    media_cont_width();
+}
 //-------------------- show/hide shadow --------------------- //
     $(".window .scroller").scroll(function() {
         // animate shadow 1        
@@ -472,6 +502,16 @@ function calendar_width() {
         // animate shadow 1        
         if (($(this).scrollTop() > 10)) {
             $(".content .article-bar").addClass("is-with-shadow");
+        }
+        else {
+            $(".content .article-bar").removeClass("is-with-shadow");
+        }
+    });
+    // We don't need animation here
+    $(".content .article-bar .scroller").scroll(function() {
+        // animate shadow 1        
+        if (($(this).scrollTop() > 10)) {
+            $(".content .article-bar").removeClass("is-with-shadow");
         }
         else {
             $(".content .article-bar").removeClass("is-with-shadow");
@@ -550,7 +590,7 @@ function calendar_width() {
                 $('.js-scroller-2').baron({barOnCls: 'baron'});
             }
         });
-        $(".js-close-search").click(function(){
+        $(".js-close-search, .scroller-wrap__overlay").click(function(){
             $(".js-show-search").show();
             search.animate({
                 top: -search_pos

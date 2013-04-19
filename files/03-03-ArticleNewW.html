@@ -30,11 +30,84 @@
                                         <i class="view__icon"></i>
                                     </button>
                                     <span class="tooltip">Добавить выбранные в подборку</span>
-                                    <ul class="drop-list js-drop-down">
-                                        <li>Отчет руководству</li>
-                                        <li>К пресс-конференции</li>
-                                        <li><i class="icon icon_plus"></i>Создать подборку</li>
-                                    </ul>
+                                    <div class="drop-list drop-list_extend js-drop-down">
+                                            <!-- <form> -->
+                                                <div class="drop-list__head">
+                                                    <strong>Выберите подборку</strong>
+                                                    <span>Создать<i class="icon icon_plus"></i></span>
+                                                </div>
+                                                <div class="scroller-wrap js-scroller-list">
+                                                    <div class="scroller">
+                                                        <div class="scroller__container">
+                                                            <ul>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>Отчет руководству</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>К пресс-конференции</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>Просто так</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>Путин и Ко</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>Отчет руководству</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>К пресс-конференции</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>Просто так</strong>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <label class="check check_mod">
+                                                                        <input type="checkbox">
+                                                                        <span><i></i></span>
+                                                                        <strong>Путин и Ко</strong>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="scroller__bar">
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="drop-list__footer">
+                                                    <input type="submit" class="submit" value="ДОБАВИТЬ">
+                                                </div>
+                                            <!-- </form> -->
+                                        </div>
                                 </div>
                                 <div class="download">
                                     <button class="btn-opt js-btn-opt">
@@ -192,7 +265,7 @@
                 <input type="text" id="input1">
             </div>
             <div  class="input textarea">
-                <label for="textarea1">КОМУ</label>
+                <label for="textarea1">Текст письма</label>
                 <textarea id="textarea1"></textarea>
             </div>
             <div class="submit-wrap">

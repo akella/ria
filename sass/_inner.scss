@@ -7,10 +7,11 @@
     border-bottom: 1px solid #e7e7e7;
     position: relative;
     @extend %clr;
-    z-index: 2; 
+    z-index: 3; 
     div {
         padding: 4px 10px;
-        background: #f3f3f3;
+        background: #f2f2f2;
+        background: rgba(242,242,242,.9);
         border-right: 1px solid #e7e7e7;
         @include box-sizing(border-box);
     }
@@ -55,7 +56,6 @@
     border-right: 1px solid #e7e7e7;
     li {
         position: relative;
-        padding-right: 5px;
         @extend %clr;
         border-bottom: 1px solid #e7e7e7;
     }
@@ -131,7 +131,10 @@
     top: -2px;
     line-height: 1.1;
     margin-bottom: 4px;
+    
     a {
+        display: block;
+        padding-right: 20px;
         color: #00659b;
         @include b;
         font-size: 16px;
@@ -214,11 +217,15 @@
             @include opacity(1);
         }
     }
+    &:active {
+        top: 1px;
+    }
     .tooltip {
         top: 28px;
-        margin-left: -80px;
-        width: 95px;
+        margin-left: -90px;
+        width: 105px;
         text-transform: none;
+        font-size: 12px;
         &:before {
             left: auto;
             right: 8px
@@ -528,6 +535,14 @@
         position: absolute;
         left: -21px;
         top: -2px;
+    }
+    .is-width {
+        float: none;
+        width: 100%;
+        .media-link {
+            width: 180px;
+            margin: 0 auto;
+        }
     }
 }
 .article-nav_wide {
