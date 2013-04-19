@@ -627,7 +627,7 @@ function calendar_width() {
     var to = new Date();
     var from = new Date(to.getTime() - 1000 * 60 * 60 * 24 * 14);
 
-    $('.js-calendar').DatePicker({
+    $('.js-datepicker').DatePicker({
       inline: true,
       date: [from, to],
       calendars: 2,

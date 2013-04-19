@@ -1340,6 +1340,9 @@ a{
         float: none;
         width: 100%;
     }
+    .calendar-main {
+        border-right: none;
+    }
 }
 .calendar-wrap_small {
     .calendar {
@@ -1447,6 +1450,21 @@ a{
         @include sized-sprite($icons, next);
         &:hover {
             @include sized-sprite($icons, next-h);
+        }
+    }
+}
+// .datepicker {
+//     width: 100% !important;
+// }
+.datepickerContainer {
+    width: 100%;
+    table {
+        width: 100%;
+    }
+    .datepickerBlock {
+        float: right;
+        &:first-child {
+            float: left;
         }
     }
 }

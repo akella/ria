@@ -51,7 +51,7 @@
             '</thead>',
           '</table></td>'
         ],
-        space : '<td class="datepickerSpace"><div></div></td>',
+        space : '',
         days: [
           '<tbody class="datepickerDays">',
             '<tr>',
@@ -450,12 +450,12 @@
         var width = tbl.offsetWidth;
         var height = tbl.offsetHeight;
         cal.css({
-          width: width + options.extraWidth + 'px',
+          //width: width + options.extraWidth + 'px',
           height: height + options.extraHeight + 'px'
-        }).find('div.datepickerContainer').css({
-          width: width + 'px',
-          height: height + 'px'
-        });
+        });//.find('div.datepickerContainer').css({
+          //width: width + 'px',
+          //height: height + 'px'
+        //});
       },
       
       /**
