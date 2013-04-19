@@ -621,25 +621,31 @@ function calendar_width() {
     var to = new Date();
     var from = new Date(to.getTime() - 1000 * 60 * 60 * 24 * 14);
 
-    $('.js-datepicker').DatePicker({
-      inline: true,
-      date: [from, to],
-      calendars: 2,
-      mode: 'range',
-      current: new Date(to.getFullYear(), to.getMonth() - 1, 1),
-      onChange: function(dates,el) {
-        // update the range display
-        $(".js-date-from, .js-date-to").addClass("is-focused");
-        $('.js-date-from').val(
-          dates[0].getDate()+' '+dates[0].getMonthName(true)+', '+
-          dates[0].getFullYear()
-        );
-        $('.js-date-to').val(
-          dates[1].getDate()+' '+dates[1].getMonthName(true)+', '+
-          dates[1].getFullYear()
-        );
-      }
+    $('.js-datepicker').each(function(){
+        var date_from = $(this).parent().find(".js-date-from");
+        var date_to = $(this).parent().find(".js-date-to");
+        $(this).DatePicker({
+            inline: true,
+            date: [from, to],
+            calendars: 2,
+            mode: 'range',
+            current: new Date(to.getFullYear(), to.getMonth() - 1, 1),
+            onChange: function(dates,el) {
+            // update the range display
+            date_from.addClass("is-focused");
+            date_to.addClass("is-focused");
+            date_from.val(
+              dates[0].getDate()+' '+dates[0].getMonthName(true)+', '+
+              dates[0].getFullYear()
+            );
+            date_to.val(
+              dates[1].getDate()+' '+dates[1].getMonthName(true)+', '+
+              dates[1].getFullYear()
+            );
+          }
+        });
     });
+    
 
 
 });
