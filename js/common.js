@@ -443,11 +443,17 @@ $(document).ready(function() {
 // -------------- calendar width -------------- //
 function calendar_width() {
     var cal_width = $(".js-calendar").outerWidth();
-    if (cal_width < 630) {
+    if (cal_width < 630 && cal_width > 440) {
         $(".js-calendar").addClass("calendar-wrap_middle");
+        $(".js-calendar").removeClass("calendar-wrap_small");
     }
-    else {
+    else if (cal_width < 440) {
         $(".js-calendar").removeClass("calendar-wrap_middle");
+        $(".js-calendar").addClass("calendar-wrap_small");
+    }
+    else if (cal_width > 630) {
+        $(".js-calendar").removeClass("calendar-wrap_middle");
+        $(".js-calendar").removeClass("calendar-wrap_small");
     }
 }
     calendar_width();
@@ -626,10 +632,10 @@ function calendar_width() {
         var date_to = $(this).parent().find(".js-date-to");
         $(this).DatePicker({
             inline: true,
-            date: [from, to],
+            //date: [from, to],
             calendars: 2,
             mode: 'range',
-            current: new Date(to.getFullYear(), to.getMonth() - 1, 1),
+            current: new Date(to.getFullYear(), to.getMonth(), 1),
             onChange: function(dates,el) {
             // update the range display
             date_from.addClass("is-focused");

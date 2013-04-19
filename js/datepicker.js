@@ -451,7 +451,7 @@
         var height = tbl.offsetHeight;
         cal.css({
           //width: width + options.extraWidth + 'px',
-          height: height + options.extraHeight + 'px'
+          //height: height + options.extraHeight + 'px'
         });//.find('div.datepickerContainer').css({
           //width: width + 'px',
           //height: height + 'px'
