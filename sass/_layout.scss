@@ -247,9 +247,21 @@
     .scroller__container {
         padding-right: 16px;
     }
-    .scroller__bar {
-        span {
-            background: #858f97;
+    // .scroller__bar {
+    //     span {
+    //         background: #858f97;
+    //     }
+    // }
+    .drop-list_extend {
+        .scroller-wrap {
+            height: auto;
+            top: 29px;
+            bottom: 49px;
+        }
+        .scroller__container {
+            padding: 0;
+            margin-right: 14px;
+            border-right: 1px solid #b9b9b9;
         }
     }
 }

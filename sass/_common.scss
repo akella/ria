@@ -635,7 +635,9 @@ a{
     position: relative;
     float: left;
     margin-right: -1px;
-    @include border-radius(2px 0 0 2px);
+    .btn-opt {
+        @include border-radius(2px 0 0 2px);
+    }
     &:hover {
         .icon {
             @include sized-sprite($icons, print-h);
@@ -654,7 +656,10 @@ a{
 .email {
     position: relative;
     float: left;
-    @include border-radius(0 2px 2px 0);
+    
+    .btn-opt {
+        @include border-radius(0 2px 2px 0);
+    }
     .tooltip {
         width: 146px;
         margin-left: -73px;
@@ -764,6 +769,7 @@ a{
         @include box-shadow(0 1px 2px rgba(0,0,0,.15));
         + .tooltip {
             @include opacity(1);
+            @include transition(all .2s ease-in-out 2s);
         }
         .view__icon {
             @include sized-sprite($icons, drop-h); 
@@ -796,7 +802,7 @@ a{
     background: rgba(47,55,61,.8);
     @include border-radius(2px);
     @include box-sizing(border-box);
-    @include transition(all .2s ease-in-out);
+   // @include transition(all .2s ease-in-out 2s);
     &:before {
         content: "";
         position: absolute;
@@ -1364,7 +1370,7 @@ label.check {
         padding: 0 !important;
     }
     .scroller__bar {
-        right: 5px !important;
+        right: 4px !important;
     }
     .article-nav {
         margin: 0;

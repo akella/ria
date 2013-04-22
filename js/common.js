@@ -489,7 +489,7 @@ if ($(".l-col-right").length > 0) {
     media_cont_width();
 }
 //-------------------- show/hide shadow --------------------- //
-    $(".window .scroller").scroll(function() {
+    $(".window").children(".scroller-wrap").children(".scroller").scroll(function() {
         // animate shadow 1        
         if (($(this).scrollTop() > 10)) {
             $(".window .article-bar").addClass("is-with-shadow");
