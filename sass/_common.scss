@@ -189,9 +189,16 @@ a{
         top: 10px;
         right: 0;
         width: 24px; 
-        height: 24px;
+        height: 24px; 
         background: none;
         text-align: center;
+        @include opacity(.5);
+        &:active {
+            top: 11px;
+        }
+        &:hover  {
+            @include opacity(1);
+        }
         .icon {
             margin: -3px 0 0;
             vertical-align: middle;
@@ -446,8 +453,6 @@ a{
     .btn-opt {
         &:hover {
             i {
-                position: relative;
-                top: 1px;
                 @include sized-sprite($icons, lightning-h);
             }
         } 
@@ -461,15 +466,18 @@ a{
         margin-left: -75px;
         width: 150px;
     }
+    .is-active {
+        i {
+            @include sized-sprite($icons, lightning-h);
+        }
+    }
 }
+
 .view { 
     position: relative;
     float: left;
     margin-left: 10px; 
     &:hover {
-        .view__icon {
-            @include sized-sprite($icons, drop-h);
-        }
         button {
             .icon_sort1 {@include sized-sprite($icons, sort1-h);}
             .icon_sort2 {@include sized-sprite($icons, sort2-h);}
@@ -508,7 +516,7 @@ a{
             }
         }
         .is-selected {
-            font-weight: bold;
+            @include b; 
             color: #000;
         }
     }
@@ -526,6 +534,12 @@ a{
         .icon {
             @include sized-sprite($icons, sort3-h);
         }
+    }
+    .btn-opt.is-active {
+        .icon_sort1 {@include sized-sprite($icons, sort1-h);}
+        .icon_sort2 {@include sized-sprite($icons, sort2-h);}
+        .icon_sort3 {@include sized-sprite($icons, sort3-h);}
+        .view__icon {@include sized-sprite($icons, drop-h);}
     }
 }
 .view__icon {
@@ -552,12 +566,20 @@ a{
     position: relative;
     float: left;
     margin-right: -1px;
+    &:hover {
+        .icon_star {
+            @include sized-sprite($icons, star-h);
+        }
+    }
     .btn-opt {
         @include border-radius(2px 0 0 2px);
     }
     .is-active {
         border: 1px solid #a3aaac;
         @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
+        .icon_star {
+            @include sized-sprite($icons, star-h);
+        }
     }
     .drop-list {
         .icon {
@@ -582,6 +604,11 @@ a{
     position: relative;
     float: left;
     margin-right: 10px;
+    &:hover, .is-active {
+        .icon_downl {
+            @include sized-sprite($icons, downl-h);
+        }
+    }
     .btn-opt {
         @include border-radius(0 2px 2px 0);
     }
@@ -609,9 +636,19 @@ a{
     float: left;
     margin-right: -1px;
     @include border-radius(2px 0 0 2px);
+    &:hover {
+        .icon {
+            @include sized-sprite($icons, print-h);
+        }
+    }
     .tooltip {
         width: 146px;
         margin-left: -73px;
+    }
+    .is-active {
+        .icon {
+            @include sized-sprite($icons, print-h);
+        }
     }
 }
 .email {
@@ -621,6 +658,16 @@ a{
     .tooltip {
         width: 146px;
         margin-left: -73px;
+    }
+    &:hover {
+        .icon {
+            @include sized-sprite($icons, email-h);
+        }
+    }
+    .is-active {
+        .icon {
+            @include sized-sprite($icons, email-h);
+        }
     }
 }
 
@@ -650,6 +697,7 @@ a{
 .icon_point {@include sized-sprite($icons, point);}
 .icon_all {@include sized-sprite($icons, all);}
 .icon_plus {@include sized-sprite($icons, plus);}
+.icon_plus2 {@include sized-sprite($icons, plus2);}
 .icon_info {@include sized-sprite($icons, info);}
 .icon_photo {@include sized-sprite($icons, photo);}
 .icon_video {@include sized-sprite($icons, video);}
@@ -659,6 +707,7 @@ a{
 .icon_pin {@include sized-sprite($icons, pin);}
 .icon_string {@include sized-sprite($icons, string);}
 .icon_set {@include sized-sprite($icons, set2);}
+.icon_set2 {@include sized-sprite($icons, set3);}
 .icon_close {
     @include sized-sprite($icons, close);
     &:hover {
@@ -680,23 +729,14 @@ a{
 .icon_star {
     @include sized-sprite($icons, star);
     vertical-align: middle;
-    &:hover {
-        @include sized-sprite($icons, star-h);
-    }
 }
 .icon_print {
     @include sized-sprite($icons, print);
     vertical-align: middle;
-    &:hover {
-        @include sized-sprite($icons, print-h);
-    }
 }
 .icon_downl {
     @include sized-sprite($icons, downl);
     vertical-align: middle;
-    &:hover {
-        @include sized-sprite($icons, downl-h);
-    }
 }
 .icon_email {
     @include sized-sprite($icons, email);
@@ -725,12 +765,20 @@ a{
         + .tooltip {
             @include opacity(1);
         }
+        .view__icon {
+            @include sized-sprite($icons, drop-h); 
+        }
     }
     &:active {
         @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
     }
 }
-
+.btn-opt.is-active {
+    @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
+    .view__icon {
+        @include sized-sprite($icons, drop-h); 
+    }
+}
 
 // fade in message
 .tooltip {
@@ -792,8 +840,7 @@ a{
             border-top: 0;
         }
         &:hover {
-            color: #000;
-            @include b;
+            color: #333;
             background: #f8f8f8;
         }
     }

@@ -119,14 +119,14 @@ $(document).ready(function() {
         } 
     });
 // ------------------- Popup  ------------------- //
-    $(".email").click(function(){
-        if($(this).hasClass("js-active")) {
-            $(this).removeClass("js-active");
+    $(".email .btn-opt").click(function(){
+        if($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
             $(".js-popup-send").fadeOut("fast");
             $(".overlay-popup").fadeOut()
         }
         else {
-            $(this).addClass("js-active");
+            $(this).addClass("is-active");
             $(".js-popup-send").fadeIn("fast");
             $(".overlay-popup").fadeIn()
         }
@@ -135,7 +135,7 @@ $(document).ready(function() {
     $(".overlay-popup, .popup-close").click(function(){
         $(".popup-easy").fadeOut();
         $(".overlay-popup").fadeOut();
-        $(".email").removeClass("js-active");
+        $(".email .btn-opt").removeClass("is-active");
     });
     //$(".js-popup-create").show();
 // ------------------- View type ------------------- //

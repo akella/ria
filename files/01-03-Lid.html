@@ -24,7 +24,10 @@
                         <div class="scroller__container">
                             <a class="logo" href="#"></a>
                             <div class="nav">
-                                <strong class="nav__title">Продукты РИА Новости</strong>
+                                <strong class="nav__title">
+                                Продукты РИА Новости
+                                <button><i class="icon icon_set2"></i></button>
+                            </strong>
                                 <ul>
                                     <li class="is-active">
                                         <a href="#">
@@ -54,7 +57,10 @@
                                 </ul>
                             </div>
                             <div class="nav">
-                                <strong class="nav__title">Мои ленты</strong>
+                                <strong class="nav__title">
+                                Мои ленты
+                                <button><i class="icon icon_plus2"></i></button> 
+                            </strong>
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -74,7 +80,10 @@
                                 </ul>
                             </div>
                             <div class="nav">
-                                <strong class="nav__title">ПОДБОРКИ</strong>
+                                <strong class="nav__title">
+                                ПОДБОРКИ
+                                <button><i class="icon icon_plus2"></i></button> 
+                            </strong>
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -141,10 +150,65 @@
                         <button class="js-show-search">
                             <i></i>
                         </button>
+                        <ul class="search-list">
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <i class="icon icon_glass"></i>
+                                    </div>
+                                    <div class="search-list__text">
+                                        Путешествия
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <img src="http://placehold.it/32x32" alt="">
+                                    </div>
+                                    <div class="search-list__text">
+                                        Владимир Путин
+                                        <span>Президент Российской Федерации</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <img src="http://placehold.it/32x32" alt="">
+                                    </div>
+                                    <div class="search-list__text">
+                                        Людмила Путина
+                                        <span>Супруга Владимира Путина</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <i class="icon icon_point"></i>
+                                    </div>
+                                    <div class="search-list__text">
+                                        Путино
+                                        <span>Село | Приморский край</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <i class="icon icon_all"></i>
+                                    </div>
+                                    <div class="search-list__text">
+                                        Искать во всех лентах
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="options">
                         <div class="lightning">
-                            <button class="btn-opt"><i></i></button>
+                            <button class="btn-opt js-btn-opt"><i></i></button>
                             <span class="tooltip">Показать только молнии</span>
                         </div>
                         <div class="view">
@@ -260,7 +324,7 @@
                             </ul>
                         </div>
                         <div class="print">
-                            <button class="btn-opt">
+                            <button class="btn-opt js-btn-opt">
                                 <i class="icon icon_print"></i>
                             </button>
                             <span class="tooltip">Распечатать выбранные</span>
@@ -856,7 +920,7 @@
                             </ul>
                         </div>
                         <div class="print">
-                            <button class="btn-opt">
+                            <button class="btn-opt js-btn-opt">
                                 <i class="icon icon_print"></i>
                             </button>
                             <span class="tooltip">Распечатать выбранные</span>
