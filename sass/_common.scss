@@ -53,7 +53,7 @@ body{
     @include r;
     font-size: 16px;
     line-height: 1.2;
-    ::-webkit-selection {
+::-webkit-selection {
     background: #c2cedd;
 }
 ::selection {
@@ -1371,6 +1371,9 @@ label.check {
     }
     .scroller__bar {
         right: 4px !important;
+        span {
+            background: #2f363c !important;
+        }
     }
     .article-nav {
         margin: 0;

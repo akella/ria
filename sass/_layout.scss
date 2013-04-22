@@ -23,7 +23,7 @@
 }
 .is-withwall {
     .l-layout {
-        right: 210px;
+        right: 510px;
     }
 }
 .is-full-screen {
@@ -237,7 +237,7 @@
     z-index: 3; 
     width: 210px;
     background: #2f373d;
-    @include transition(left, .5s ease-in-out);
+    //@include transition(left, .5s ease-in-out);
     // @include respond-to(wide) {
     //     right: -210px !important;
     // }
@@ -247,11 +247,11 @@
     .scroller__container {
         padding-right: 16px;
     }
-    // .scroller__bar {
-    //     span {
-    //         background: #858f97;
-    //     }
-    // }
+    .scroller__bar {
+        span {
+            background: #858f97;
+        }
+    }
     .drop-list_extend {
         .scroller-wrap {
             height: auto;
