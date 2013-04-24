@@ -1398,6 +1398,9 @@ label.check {
         padding-bottom: 23px;
         border-bottom: 1px solid #e7e7e7;
     }
+    .article-bar.is-with-shadow {
+        @include box-shadow(0 4px 6px -4px rgba(0,0,0,0.6));
+    }
 }
 .window__overlay {
     display: none;

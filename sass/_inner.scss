@@ -409,6 +409,11 @@
         }
     }
 }
+.article-bar.is-with-shadow {
+    border: 0;
+    @include box-shadow(-13px 4px 6px -4px rgba(0,0,0,0.6));
+}
+
 .article-bar__left {
     position: absolute;
     left: 30px;
