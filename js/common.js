@@ -494,6 +494,10 @@ function media_cont_width() {
         $(".article-nav__left").addClass("is-width");
         $(".article-nav__media").addClass("is-width");
     }
+    else {
+        $(".article-nav__left").removeClass("is-width");
+        $(".article-nav__media").removeClass("is-width");
+    }
 }
 
 if ($(".l-col-right").length > 0) {
