@@ -433,7 +433,6 @@ $(document).ready(function() {
         else {
               $('.l-col-right').removeClass("l-col-right_width");
         }
-        calendar_width();
         media_cont_width();
     }
     if ($(".l-col-left").length > 0) {
@@ -447,7 +446,6 @@ $(document).ready(function() {
         $('.l-col-right').width(whole*(1-cur_prop));
         newValue = whole*cur_prop;
         $('.drag span').css('left', newValue);
-        //calendar_width();
     }
     if ($(".drag").length > 0) {
         $('.drag span').draggable({
@@ -465,27 +463,26 @@ $(document).ready(function() {
             column_width();
         }
         if ($(".l-col-right").length > 0) {
-            calendar_width();
             media_cont_width();
         }
     });
 
 // -------------- calendar width -------------- //
-function calendar_width() {
-    var cal_width = $(".js-calendar").outerWidth();
-    if (cal_width < 630 && cal_width > 440) {
-        $(".js-calendar").addClass("calendar-wrap_middle");
-        $(".js-calendar").removeClass("calendar-wrap_small");
-    }
-    else if (cal_width < 440) {
-        $(".js-calendar").removeClass("calendar-wrap_middle");
-        $(".js-calendar").addClass("calendar-wrap_small");
-    }
-    else if (cal_width > 630) {
-        $(".js-calendar").removeClass("calendar-wrap_middle");
-        $(".js-calendar").removeClass("calendar-wrap_small");
-    }
-}
+// function calendar_width() {
+//     var cal_width = $(".js-calendar").outerWidth();
+//     if (cal_width < 630 && cal_width > 440) {
+//         $(".js-calendar").addClass("calendar-wrap_middle");
+//         $(".js-calendar").removeClass("calendar-wrap_small");
+//     }
+//     else if (cal_width < 440) {
+//         $(".js-calendar").removeClass("calendar-wrap_middle");
+//         $(".js-calendar").addClass("calendar-wrap_small");
+//     }
+//     else if (cal_width > 630) {
+//         $(".js-calendar").removeClass("calendar-wrap_middle");
+//         $(".js-calendar").removeClass("calendar-wrap_small");
+//     }
+// }
 
 // -------------- adaptive width -------------- //
 function media_cont_width() {
@@ -501,7 +498,6 @@ function media_cont_width() {
 }
 
 if ($(".l-col-right").length > 0) {
-    calendar_width();
     media_cont_width();
 }
 //-------------------- show/hide shadow --------------------- //
@@ -680,9 +676,10 @@ if ($(".l-col-right").length > 0) {
     });
 
 
+
+// ---------------- Calendar in the extend search  -------------------------- //
     var to = new Date();
     var from = new Date(to.getTime() - 1000 * 60 * 60 * 24 * 14);
-
     $('.js-datepicker').each(function(){
         var date_from = $(this).parent().find(".js-date-from");
         var date_to = $(this).parent().find(".js-date-to");
@@ -707,7 +704,38 @@ if ($(".l-col-right").length > 0) {
           }
         });
     });
-    
+
+    //show calendar on click
+    // $(".js-period").focusin(function(){
+    //     $(this).parent().parent().children(".calendar-wrap").show();
+    // });
+
+
+    // $('#inputDate').DatePicker({
+    //   mode: 'single',
+    //   position: 'right',
+    //   onBeforeShow: function(el){
+    //     if($('#inputDate').val())
+    //       $('#inputDate').DatePickerSetDate($('#inputDate').val(), true);
+    //   },
+    //   onChange: function(date, el) {
+    //     $(el).val((date.getMonth()+1)+'/'+date.getDate()+'/'+date.getFullYear());
+    //     if($('#closeOnSelect input').attr('checked')) {
+    //       $(el).DatePickerHide();
+    //     }
+    //   }
+    // });
+// ---------------- Calendar in the right column -------------------------- //
+    $('.js-datepicker-one-date').each(function(){
+        $(this).DatePicker({
+            inline: true,
+            calendars: 2,
+            mode: 'single',
+            current: new Date(to.getFullYear(), to.getMonth(), 1),
+            onChange: function(dates,el) {
+          }
+        });
+    });
 
 
 });

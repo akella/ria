@@ -45,7 +45,11 @@ table.datepickerViewYears tbody.datepickerMonths,
 table.datepickerViewYears tr.datepickerDoW {
   display: none;
 }
-
+// .search-ext {
+//     .calendar-wrap {
+//         display: none;
+//     }
+// }
 .calendar-wrap {
     //min-width: 630px;
     background: #fff;
@@ -91,6 +95,15 @@ table.datepickerViewYears tr.datepickerDoW {
     border-right: 1px solid #c0c2c4;
     @include box-sizing(border-box);
     @extend %clr;
+    overflow: hidden;
+}
+.calendar-main_width {
+    width: 100%;
+    border-right: 0;
+    .datepicker {
+        margin: 0 auto;
+        width: 420px;
+    }
 }
 .calendar-period {
     float: right;
@@ -168,7 +181,8 @@ table.datepickerViewYears tr.datepickerDoW {
     }
     .datepickerGoPrev {
         display: block;
-        left: 0;
+        left: 11px;
+        top: 8px;
         @include sized-sprite($icons, prev);
     &:hover {
         @include sized-sprite($icons, prev-h);
@@ -176,7 +190,8 @@ table.datepickerViewYears tr.datepickerDoW {
     }
     .datepickerGoNext {
         display: none;
-        right: 0;
+        right: 11px;
+        top: 8px;
         @include sized-sprite($icons, next);
         &:hover {
             @include sized-sprite($icons, next-h);
