@@ -634,7 +634,14 @@ if ($(".l-col-right").length > 0) {
     // add placeholder to all input
     $(".input input").each(function(){
         var placeholder = $(this).attr("placeholder");
-        $(this).val(placeholder);
+        var text = $(this).attr("value");
+        if (text.length > 0) {
+            $(this).val(text);
+            $(this).addClass("is-focused");
+        }
+        else {
+            $(this).val(placeholder);
+        }
     });
     // remove placeholder from the current input
     $(".input input").focusin(function(){
@@ -675,8 +682,6 @@ if ($(".l-col-right").length > 0) {
         popup_height();
     });
 
-
-
 // ---------------- Calendar in the extend search  -------------------------- //
     var to = new Date();
     var from = new Date(to.getTime() - 1000 * 60 * 60 * 24 * 14);
@@ -704,27 +709,6 @@ if ($(".l-col-right").length > 0) {
           }
         });
     });
-
-    //show calendar on click
-    // $(".js-period").focusin(function(){
-    //     $(this).parent().parent().children(".calendar-wrap").show();
-    // });
-
-
-    // $('#inputDate').DatePicker({
-    //   mode: 'single',
-    //   position: 'right',
-    //   onBeforeShow: function(el){
-    //     if($('#inputDate').val())
-    //       $('#inputDate').DatePickerSetDate($('#inputDate').val(), true);
-    //   },
-    //   onChange: function(date, el) {
-    //     $(el).val((date.getMonth()+1)+'/'+date.getDate()+'/'+date.getFullYear());
-    //     if($('#closeOnSelect input').attr('checked')) {
-    //       $(el).DatePickerHide();
-    //     }
-    //   }
-    // });
 // ---------------- Calendar in the right column -------------------------- //
     $('.js-datepicker-one-date').each(function(){
         $(this).DatePicker({
@@ -735,6 +719,37 @@ if ($(".l-col-right").length > 0) {
             onChange: function(dates,el) {
           }
         });
+    });
+
+// ---------------- Delete MY wall -------------------------- //
+    $(".js-del-wall").click(function(){
+        $(".js-popup-del").fadeIn();
+        $(".overlay-popup").fadeIn();
+        return false;
+    });
+    $(".js-cancel-del").click(function(){
+        $(".js-popup-del").fadeOut();
+        $(".overlay-popup").fadeOut();
+    });
+// ---------------- Delete selected -------------------------- //
+    $(".js-del-selected").click(function(){
+        $(".js-popup-del-selected").fadeIn();
+        $(".overlay-popup").fadeIn();
+        return false;
+    });
+    $(".js-cancel-del").click(function(){
+        $(".js-popup-del-selected").fadeOut();
+        $(".overlay-popup").fadeOut();
+    });
+// ---------------- Delete article -------------------------- //
+    $(".js-del-article").click(function(){
+        $(".js-popup-del-article").fadeIn();
+        $(".overlay-popup").fadeIn();
+        return false;
+    });
+    $(".js-cancel-del").click(function(){
+        $(".js-popup-del-article").fadeOut();
+        $(".overlay-popup").fadeOut();
     });
 
 

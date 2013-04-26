@@ -928,8 +928,9 @@
                                 <span>Продукты РИА Новости</span>
                                 <h1 class="main-head__title">Общая лента</h1>
                                 <div class="set-link">
-                                    <a href="#"></a>
-                                    <span class="tooltip">Настроить ленту</span>
+                                    <a href="#" class="set-link__edit">
+                                        <span class="tooltip">Настроить ленту</span>
+                                    </a>
                                 </div>
                             </div> 
                             <div class="info-item">
@@ -1187,7 +1188,7 @@
         </aside>
     </section>
     <div class="overlay"></div>
-    <div class="popup-easy popup-create popup-easy_small js-popup-create-collection" style="display:block;">
+    <div class="popup-easy popup-create js-popup-create-collection" style="display:block;">
         <div class="popup-easy__left">
             <strong class="popup-easy__title">Создание новой подборки</strong>
             <p>Выбранные новости будут автоматически добавлены в эту подборкуообщения.</p>
@@ -1196,7 +1197,7 @@
             <form>
                 <div class="input">
                     <label for="input_cr1">НАЗВАНИЕ ПОДБОРКИ</label>
-                    <input type="text" id="input_cr1">
+                    <input type="text" id="input_cr1" value="Новая подборка">
                 </div>
                 <div class="submit-wrap">
                     <input type="submit" class="submit" value="СОЗДАТЬ ПОДБОРКУ">

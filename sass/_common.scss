@@ -226,7 +226,7 @@ a{
 }
 .toolbar_extend {
     .search {
-        left: 238px;
+        left: 298px;
         right: 10px;
     }
     .options {
@@ -549,7 +549,7 @@ a{
 
 .options-more {
     position: absolute;
-    left: -210px;
+    left: -300px;
     top: 10px;
     @include transition(all .1s ease-in-out);
     .print {
@@ -656,7 +656,6 @@ a{
 .email {
     position: relative;
     float: left;
-    
     .btn-opt {
         @include border-radius(0 2px 2px 0);
     }
@@ -672,6 +671,29 @@ a{
     .is-active {
         .icon {
             @include sized-sprite($icons, email-h);
+        }
+    }
+}
+
+.del-delected {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    &:hover {
+        .icon {
+            @include sized-sprite($icons, del-big-h);
+        }
+    }
+    .is-active {
+        .icon {
+            @include sized-sprite($icons, del-big-h);
+        }
+    }
+    .tooltip {
+        margin-left: -25px;
+        width: 125px;
+        &:before {
+            margin-left: -45px;
         }
     }
 }
@@ -713,6 +735,7 @@ a{
 .icon_string {@include sized-sprite($icons, string);}
 .icon_set {@include sized-sprite($icons, set2);}
 .icon_set2 {@include sized-sprite($icons, set3);}
+.icon_del-big {@include sized-sprite($icons, del-big);}
 .icon_close {
     @include sized-sprite($icons, close);
     &:hover {
@@ -769,7 +792,7 @@ a{
         @include box-shadow(0 1px 2px rgba(0,0,0,.15));
         + .tooltip {
             @include opacity(1);
-            @include transition(all .2s ease-in-out 2s);
+            @include transition(all .2s ease-in-out 1s);
         }
         .view__icon {
             @include sized-sprite($icons, drop-h); 
@@ -1234,6 +1257,11 @@ label.check {
         @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
     }
 }
+.submit_red {
+    color: #fff;
+    border-color: #b52c2c;
+    @include background-image(linear-gradient(bottom, #f65959 0%, #c84141 100%));
+}
 
 .popup {
     display: none;
@@ -1292,6 +1320,10 @@ label.check {
             @include box-sizing(border-box);
         }
     }
+}
+.popup-easy_small {
+    width: 420px;
+    margin-left: -210px;
 }
 .popup-easy__left {
     float: left;
