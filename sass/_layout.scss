@@ -264,6 +264,16 @@
             border-right: 1px solid #b9b9b9;
         }
     }
+    .window {
+        .scroller-wrap {
+            height: 100%;
+        }
+        .article-bar {
+            .scroller-wrap {
+                height: auto;
+            }
+        }
+    }
 }
 
 

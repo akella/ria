@@ -456,7 +456,6 @@
     }
 }
 .article-bar.is-with-shadow {
-    border: 0;
     @include box-shadow(-13px 4px 6px -4px rgba(0,0,0,0.6));
 }
 
@@ -744,6 +743,10 @@
     .popup-easy__right {
         margin: 10px 35px 0 0;
     }
+}
+.popup-create_wall {
+    height: 400px;
+    margin-top: -200px;
 }
 .popup-easy__item {
     .tags-wrap {

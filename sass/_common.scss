@@ -1215,6 +1215,8 @@ label.check {
     textarea {
         padding: 10px;
         height: 140px;
+        min-height: 50px;
+        max-height: 160px;
         resize: vertical;
     }
     button { 
@@ -1372,6 +1374,7 @@ label.check {
 .popup-easy_send {
     background: #fff url(../i/popup-border.png) 0 0 repeat-x;
 }
+
 
 .window {
     display: none;
