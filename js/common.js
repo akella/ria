@@ -141,12 +141,14 @@ $(document).ready(function() {
 // ------------------- View type ------------------- //
     $(".js-btn-opt").click(function(){
         var overlay = $(this).parent().parent().parent().children(".toolbar__overlay");
+        var overlay_window = $(this).parent().parent().find(".js-window-overlay");
         var list = $(this).parent().children(".js-drop-down");
 
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
             list.slideUp("fast");
             overlay.hide();
+            overlay_window.hide();
         }
         else {
             $(".js-btn-opt").removeClass("is-active");
@@ -154,19 +156,20 @@ $(document).ready(function() {
             $(this).addClass("is-active");
             list.slideDown("fast");
             overlay.show()
+            overlay_window.show()
             if ($('.js-scroller-list').length > 0) {
                 $('.js-scroller-list').baron({barOnCls: 'baron'});
             }
             else {}
         }
     });
-    // Click on toolbar__overlay
-    $(".toolbar__overlay").click(function(){
+    // Click on overlay
+    $(".toolbar__overlay, .js-window-overlay").click(function(){
         $(".toolbar__overlay").fadeOut();
-        $(".btn-opt").removeClass("is-active");
+        $(".js-window-overlay").fadeOut();
+        $(".js-btn-opt").removeClass("is-active");
         $(".js-drop-down").slideUp("fast");
     });
-
 
 
 // ------------------- Show nav ------------------- //
