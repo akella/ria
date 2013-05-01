@@ -1394,6 +1394,27 @@ label.check {
         right: 204px;
         margin-top: 10px; 
     }
+    .article-bar {
+        .scroller {
+            width: 295px !important;
+        }
+        .btn-open {
+            .tooltip {
+                margin-left: -102px;
+                &:before {
+                    margin-left: 26px;
+                }
+            }
+        }
+        .btn-close {
+            .tooltip {
+                margin-left: -49px;
+                &:before {
+                    margin-left: 11px;
+                }
+            }
+        }
+    }
     .article-bar__left {
         left: 10px;
         .is-active {
@@ -1438,6 +1459,10 @@ label.check {
     }
     .article-bar.is-with-shadow {
         @include box-shadow(0 4px 6px -4px rgba(0,0,0,0.6));
+    }
+    // set static width, because firefox has bug
+    .scroller {
+        width: 374px !important;
     }
 }  
 .window__overlay {
