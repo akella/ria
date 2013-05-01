@@ -522,7 +522,10 @@
         }
     }
 }
-
+.article-wrap {
+    margin-right: 14px;
+    border-right: 1px solid #e7e7e7;
+}
 .article {
     padding: 63px 40px 10px;
     width: 100%; // for animation
