@@ -226,7 +226,7 @@ a{
 }
 .toolbar_extend {
     .search {
-        left: 298px;
+        left: 238px;
         right: 10px;
     }
     .options {
@@ -234,6 +234,11 @@ a{
     }
     .options-more {
         left: 10px;
+    }
+}
+.toolbar_extend.toolbar_del {
+    .search {
+        left: 298px;
     }
 }
 .search {
