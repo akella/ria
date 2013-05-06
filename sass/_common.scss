@@ -621,15 +621,31 @@ a{
         @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
     }
     .drop-list {
-        i {
-            display: inline-block;
+        .icon {
             margin: -4px 18px 0 0;
-            width: 16px;
-            height: 16px;
-            background: #999;
             vertical-align: middle;
         }
     } 
+}  
+.download__pdf {
+    &:hover {
+        .icon_pdf {@include sized-sprite($icons, pdf-h);}
+    }
+}
+.download__word {
+    &:hover {
+        .icon_word {@include sized-sprite($icons, word-h);}
+    }
+}
+.download__xml {
+    &:hover {
+        .icon_xml {@include sized-sprite($icons, xml-h);}
+    }
+}
+.download__zip {
+    &:hover {
+        .icon_zip {@include sized-sprite($icons, zip-h);}
+    }
 }
 .print {
     position: relative;
@@ -736,6 +752,10 @@ a{
 .icon_set {@include sized-sprite($icons, set2);}
 .icon_set2 {@include sized-sprite($icons, set3);}
 .icon_del-big {@include sized-sprite($icons, del-big);}
+.icon_pdf {@include sized-sprite($icons, pdf);}
+.icon_word {@include sized-sprite($icons, word);}
+.icon_xml {@include sized-sprite($icons, xml);}
+.icon_zip {@include sized-sprite($icons, zip);}
 .icon_close {
     @include sized-sprite($icons, close);
     &:hover {
