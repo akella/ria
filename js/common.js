@@ -735,7 +735,7 @@ if ($(".l-col-right").length > 0) {
 
 // ---------------- Delete MY wall -------------------------- //
     $(".js-del-wall").click(function(){
-        $(".js-popup-del").fadeIn();
+        $(".js-popup-del-collection").fadeIn();
         $(".overlay-popup").fadeIn();
         return false;
     });
@@ -744,13 +744,22 @@ if ($(".l-col-right").length > 0) {
         $(".overlay-popup").fadeOut();
     });
 // ---------------- Delete selected -------------------------- //
+    // $(".js-del-selected").click(function(){
+    //     $(".js-popup-del-selected").fadeIn();
+    //     $(".overlay-popup").fadeIn();
+    //     return false;
+    // });
     $(".js-del-selected").click(function(){
-        $(".js-popup-del-selected").fadeIn();
-        $(".overlay-popup").fadeIn();
-        return false;
+        if($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+        }
+        else {
+            $(this).addClass("is-active");
+        }
     });
     $(".js-cancel-del").click(function(){
         $(".js-popup-del-selected").fadeOut();
+        $(".js-popup-del-collection").fadeOut();
         $(".overlay-popup").fadeOut();
     });
 // ---------------- Delete article -------------------------- //
