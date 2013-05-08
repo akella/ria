@@ -116,13 +116,21 @@
 .is-news-headers {
     .news__title {
         display: inline;
+        a {
+            display: inline;
+            padding-right: 0;
+            font-size: 14px;
+        }
     }
     .news__meta {
         position: relative;
         top: -2px;
     }
+    .news__date {
+        @include r;
+    }
 }
-.is-news-lid {
+.is-comfort {
     .news__cont {
         p {
             display: none;
