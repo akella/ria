@@ -476,12 +476,12 @@
     }
 }
 .article-bar.is-with-shadow {
-    @include box-shadow(-13px 4px 6px -4px rgba(0,0,0,0.6));
+    @include box-shadow(-13px 4px 10px -4px rgba(0,0,0,0.3));
 }
 
 .article-bar__left {
     position: absolute;
-    left: 30px;
+    left: 50px;
     top: 10px;
     .add-to {
         .tooltip {
@@ -547,7 +547,7 @@
     border-right: 1px solid #e7e7e7;
 }
 .article {
-    padding: 63px 40px 10px;
+    padding: 63px 50px 10px;
     width: 100%; // for animation
     @include box-sizing(border-box);
     @include transition(all .5s ease-in-out);
