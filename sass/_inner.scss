@@ -44,6 +44,7 @@
     color: #00659b;
     font-size: 12px;
     @include b;
+    background: none;
     .icon {
         margin-left: 5px;
         vertical-align: middle;
@@ -591,10 +592,12 @@
     @extend %clr;
     @include transition(all .5s ease-in-out);
     strong {
+        display: inline-block;
         position: relative;
         font-size: 11px;
         color: #404040;
         text-transform: uppercase;
+        font-weight: normal;
     }
     ul {
         margin-bottom: 21px;
@@ -630,7 +633,7 @@
 }
 .article-nav__left {
     float: left;
-    width: 45%;    
+    width: 45%; 
 }
 .article-nav__right {
     float: right;

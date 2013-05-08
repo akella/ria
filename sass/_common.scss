@@ -1114,9 +1114,10 @@ label.check {
     color: #666;
     font-size: 14px;
     margin-bottom: 14px;
-    
+    //position: relative;
     label {
-        position: relative;
+        display: inline-block;
+        position: relative;  
         padding-left: 24px;
         &:hover {
             i {
