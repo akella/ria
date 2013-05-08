@@ -599,7 +599,7 @@ if ($(".l-col-right").length > 0) {
             $(this).hide();
             search.animate({
                 top: 0,
-                zIndex: 4
+                zIndex: 5
             }, 300);
             $(".scroller-wrap__overlay").fadeIn("fast");
             // $(".js-scroller-2").animate({
