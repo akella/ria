@@ -843,3 +843,16 @@
     margin-bottom: 20px;
 }
 
+.header-print {
+    overflow: hidden;
+    margin: 0 50px;
+    padding: 35px 0 20px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.header-print__ria {
+    float: left;
+    margin: 14px 0 0;
+}
+.header-print__itar {
+    float: right;
+}

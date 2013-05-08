@@ -41,7 +41,23 @@
         }
     }
 }
+.is-print-screen {
+    .content {
+        color: #000;
+        .scroller__bar {
+            top: 0;
+        }
+    }
+    .article-wrap {
+        margin-right: 0;
+        border: 0;
+    }
+    .scroller__container {
+        margin-right: 14px;
+        border-right: 1px solid #e7e7e7;
+    }
 
+}
 // layout
 .l-wrapper {
     overflow: hidden;
