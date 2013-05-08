@@ -141,9 +141,12 @@
     .scroller-wrap_filter-res {
         top: 100px;
     }
-    .scroller__container {
-        padding: 0 14px 0 0;
+    .baron {
+        .scroller__container {
+            padding: 0 14px 0 0;
+        }
     }
+    
     .is-searching {
         padding: 0;
     }

@@ -4,6 +4,7 @@
 // styles of .l-col-left  items
 // news
 .news-top {
+    left: 0;
     border-bottom: 1px solid #e7e7e7;
     position: relative;
     @extend %clr;
@@ -12,7 +13,7 @@
         padding: 4px 10px;
         background: #f2f2f2;
         background: rgba(242,242,242,.9);
-        border-right: 1px solid #e7e7e7;
+        //border-right: 1px solid #e7e7e7;
         @include box-sizing(border-box);
     }
     span, .check {
@@ -26,7 +27,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 14px;
+}
+.baron {
+    .news-top {
+        right: 14px;
+        div {
+            border-right: 1px solid #e7e7e7;
+        }
+    }
 }
 .news-top.fixed.absolute { 
     position: absolute;
@@ -52,8 +60,12 @@
     @include b;
     text-transform: uppercase;
 }
+.baron {
+    .news {
+        border-right: 1px solid #e7e7e7;
+    }
+}
 .news {
-    border-right: 1px solid #e7e7e7;
     li {
         position: relative;
         @extend %clr;
