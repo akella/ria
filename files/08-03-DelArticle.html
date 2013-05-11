@@ -341,48 +341,52 @@
                 <div class="search-ext">
                     <span class="search-ext__title">ЧТО И ГДЕ ИСКАТЬ?</span>
                     <form>
-                        <div class="search-ext__cols js-radio-group">
-                            <div class="radio">
-                                <label for="radio_s1">
-                                    <input type="radio" name="radio" id="radio_s1" ckecked="checked">
-                                    <i class="is-active"></i>
-                                    <span>Все слова</span>
-                                </label>
+                        <div class="search-ext__cols">
+                            <div class="search-ext__col js-radio-group">
+                                <div class="radio">
+                                    <label for="radio_s1">
+                                        <input type="radio" name="radio" id="radio_s1" ckecked="checked">
+                                        <i class="is-active"></i>
+                                        <span>Все слова</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label for="radio_s2">
+                                        <input type="radio" name="radio" id="radio_s2">
+                                        <i></i>
+                                        <span>Совпадение фразы</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label for="radio_s3">
+                                        <input type="radio" name="radio" id="radio_s3">
+                                        <i></i>
+                                        <span>Одно из слов</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="check check_mod">
+                            <div class="search-ext__col">
+                                <div class="check check_mod">
                                 <label>
                                     <input type="checkbox">
                                     <span><i></i></span>
                                     <strong>Заголовки</strong>
                                 </label>
-                            </div>
-                            <div class="radio">
-                                <label for="radio_s2">
-                                    <input type="radio" name="radio" id="radio_s2">
-                                    <i></i>
-                                    <span>Совпадение фразы</span>
-                                </label>
-                            </div>
-                            <div class="check check_mod">
+                                </div>
+                                <div class="check check_mod">
                                 <label>
                                     <input type="checkbox">
                                     <span><i></i></span>
                                     <strong>Текст новости</strong>
                                 </label>
-                            </div>
-                            <div class="radio">
-                                <label for="radio_s3">
-                                    <input type="radio" name="radio" id="radio_s3">
-                                    <i></i>
-                                    <span>Одно из слов</span>
-                                </label>
-                            </div>
-                            <div class="check check_mod">
+                                </div>
+                                <div class="check check_mod">
                                 <label>
                                     <input type="checkbox">
                                     <span><i></i></span>
                                     <strong>Ключевые слова</strong>
                                 </label>
+                                </div>
                             </div>
                         </div>
                         <div class="search-ext__filter">
@@ -1026,10 +1030,10 @@
                                         </button>
                                         <span class="tooltip">Скачать выбранные</span>
                                         <ul class="drop-list js-drop-down">
-                                            <li><i></i>PDF</li>
-                                            <li><i></i>MS Word</li>
-                                            <li><i></i>XML</li>
-                                            <li><i></i>Скачать с медиа</li>
+                                            <li class="download__pdf"><i class="icon icon_pdf"></i>PDF</li>
+                                            <li class="download__word"><i class="icon icon_word"></i>MS Word</li>
+                                            <li class="download__xml"><i class="icon icon_xml"></i>XML</li>
+                                            <li class="download__zip"><i class="icon icon_zip"></i>Скачать с медиа</li>
                                         </ul>
                                     </div>
                                     <div class="print">

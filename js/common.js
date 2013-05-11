@@ -119,9 +119,12 @@ $(document).ready(function() {
             title : {
                 type : 'outside'
             }
-        } 
+        }
     });
+
+    //$("#popup-audio").parent().css("height", 40);
 // ------------------- Popup  ------------------- //
+
     $(".email .btn-opt").click(function(){
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
@@ -139,6 +142,7 @@ $(document).ready(function() {
         $(".popup-easy").fadeOut();
         $(".overlay-popup").fadeOut();
         $(".email .btn-opt").removeClass("is-active");
+        $(".btn-opt").removeClass("is-active");
     });
     //$(".js-popup-create").show();
 // ------------------- View type ------------------- //
@@ -225,8 +229,6 @@ $(document).ready(function() {
 
 // ------------------- Show wall ------------------- //
     $(".js-show-wall").click(function(){
-        //resize_proportions();
-        //column_width();
         if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
             $(this).text("Все ленты");
@@ -761,9 +763,11 @@ if ($(".l-col-right").length > 0) {
         $(".js-popup-del-selected").fadeOut();
         $(".js-popup-del-collection").fadeOut();
         $(".overlay-popup").fadeOut();
+        $(".js-del-article").removeClass("is-active");
     });
 // ---------------- Delete article -------------------------- //
     $(".js-del-article").click(function(){
+        $(this).addClass("is-active");
         $(".js-popup-del-article").fadeIn();
         $(".overlay-popup").fadeIn();
         return false;
@@ -772,6 +776,8 @@ if ($(".l-col-right").length > 0) {
         $(".js-popup-del-article").fadeOut();
         $(".overlay-popup").fadeOut();
     });
+
+
 
 
 });

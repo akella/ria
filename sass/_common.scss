@@ -372,16 +372,21 @@ a{
 }
 .search-ext__cols  {
     margin-bottom: 14px;
+    @extend %clr;
     .radio, .check_mod {
-        display: inline-block;
-        width: 49%;
-        @include box-sizing(border-box);
+        display: block;
+        margin-bottom: 17px;
     }
     .check_mod {
+        margin-bottom: 13px;
         input,span {
             top: 2px;
         }
     }
+}
+.search-ext__col {
+    float: left;
+    width: 50%;
 }
 .search-ext__filter {
     clear: both;
@@ -571,13 +576,13 @@ a{
     position: relative;
     float: left;
     margin-right: -1px;
-    &:hover {
-        .icon_star {
-            @include sized-sprite($icons, star-h);
-        }
-    }
     .btn-opt {
         @include border-radius(2px 0 0 2px);
+        &:hover {
+            .icon_star {
+            @include sized-sprite($icons, star-h);
+            }
+        }
     }
     .is-active {
         border: 1px solid #a3aaac;
@@ -609,13 +614,13 @@ a{
     position: relative;
     float: left;
     margin-right: 10px;
-    &:hover, .is-active {
-        .icon_downl {
-            @include sized-sprite($icons, downl-h);
-        }
-    }
     .btn-opt {
         @include border-radius(0 2px 2px 0);
+        &:hover {
+            .icon_downl {
+                @include sized-sprite($icons, downl-h);
+            }
+        }
     }
     .tooltip {
         width: 125px;
@@ -624,6 +629,9 @@ a{
     .is-active {
         border: 1px solid #a3aaac;
         @include box-shadow(inset 0 2px 5px rgba(0,0,0,.4));
+        .icon_downl {
+            @include sized-sprite($icons, downl-h);
+        }
     }
     .drop-list {
         .icon {
@@ -658,10 +666,10 @@ a{
     margin-right: -1px;
     .btn-opt {
         @include border-radius(2px 0 0 2px);
-    }
-    &:hover {
-        .icon {
-            @include sized-sprite($icons, print-h);
+        &:hover {
+            .icon {
+                @include sized-sprite($icons, print-h);
+            }
         }
     }
     .tooltip {
@@ -679,16 +687,17 @@ a{
     float: left;
     .btn-opt {
         @include border-radius(0 2px 2px 0);
+        &:hover {
+            .icon {
+                @include sized-sprite($icons, email-h);
+            }
+        }
     }
     .tooltip {
         width: 146px;
         margin-left: -73px;
     }
-    &:hover {
-        .icon {
-            @include sized-sprite($icons, email-h);
-        }
-    }
+    
     .is-active {
         .icon {
             @include sized-sprite($icons, email-h);
@@ -700,9 +709,11 @@ a{
     position: relative;
     float: left;
     margin-right: 10px;
-    &:hover {
-        .icon {
-            @include sized-sprite($icons, del-big-h);
+    .btn-opt {
+        &:hover {
+            .icon {
+                @include sized-sprite($icons, del-big-h);
+            }
         }
     }
     .is-active {
@@ -813,6 +824,8 @@ a{
     @include transition(all .2s ease-in-out);
     @include background-image(linear-gradient(bottom, #e6eaed 0%, #f5f7fa 100%));
     &:hover {
+        position: relative;
+        z-index: 2;
         border: 1px solid #a3aaac;
         @include box-shadow(0 1px 2px rgba(0,0,0,.15));
         + .tooltip {
@@ -1279,6 +1292,8 @@ label.check {
     font-size: 11px;
     @include background-image(linear-gradient(bottom, #e6eaed 0%, #f5f7fa 100%));
     &:hover {
+        border: 1px solid #a3aaac;
+        @include transition(all 0.2s ease-in-out);
         @include box-shadow(0 1px 2px rgba(0,0,0,.15));
     }
     &:active {
@@ -1289,6 +1304,10 @@ label.check {
     color: #fff;
     border-color: #b52c2c;
     @include background-image(linear-gradient(bottom, #f65959 0%, #c84141 100%));
+    &:hover {
+        border-color: #831313;
+        @include box-shadow(0 1px 2px rgba(0,0,0,.3));
+    }
 }
 
 .popup {

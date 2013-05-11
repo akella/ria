@@ -52,7 +52,7 @@
 }
 .news-top_search {
     z-index: 10;
-    top: 597px;
+    top: 626px;
 }  
 .news-top__date {
     margin-left: 13px; 
@@ -189,7 +189,6 @@
 }
 .news__date {
     display: inline-block;
-    margin-left: 5px;
     @include b;
 }
 .news__star {
@@ -230,7 +229,7 @@
         padding: 0 30px 0 41px;    
     }
     .scroller__bar {
-        right: 13px; 
+        right: 12px; 
     }
 }
 .set-link {
@@ -314,7 +313,6 @@
     }
 }
 .info-item__sort {
-    margin-left: 10px;
     i {
         display: inline-block;
         margin-left: 5px;
@@ -606,6 +604,9 @@
         font-size: 12px;
         color: #00659b;
         text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     .icon_star {
         position: absolute;
