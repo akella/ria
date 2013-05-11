@@ -253,6 +253,9 @@ $(document).ready(function() {
                         if ($(".l-col-left").length > 0 || $(".l-col-right").length > 0) {
                             column_width();
                         }
+                        else if ($(".js-scroller-6").length > 0) {
+                            single_column_width();
+                        }
                     }
                 }
             );
@@ -280,6 +283,9 @@ $(document).ready(function() {
                     step: function() {
                         if ($(".l-col-left").length > 0 || $(".l-col-right").length > 0) {
                             column_width();
+                        }
+                        else if ($(".js-scroller-6").length > 0) {
+                            single_column_width();
                         }
                     }
                 }
@@ -450,6 +456,12 @@ $(document).ready(function() {
     if ($(".l-col-left").length > 0) {
         column_width();
     }
+
+    function single_column_width() {
+        var width_layout = $('.l-layout').width();
+        $('.l-layout .scroller').width(width_layout + 17);
+    }
+    
     function resize_proportions(){
         whole = $('.l-layout').width();
         // $('.l-col-left, .l-col-left .scroller').width(whole*cur_prop);
