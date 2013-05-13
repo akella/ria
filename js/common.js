@@ -420,20 +420,20 @@ $(document).ready(function() {
 
 
 //  --------------------- width l-layout and cols ---------- //
-    function width_content() {
-        var width_layout = $('.l-layout').width();
-        var width_left = width_layout * 0.4;
-        var width_right = width_layout * 0.6;
-        $('.l-col-left').width(width_left);
-        $('.l-col-right').width(width_right);
-        //$('.l-col-left, .l-col-left .scroller').width(width_topic);
-        //$('.l-col-right, .l-col-right .scroller').width(width_content);
-        //api.reinitialise();
-        //api_content.reinitialise();
-    }
-    if ($(".l-col-left").length > 0) {
-        width_content();
-    }
+    // function width_content() {
+    //     var width_layout = $('.l-layout').width();
+    //     var width_left = width_layout * 0.4;
+    //     var width_right = width_layout * 0.6;
+    //     $('.l-col-left').width(width_left);
+    //     $('.l-col-right').width(width_right);
+    //     //$('.l-col-left, .l-col-left .scroller').width(width_topic);
+    //     //$('.l-col-right, .l-col-right .scroller').width(width_content);
+    //     //api.reinitialise();
+    //     //api_content.reinitialise();
+    // }
+    // if ($(".l-col-left").length > 0) {
+    //     //width_content();
+    // }
 
 //  --------------- resise(drag) width l-layout and cols -------- //
     //cur_prop = 0.4;
@@ -468,11 +468,6 @@ $(document).ready(function() {
     if ($(".l-col-left").length > 0) {
         column_width();
     }
-
-    function single_column_width() {
-        var width_layout = $('.l-layout').width();
-        $('.l-layout .scroller').width(width_layout + 17);
-    }
     
     function resize_proportions(){
         whole = $('.l-layout').width();
@@ -491,6 +486,10 @@ $(document).ready(function() {
         });
     }
 
+    function single_column_width() {
+        var width_layout = $('.l-layout').width();
+        $('.l-layout .scroller').width(width_layout + 17);
+    }
 
 // --------------  reinit columns width -------------- //
     $(window).resize(function(event) {
