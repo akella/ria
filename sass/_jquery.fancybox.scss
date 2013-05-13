@@ -49,12 +49,13 @@
 .fancybox-inner {
 	overflow: hidden;
 	padding-bottom: 70px;
+	@include box-sizing(border-box);
 }
 
 .fancybox-type-iframe .fancybox-inner {
 	-webkit-overflow-scrolling: touch;
 }
-
+ 
 .fancybox-error {
 	color: #444;
 	margin: 0; 
