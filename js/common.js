@@ -55,7 +55,9 @@ window.onload = function() {
     if ($('.is-pc .js-scroller-full-screen').length > 0) {
         $('.is-pc .js-scroller-full-screen').baron({barOnCls: 'baron'});
     }
-
+    if ($('.is-pc .js-scroller-search').length > 0) {
+        $('.is-pc .js-scroller-search').baron({barOnCls: 'baron'});
+    }
 
 }
 
