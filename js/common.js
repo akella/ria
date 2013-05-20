@@ -58,6 +58,9 @@ window.onload = function() {
     if ($('.is-pc .js-scroller-search').length > 0) {
         $('.is-pc .js-scroller-search').baron({barOnCls: 'baron'});
     }
+    if ($('.is-pc .js-scroller-login').length > 0) {
+        $('.is-pc .js-scroller-login').baron({barOnCls: 'baron'});
+    }
 
 }
 
