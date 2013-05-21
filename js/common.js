@@ -817,6 +817,13 @@ if ($(".l-col-right").length > 0) {
         $(".overlay-popup").fadeOut();
     });
 
+// ---------------- subscribe -------------------------- //
+    $(".js-subscribe").click(function(){
+        $(this).addClass("is-active");
+        $(".js-popup-subscribe").fadeIn();
+        $(".overlay-popup").fadeIn();
+        return false;
+    });
 
 
 

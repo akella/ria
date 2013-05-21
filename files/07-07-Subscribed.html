@@ -1,0 +1,1346 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>07-07-Subscribed</title>
+    <link rel="stylesheet" media="screen" href="../css/screen.css" >
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/baron.min.js"></script>  
+    <script src="../js/transition-events.js"></script>  
+    <script src="../js/jquery-ui-1.10.0.custom.min.js"></script>  
+    <script src="../js/jquery.fancybox.pack.js"></script>  
+    <script src="../js/datepicker.js"></script> 
+    <script src="../js/common.js"></script>
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <section class="l-wrapper">
+        <aside class="l-sidebar">
+            <div class="scroller-wrap js-scroller-1">
+                <div class="scroller">
+                    <div class="scroller__container">
+                        <a class="logo js-create" href="#create"></a>
+                        <div class="nav">
+                            <strong class="nav__title">
+                                Продукты РИА Новости
+                                <button><i class="icon icon_set2"></i></button>
+                            </strong>
+                            <ul>
+                                <li class="is-new">
+                                    <a href="#">
+                                        <span>Общая лента</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li class="is-new">
+                                    <a href="#">
+                                        <span>Политика</span><i></i><b>1</b>
+                                    </a>
+                                </li>
+                                <li class="is-media">
+                                    <a href="#">
+                                        <span>Экономика</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li class="is-new">
+                                    <a href="#">
+                                        <span>Культура</span><i></i><b>5</b>
+                                    </a>
+                                </li>
+                                <li class="is-rate">
+                                    <a href="#">
+                                        <span>РИА Тренды</span><i></i><b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav">
+                            <strong class="nav__title">
+                                Мои ленты
+                                <button><i class="icon icon_plus2"></i></button> 
+                            </strong>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>Все мои ленты</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Анархия</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Моя лента с очень длинным названием</span><b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav">
+                            <strong class="nav__title">
+                                ПОДБОРКИ
+                                <button><i class="icon icon_plus2"></i></button> 
+                            </strong>
+                            <ul>
+                                <li class="is-active">
+                                    <a href="#">
+                                        <span>Отчет руководству</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>К пресс-конференции</span><i></i><b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav">
+                            <strong class="nav__title">Настройки</strong>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>Профиль</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Настройка уведомлений</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Помощь</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Обратная связь</span><i></i><b></b>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Выйти</span><i></i><b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="scroller__bar">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-mini">
+                <a href="#" class="logo-mini"></a>
+                <button class="show-nav is-new js-show-nav"></button>  
+            </div>
+        </aside>
+        <section class="l-layout">
+            <div class="drag">
+                <span></span>
+            </div>
+            <section class="l-col-left">
+                <div class="toolbar">
+                    <div class="toolbar__overlay"></div> 
+                    <div class="search input">
+                        <input type="text" placeholder="Поиск…">
+                        <button class="js-show-search">
+                            <i></i>
+                        </button>
+                        <ul class="search-list">
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <i class="icon icon_glass"></i>
+                                    </div>
+                                    <div class="search-list__text">
+                                        Путешествия
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <img src="http://placehold.it/32x32" alt="">
+                                    </div>
+                                    <div class="search-list__text">
+                                        Владимир Путин
+                                        <span>Президент Российской Федерации</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <img src="http://placehold.it/32x32" alt="">
+                                    </div>
+                                    <div class="search-list__text">
+                                        Людмила Путина
+                                        <span>Супруга Владимира Путина</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <i class="icon icon_point"></i>
+                                    </div>
+                                    <div class="search-list__text">
+                                        Путино
+                                        <span>Село | Приморский край</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="search-list__img">
+                                        <i class="icon icon_all"></i>
+                                    </div>
+                                    <div class="search-list__text">
+                                        Искать во всех лентах
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="options">
+                        <div class="lightning">
+                            <button class="btn-opt js-btn-opt"><i></i></button>
+                            <span class="tooltip">Показать только молнии</span>
+                        </div>
+                        <div class="view">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_sort1"></i>
+                                <i class="view__icon"></i>
+                            </button>
+                            <span class="tooltip">Переключить вид</span>
+                            <ul class="drop-list js-drop-down">
+                                <li class="view__1 is-selected"><i class="icon icon_sort1"></i>Комфортный вид</li>
+                                <li class="view__2"><i class="icon icon_sort2"></i>Заголовок + лид</li>
+                                <li class="view__3"><i class="icon icon_sort3"></i>Только заголовок</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="options-more">
+                        
+                        <div class="add-to">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_star"></i>
+                                <i class="view__icon"></i>
+                            </button>
+                            <span class="tooltip">Добавить выбранные в подборку</span>
+                            <div class="drop-list drop-list_extend js-drop-down">
+                                <!-- <form> -->
+                                    <div class="drop-list__head">
+                                        <strong>Выберите подборку</strong>
+                                        <span>Создать<i class="icon icon_plus"></i></span>
+                                    </div>
+                                    <div class="scroller-wrap js-scroller-list">
+                                        <div class="scroller">
+                                            <div class="scroller__container">
+                                                <ul>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Отчет руководству</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>К пресс-конференции</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Просто так</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Путин и Ко</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Отчет руководству</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>К пресс-конференции</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Просто так</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Путин и Ко</strong>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="scroller__bar">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="drop-list__footer">
+                                        <input type="submit" class="submit" value="ДОБАВИТЬ">
+                                    </div>
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                        <div class="download">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_downl"></i>
+                                <i class="view__icon"></i>
+                            </button>
+                            <span class="tooltip">Скачать выбранные</span>
+                            <ul class="drop-list js-drop-down">
+                                <li class="download__pdf"><i class="icon icon_pdf"></i>PDF</li>
+                                <li class="download__word"><i class="icon icon_word"></i>MS Word</li>
+                                <li class="download__xml"><i class="icon icon_xml"></i>XML</li>
+                                <li class="download__zip"><i class="icon icon_zip"></i>Скачать с медиа</li>
+                            </ul>
+                        </div>
+                        <div class="print">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_print"></i>
+                            </button>
+                            <span class="tooltip">Распечатать выбранные</span>
+                        </div>
+                        <div class="email">
+                            <button class="btn-opt">
+                                <i class="icon icon_email"></i>
+                            </button>
+                            <span class="tooltip">Отправить выбранные по эл. почте</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-ext">
+                    <span class="search-ext__title">ЧТО И ГДЕ ИСКАТЬ?</span>
+                    <form>
+                        <div class="search-ext__cols">
+                            <div class="search-ext__col js-radio-group">
+                                <div class="radio">
+                                    <label for="radio_s1">
+                                        <input type="radio" name="radio" id="radio_s1" ckecked="checked">
+                                        <i class="is-active"></i>
+                                        <span>Все слова</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label for="radio_s2">
+                                        <input type="radio" name="radio" id="radio_s2">
+                                        <i></i>
+                                        <span>Совпадение фразы</span>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label for="radio_s3">
+                                        <input type="radio" name="radio" id="radio_s3">
+                                        <i></i>
+                                        <span>Одно из слов</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="search-ext__col">
+                                <div class="check check_mod">
+                                <label>
+                                    <input type="checkbox">
+                                    <span><i></i></span>
+                                    <strong>Заголовки</strong>
+                                </label>
+                                </div>
+                                <div class="check check_mod">
+                                <label>
+                                    <input type="checkbox">
+                                    <span><i></i></span>
+                                    <strong>Текст новости</strong>
+                                </label>
+                                </div>
+                                <div class="check check_mod">
+                                <label>
+                                    <input type="checkbox">
+                                    <span><i></i></span>
+                                    <strong>Ключевые слова</strong>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-ext__filter">
+                            <div class="input-extend">
+                                <div class="input">
+                                    <label for="input_s1">ЗА ПЕРИОД</label>
+                                    <input type="text" id="input_s1">
+                                    <button>
+                                        <i></i>
+                                    </button>
+                                </div>
+                                <label for="check_s1" class="check check_mod js-block-input">
+                                    <input type="checkbox" id="check_s1">
+                                    <span><i></i></span>
+                                    <strong>Все время</strong>
+                                </label>
+                            </div>
+                            <div class="input-extend">
+                                <div class="input">
+                                    <label for="input_s2">ПО ЛЕНТАМ</label>
+                                    <input type="text" id="input_s2">
+                                    <button>
+                                        <i></i>
+                                    </button>
+                                </div>
+                                <label class="check check_mod js-block-input">
+                                    <input type="checkbox">
+                                    <span><i></i></span>
+                                    <strong>Все ленты</strong>
+                                </label>
+                            </div>
+                            <div class="input-extend search-ext__input_obj">
+                                <div class="input">
+                                    <label for="input_s3">Обьекты</label>
+                                    <input type="text" id="input_s3">
+                                </div>
+                                <div class="tags-wrap">
+                                    <span class="tag">Путин<i></i></span>
+                                </div>
+                                <div class="search-list">
+                                    <div class="scroller-wrap js-scroller-search">
+                                        <div class="scroller">
+                                            <div class="scroller__container">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <i class="icon icon_glass"></i>
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Путешествия
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <img src="http://placehold.it/32x32" alt="">
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Владимир Путин
+                                                                <span>Президент Российской Федерации</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <img src="http://placehold.it/32x32" alt="">
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Людмила Путина
+                                                                <span>Супруга Владимира Путина</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <i class="icon icon_point"></i>
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Путино
+                                                                <span>Село | Приморский край</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <div class="search-list__img">
+                                                                <i class="icon icon_all"></i>
+                                                            </div>
+                                                            <div class="search-list__text">
+                                                                Искать во всех лентах
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                    <li>.................</li>
+                                                </ul>
+                                                <div class="scroller__bar">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-wrap">
+                            <input type="submit" class="submit" value="ОТПРАВИТЬ">
+                        </div>
+                    </form>
+                    <div class="btn-close js-close-search">
+                        <i class="icon icon_close"></i>
+                        <span class="tooltip">Закрыть</span>
+                    </div>
+                </div>
+                <div class="scroller-wrap js-scroller-2">
+                    <div class="scroller">
+                        <div class="scroller__container">
+                            <div class="scroller-wrap__overlay"></div>
+                            <div class="news-top js-news-top">
+                                <div class="js-scroller-head">
+                                    <span class="check check_all">
+                                        <input type="checkbox">
+                                        <span class="is-blocked"><i></i></span>
+                                    </span>
+                                    <span class="news-top__date">Сегодня, 15 февраля</span>
+                                </div>
+                            </div>
+                            <ul class="news">
+                                <li class="is-selected">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span class="is-checked"><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li class="is-important">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li class="is-read">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>15:25  <span>Политика</span>, <span>Моя супер лента</span></span>
+                                    </div>
+                                </li>
+                                <li class="is-selected">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span class="is-checked"><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="news-top js-news-top">
+                                <div class="js-scroller-head">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <span class="news-top__date">Сегодня, 14 февраля</span>
+                                </div>
+                            </div>
+                            <ul class="news">
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li class="is-important">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li class="is-read">
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>15:25  <span>Политика</span>, <span>Моя супер лента</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="check">
+                                        <input type="checkbox">
+                                        <span><i></i></span>
+                                    </span>
+                                    <div class="news__cont">
+                                        <h2 class="news__title">
+                                            <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                        </h2>
+                                        <span class="news__meta"><span class="news__date">15:28</span>  <span>Политика</span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="scroller__bar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="l-col-right">
+                <div class="main scroller-wrap js-scroller-3">
+                    <div class="scroller">
+                        <div class="scroller__container">
+                            <div class="main-head">
+                                <span>ПОДБОРКИ</span>
+                                <h1 class="main-head__title">Отчет руководству</h1>
+                                <div class="set-link">
+                                    <a href="#" class="set-link__subscribe set-link__subscribe-done js-subscribe">
+                                        <span class="tooltip">Подписка на уведомления</span>
+                                    </a>
+                                    <a href="#" class="set-link__edit">
+                                        <span class="tooltip">Настроить ленту</span>
+                                    </a>
+                                    <a href="#" class="set-link__del js-del-wall">
+                                        <span class="tooltip">Удалить ленту</span>
+                                    </a>
+                                </div>
+                                <div class="main-head__counter">11 новостей</div>
+                            </div> 
+                            <div class="scroller__bar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <aside class="l-wall-news">
+            <div class="scroller-wrap js-scroller-4">
+                <div class="scroller">
+                    <div class="scroller__container">
+                        <ul class="wall">
+                            <li class="is-new">
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+                            <li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li><li>
+                                <a href="#">МЧС призвало жителей Урала не приближаться к незнакомым предметам</a>
+                                <span><strong>15:28</strong> Политика</span>
+                            </li>
+
+                        </ul>
+                        <div class="scroller__bar">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="show-wall is-new js-show-wall">Все ленты</span>
+            <div class="window">
+                <div class="article-bar">
+                    <div class="article-bar__left">
+                        <div class="add-to">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_star"></i>
+                                <i class="view__icon"></i>
+                            </button>
+                            <span class="tooltip">Добавить выбранные в подборку</span>
+                            <div class="drop-list drop-list_extend js-drop-down">
+                                <!-- <form> -->
+                                    <div class="drop-list__head">
+                                        <strong>Выберите подборку</strong>
+                                        <span>Создать<i class="icon icon_plus"></i></span>
+                                    </div>
+                                    <div class="scroller-wrap js-scroller-list">
+                                        <div class="scroller">
+                                            <div class="scroller__container">
+                                                <ul>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Отчет руководству</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>К пресс-конференции</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Просто так</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Путин и Ко</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Отчет руководству</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>К пресс-конференции</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Просто так</strong>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="check check_mod">
+                                                            <input type="checkbox">
+                                                            <span><i></i></span>
+                                                            <strong>Путин и Ко</strong>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="scroller__bar">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="drop-list__footer">
+                                        <input type="submit" class="submit" value="ДОБАВИТЬ">
+                                    </div>
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                        <div class="download">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_downl"></i>
+                                <i class="view__icon"></i>
+                            </button>
+                            <span class="tooltip">Скачать выбранные</span>
+                            <ul class="drop-list js-drop-down">
+                                <li class="download__pdf"><i class="icon icon_pdf"></i>PDF</li>
+                                <li class="download__word"><i class="icon icon_word"></i>MS Word</li>
+                                <li class="download__xml"><i class="icon icon_xml"></i>XML</li>
+                                <li class="download__zip"><i class="icon icon_zip"></i>Скачать с медиа</li>
+                            </ul>
+                        </div>
+                        <div class="print">
+                            <button class="btn-opt js-btn-opt">
+                                <i class="icon icon_print"></i>
+                            </button>
+                            <span class="tooltip">Распечатать выбранные</span>
+                        </div>
+                        <div class="email">
+                            <button class="btn-opt">
+                                <i class="icon icon_email"></i>
+                            </button>
+                            <span class="tooltip">Отправить выбранные по эл. почте</span>
+                        </div>
+                        <div class="window__overlay js-window-overlay"></div>
+                    </div>
+                    <div class="article-bar__right">
+                        <div class="btn-open-feed">
+                            <i class="icon icon_open-feed"></i>
+                            <span class="tooltip">Открыть в окне</span>
+                        </div>
+                        <div class="btn-open">
+                            <i class="icon icon_open"></i>
+                            <span class="tooltip">Открыть в новом окне</span>
+                        </div>
+                        <div class="btn-close">
+                            <i class="icon icon_close"></i>
+                            <span class="tooltip">Закрыть</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroller-wrap js-scroller-5">
+                    <div class="scroller">
+                        <div class="scroller__container">
+                            <div class="window__main">
+                                <article class="article-window">
+                                    <span class="article-window__meta">Сегодня, 15 февраля 2013, 15:26</span>
+                                    <h1>В Подмосковье разработан план по размещению центров госуслуг</h1>
+                                    <p>МОСКВА, 15 фев — РИА Новости. План по размещению многофункциональных центров, где предоставляются госуслуги, разработан в Подмосковье, до 1 марта схему направят в Минэкономразвития России, сообщили в министерстве государственного управления, информационных технологий и связи Московской области в пятницу.</p>
+                                    <p>Многофункциональные центры призваны упростить процедуру получения различных справок, документов, например, на приватизацию или перепланировку квартиры.</p>
+                                    <p>В таких центрах можно будет записать ребенка в детский сад, оформить субсидии и многое другое.</p>
+                                    <p>МФЦ необходимы для того, чтобы
+                                    жители региона не тратили огромное
+                                    количество времени в очередях в разных учреждениях для сбора каких-либо документов, а могли все получить в одном месте.</p>
+                                    <p>«Разработан проект схемы размещения многофункциональных центров предоставления государственных и муниципальных услуг. Проект схемы будет рассмотрен на очередном заседании комиссии по проведению административной реформы в Московской области, которое состоится 21 февраля», — говорится в сообщении.</p>
+                                    <p>Как добавили в министерстве, до 1 марта утвержденная схема будет направлена в Минэкономразвития России. Схема предполагает развитие сети центров до 2015 года. Сейчас в области работают пять МФЦ: Балашихе, Домодедово, Клину, Серебряных Прудах, Ступино, следует из документа на сайте областного министерства информационных технологий.</p>
+                                    <p> В конце 2012 года в министерства информационных  технологий сообщили об открытии МФЦ в Кашире. Кроме  того, об открытии такого центра в Дмитрове и     Подольске тогда же проинформировали в   администрациях этих городов.</p>
+                                    <p>Всего к 2015 году планируется открыть около 90 многофункциональных центров, что позволит охватить до 90% населения, следует из документа о схеме размещения.</p>
+                                    Сегодня в реестре государственных услуг Подмосковья представлена 191 госуслуга и 674 муниципальные услуги. В МФЦ созданы комфортные условия для обслуживания граждан: построены парковки, пандусы, залы ожидания оснащены современной системой электронной очереди, а также работают call-центры, куда можно будет позвонить и проконсультироваться по вопросу сбора тех или иных документов.</p>
+                                </article>
+                                <div class="article-nav">
+                                    <div class="article-nav__media">
+                                        <div>
+                                            <span>МУЛЬТИМЕДИА</span>
+                                            <a href="#">Скачать все</a>
+                                        </div>
+                                        <a href="#" class="media-link">
+                                            <img src="../i/graph.jpg" alt="" width="145" height="80">
+                                            <i class="icon icon_photo"></i>
+                                        </a>
+                                        <a href="#" class="media-link">
+                                            <img src="../i/graph.jpg" alt="" width="145" height="80">
+                                            <i class="icon icon_video"></i>
+                                        </a>
+                                        <a href="#" class="media-link">
+                                            <img src="../i/graph.jpg" alt="" width="145" height="80">
+                                            <i class="icon icon_info"></i>
+                                        </a>
+                                        <a href="#" class="media-link">
+                                            <img src="../i/graph.jpg" alt="" width="145" height="80">
+                                            <i class="icon icon_audio"></i>
+                                        </a>
+                                    </div>
+                                    <div class="article-nav__left">
+                                        <strong><i class="icon icon_star"></i>ПОдборки</strong>
+                                        <ul>
+                                            <li><a href="#">Отчет руководству</a></li>
+                                        </ul>
+                                        <strong>ПЕРСОНЫ</strong>
+                                        <ul>
+                                            <li><a href="#">Уго Чавес</a></li>
+                                            <li><a href="#">Владимир Путин</a></li>
+                                        </ul>
+                                        <strong>География</strong>
+                                        <ul>
+                                            <li><a href="#">География Московская область</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="article-nav__right">
+                                        <strong>ОРГАНИЗАЦИИ</strong>
+                                        <ul>
+                                            <li><a href="#">Министерство экономического развития РФ</a></li>
+                                            <li><a href="#">Администрация г. Подольска</a></li>
+                                        </ul>
+                                        <strong>Категории</strong>
+                                        <ul>
+                                            <li><a href="#">Социальные услуги</a></li>
+                                            <li><a href="#">Проишествия и преступления</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scroller__bar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="window__arr"></span>
+            </div>
+        </aside>
+    </section>
+    <div class="overlay"></div>
+    <div class="popup-easy popup-create js-popup-subscribe">
+        <div class="popup-easy__left">
+            <strong class="popup-easy__title">Подписка на уведомления</strong>
+            <p>Укажите адрес эл. почты, на который вы хотите получать уведомления о новых сообщениях в ленте «Анархия»</p>
+        </div>
+        <div class="popup-easy__right">
+            <form>
+                <div class="input input_simple">
+                    <label for="input_s1">адрес электронной почты</label>
+                    <strong class="input__text">alex@mail.ru</strong>
+                </div>
+                <label class="check check_mod check_simple">
+                    <input type="checkbox">
+                    <span><i></i></span>
+                    <strong>Полный текст новости</strong>
+                </label>
+                <div class="submit-wrap submit-wrap_border">
+                    <input type="submit" class="submit" value="ПОДПИСАТЬСЯ">
+                    <a href="#">Изменить адрес эл. почты</a>
+                </div>
+            </form>
+        </div>
+        <button class="popup-close"></button>
+    </div>
+    <div class="popup-easy popup-create js-popup-create-collection">
+        <div class="popup-easy__left">
+            <strong class="popup-easy__title">Редактирование подборки</strong>
+            <p>Вы можете изменить название подборки</p>
+        </div>
+        <div class="popup-easy__right">
+            <form>
+                <div class="input">
+                    <label for="input_cr1">НАЗВАНИЕ ПОДБОРКИ</label>
+                    <input type="text" id="input_cr1" value="Отчет руководству">
+                </div>
+                <div class="submit-wrap">
+                    <input type="submit" class="submit" value="Сохранить">
+                </div>
+            </form>
+        </div>
+        <button class="popup-close"></button>
+    </div>
+    <div class="popup-easy popup-del js-popup-del">
+        <strong class="popup-easy__title">Удаление ленты</strong>
+        <p>Вы уверены, что хотите удалить ленту «Анархия»?</p>
+        <div class="popup-del__btn">
+            <button class="submit submit_red">УДАЛИТЬ</button>
+            <button class="submit js-cancel-del">ОТМЕНИТЬ</button>
+        </div>
+    </div>
+    <div class="popup-easy popup-easy_small popup-del js-popup-del-selected">
+        <strong class="popup-easy__title">Удаление подборки</strong>
+        <p>Вы уверены, что хотите удалить подборку, в которой 11 новостей?</p>
+        <div class="popup-del__btn">
+            <button class="submit submit_red">УДАЛИТЬ</button>
+            <button class="submit js-cancel-del">ОТМЕНИТЬ</button>
+        </div>
+    </div>
+    <div class="popup-easy popup-easy_send js-popup-send">  
+        <div class="popup-easy__left">
+            <strong class="popup-easy__title">Отправить 2 новости по электронной почте</strong>
+            <p>Введите адрес электронной почты и сопроводительный текст письма</p>
+            <div class="js-radio-group">
+                <div class="radio">
+                    <label for="radio1">
+                        <input type="radio" name="radio" id="radio1">
+                        <i class="is-active"></i>
+                        <span>PDF  <sub>21 Кб</sub></span>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="radio2">
+                        <input type="radio" name="radio" id="radio2">
+                        <i></i>
+                        <span>MS Word  <sub>25 Кб</sub></span>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="radio3">
+                        <input type="radio" name="radio" id="radio3">
+                        <i></i>
+                        <span>XML  <sub>15 Кб</sub></span>
+                    </label>
+                </div>
+            </div>
+            <label for="check1" class="check check_mod">
+                <input type="checkbox" id="check1">
+                <span><i></i></span>
+                <strong>Приложить медиа  <sub>3,2 Мб</sub></strong>
+            </label>
+        </div>
+        <div class="popup-easy__right">
+            <div class="input">
+                <label for="input1">КОМУ</label>
+                <input type="text" id="input1">
+            </div>
+            <div  class="input textarea">
+                <label for="textarea1">Текст письма</label>
+                <textarea id="textarea1"></textarea>
+            </div>
+            <div class="submit-wrap">
+                <input type="submit" class="submit" value="ОТПРАВИТЬ">
+            </div>
+        </div>
+        <button class="popup-close"></button>
+    </div>
+    <div class="overlay-popup"></div>
+    </body>
+</html>   

@@ -1129,6 +1129,11 @@ label.check {
     padding-left: 24px;
     @include user-select;
 }
+.check_simple {
+    span, input {
+        top: 2px;
+    }
+}
 
 .radio {
     color: #666;
@@ -1283,8 +1288,29 @@ label.check {
         }
     }
 }
+.input__text {
+    @include b;
+    font-size: 16px;
+}
+.input_simple {
+    margin-bottom: 14px;
+}
 .submit-wrap {
     text-align: left;
+    a {
+        display: inline-block;
+        margin-left: 12px;
+        color: #006699;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.submit-wrap_border {
+    padding-top: 30px;
+    margin-top: 26px;
+    border-top: 1px solid #dcdcdc;
 }
 .submit {
     padding: 0 23px;

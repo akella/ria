@@ -248,12 +248,14 @@
         }
     }
 }
-.set-link__edit {
+.set-link__subscribe,
+.set-link__edit,
+.set-link__del {
     position: relative;
     display: inline-block;
-    @include sized-sprite($icons, set);
-    &:hover {
-        @include sized-sprite($icons, set-h);
+    margin-left: 10px;
+    vertical-align: middle;
+     &:hover {
         .tooltip {
             @include opacity(1);
             @include transition(all .2s ease-in-out 1s);
@@ -263,21 +265,31 @@
         top: 1px;
     }
 }
+
+.set-link__subscribe {
+    @include sized-sprite($icons, email);
+    &:hover {
+        @include sized-sprite($icons, email-h);
+    }
+}
+.set-link__subscribe-done {
+    @include sized-sprite($icons, email2);
+    &:hover {
+        @include sized-sprite($icons, email2-h);
+    }
+}
+.set-link__edit {
+    @include sized-sprite($icons, set);
+    &:hover {
+        @include sized-sprite($icons, set-h);  
+    }
+}
 .set-link__del {
-    position: relative;
-    display: inline-block;
-    margin-left: 10px;
     @include sized-sprite($icons, del);
     &:hover {
         @include sized-sprite($icons, del-h);
-        .tooltip {
-            @include opacity(1);
-            @include transition(all .2s ease-in-out 1s);
-        }
     }
-    &:active {
-        top: 1px;
-    }
+    
 }
 
 .info-item {
