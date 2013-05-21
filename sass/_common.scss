@@ -1297,6 +1297,7 @@ label.check {
 }
 .submit-wrap {
     text-align: left;
+    position: relative;
     a {
         display: inline-block;
         margin-left: 12px;
@@ -1304,6 +1305,26 @@ label.check {
         text-decoration: none;
         &:hover {
             text-decoration: underline;
+        }
+    }
+    img {
+        position: absolute;
+        left: 16px;
+        top: 6px;
+        display: none;
+    }
+}
+.submit-wrap.is-logining {
+    img {
+        display: block;
+    }
+    input {
+        padding-left: 42px;
+        background: #f5f5f5;
+        border-color: #e6e6e6;
+        &:hover {
+            @include box-shadow(none);
+            background: #f5f5f5;
         }
     }
 }
