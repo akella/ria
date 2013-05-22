@@ -801,7 +801,11 @@
     @include b;
     font-size: 48px;
 }
-
+.popup-easy__info {
+    color: #666;
+    font-size: 12px;
+    @include i;
+}
 .popup-del {
     margin-top: -105px;
     color: #666;
