@@ -64,6 +64,7 @@
     left: 0;
     right: 0;
 }
+
 .l-layout {
     position: absolute;
     //left: 210px;
@@ -86,7 +87,17 @@
     //@include transition(left, .5s ease-in-out);  
     @include box-sizing(border-box);
 }
-
+.l-wrapper_static {
+    margin: 0 auto -63px;
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.push {
+    clear: both;
+    height: 63px;
+}
 // Sidebar
 .l-sidebar {
     width: 210px;

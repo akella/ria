@@ -955,9 +955,7 @@
     }
 }
 .lang {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+    padding-top: 40px;
     text-align: center;
     font-size: 12px;
     a {
@@ -994,5 +992,22 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.login-form_right {
+    float: right;
+    margin: 0 63px 0 0;
+    padding-bottom: 19px;
+}
+.login-form-info_left {
+    float: left;
+    margin: 0 0 0 63px;
+    width: 480px;
+    strong {
+        font-size: 28px;
+        display: block;
+        margin-bottom: 30px;
+        color: #000;
     }
 }

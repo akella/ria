@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>00-03-Logining</title>
+	<title>00-01-Home</title>
     <link rel="stylesheet" media="screen" href="../css/screen.css" >
     <script src="../js/jquery.min.js"></script>
     <script src="../js/baron.min.js"></script>  
@@ -18,22 +18,24 @@
 </head>
 <body class="login-page">
     <section class="l-wrapper l-wrapper_static">
+        <header class="header">
+            <div class="l-container">
+                <a href="#" class="logo"></a>
+                <div class="lang">
+                    <a href="#">English</a> /
+                    <a href="#">中国的</a>
+                </div>
+            </div>
+        </header>  
         <div class="l-container">
             <div class="banner">
                 <img src="http://lorempixel.com/1000/85/" alt="banner">
             </div>
-            <div class="login-form">
+            <div class="login-form login-form_right">
                 <form>
-                    <div class="login-form__header">
-                        <h1 class="login-form__title">НОВОСТНОЙ ТЕРМИНАЛ</h1>
-                        <a href="#" class="logo-ria"></a>
-                    </div>
-                    <div class="message message_error">
-                        <span>НЕВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ</span>
-                    </div>
                     <div class="input-extend">
                         <div class="input">
-                            <label for="input_s3">ЛОГИН</label>
+                            <label for="input_s3">ЭЛЕКТРОННАЯ ПОЧТА</label>
                             <input type="text" id="input_s3" value="alexey">
                         </div>
                     </div>
@@ -43,9 +45,9 @@
                             <input type="password" id="input_s4" value="12313123">
                         </div>
                     </div>
-                    <div class="submit-wrap is-logining">
+                    <div class="submit-wrap">
                         <img src="../i/loader.gif" alt="" >
-                        <input type="submit" class="submit" value="Вход..." disabled>
+                        <input type="submit" class="submit" value="Войти">
                         <label for="check1" class="check check_mod">
                             <input type="checkbox" id="check1">
                             <span><i></i></span>
@@ -54,25 +56,20 @@
                     </div>
                 </form>
             </div>
-            <div class="login-form-info">
-                <p><strong>Круглосуточный доступ к информационным продуктам РИА Новости в режиме онлайн</strong></p>
-                <p>Более 50 новостных лент различной тематики.</p>
-                <p>РИА Новости — ведущий мультимедийный холдинг, источник оперативной, эксклюзивной, исчерпывающей информации о событиях в России и мире: политика, экономика, происшествия, спорт, наука, культура. </p>
-                <p>Больше, чем новости: фото, видео, инфографика, интервью и комментарии экспертов.</p>
-                <div class="login-form-info__cont">
-                    <p>По вопросам подписки обращайтесь</p>
-                    <p>Телефон: +7 (495) 645-65-02</p>
-                    <p>Факс: +7 (495) 637-2746</p>
-                    <p><a href="mailto:sales@rian.ru">sales@rian.ru</a></p>
-                </div>
+            <div class="login-form-info login-form-info_left">
+                <strong>Круглосуточный доступ к информационным продуктам РИА Новости в режиме онлайн</strong>
+                <p>Ведущий мультимедийный холдинг РИА Новости предлагает более 50 новостных лент различной тематики. Это источник оперативной, эксклюзивной, исчерпывающей информации о событиях в России и в мире: политика, экономика, происшествия, спорт, наука и культура. Больше, чем новости — фото, видео, инфографика, рейтинги, оценки, комментарии и опросы.</p>
             </div>
         </div>
         <div class="push"></div>
     </section>
     <footer class="footer">
-        <div class="lang">
-            <a href="#">English</a> /
-            <a href="#">中国的</a>
+        <div class="l-container">
+            <div class="footer__contacts">
+                <span>Телефон: +7 (495) 645-65-02, 645-54-05</span>
+                <span>Факс: +7 (495) 637-2746</span>
+            </div>
+            <a href="mailto:sales@rian.ru" class="footer__email">sales@rian.ru</a>
         </div>
     </footer>
 </body>

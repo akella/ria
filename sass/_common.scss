@@ -75,6 +75,27 @@ a{
 /* ------------------------------------ //END Main styles --------------------------------------- */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.header {
+    background: #2f373d;
+    padding: 20px 0;
+    .l-container {
+         overflow: hidden;
+    }
+    .logo {
+        float: left;
+        margin: 0;
+    }
+    .lang {
+        padding-top: 0;
+        float: right;
+        position: static;
+        width: auto;
+        a {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
 .logo {
     display: block;
     margin: 15px auto 0;
@@ -1622,4 +1643,33 @@ label.check {
     font-size: 12px;
     @include b;
     color: #999;
+}
+
+.footer {
+    position: relative;
+    clear: both;
+    color: #666;
+    font-size: 14px;
+    height: 63px;
+    .l-container {
+        padding: 22px 0;
+        border-top: 1px solid #e0e0e0;
+        overflow: hidden;
+    }
+}
+.footer__contacts {
+    float: left;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 25px;
+    }
+}
+.footer__email {
+    float: right;
+    color: #0072bc;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
