@@ -584,6 +584,15 @@ if ($(".l-col-right").length > 0) {
         }
     });
 
+    $(".l-col-left .scroller").scroll(function() {
+        // animate shadow 1        
+        if (($(this).scrollTop() > 10)) {
+            $(".toolbar").addClass("is-with-shadow");
+        }
+        else {
+            $(".toolbar").removeClass("is-with-shadow");
+        }
+    });
 //-------------------- show/hide window on click  --------------------- //
     $(".wall li").click(function(){
         var wh = $(window).height();

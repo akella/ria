@@ -44,6 +44,7 @@
     color: #00659b;
     font-size: 12px;
     @include b;
+    margin-top: 2px;
     background: none;
     .icon {
         margin-left: 5px;
@@ -985,4 +986,13 @@
         background: #f26065;
     }
     
+}
+
+.l-col-right__cont {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
